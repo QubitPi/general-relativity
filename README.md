@@ -7,7 +7,7 @@ Install XeLaTeX
 
 ### Install Ubuntu Font
 
-The main font used is Ubuntu.
+The main font used is Ubunt
 
 ### Compile Book
 

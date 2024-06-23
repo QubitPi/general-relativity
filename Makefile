@@ -14,7 +14,7 @@ all:
 	$(BUILDTEX)
 	$(BUILDTEX)
 	$(REMOVE_AUXILIARY)
-	#$(PUBLISH_NOTES)
+	$(PUBLISH_NOTES)
 
 clean-all:
 	rm -rf *.aux *.log *.out *.bbl *.blg $(PROJECT).pdf
@@ -25,4 +25,4 @@ clean:
 git-push:
 	git add study-notes.pdf
 	git commit -m "Update notes"
-	git push origin gh-pages
+	git push origin master
