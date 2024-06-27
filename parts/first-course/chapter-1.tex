@@ -1,0 +1,126 @@
+\section*{On ``Principle of relativity (Galileo)"}
+
+\subsection*{Galilean invariance}
+
+\href{https://en.wikipedia.org/wiki/Newton\%27s_laws_of_motion}{Newton's laws of motion} hold in all frames related
+to one another by a \href{https://en.wikipedia.org/wiki/Galilean\_transformation}{Galilean transformation}. In
+other words, all frames related to one another by such a transformation are inertial (meaning, Newton's equation of
+motion is valid in these frames).\footnote{\href{https://en.wikipedia.org/wiki/Galilean_invariance}{Galilean invariance}} The proof has been given by the book on page 2.
+
+\section*{1.5 - Construction of the coordinates used by another observer}
+
+\subsection*{Why would the tangent of the angle is the speed in Fig. 1.2?}
+
+Suppose $\mathcal{O}$ and $\mathcal{\bar{O}}$ both start out at the same position where $\mathcal{\bar{O}}$
+moves along the $x$ at some speed. After $t_1$, observer $\mathcal{O}$ sees $\mathcal{\bar{O}}$ at position $x_1$:
+
+\[ \mathcal{\bar{O}}_1 = (x_1, t_1) \]
+
+Observer  $\mathcal{\bar{O}}$, however, still sees themself at $x = 0$:
+
+\[ \mathcal{\bar{O}}_1 = (0, t_1) \]
+
+By definition where ``$\bar{t}$ is the locus of events at constant $\bar{x} = 0$", $\bar{t}$ is the straight line
+that passes the origin and the $(x_1, t_1)$:
+
+\begin{tikzpicture}[scale=1.5]
+    \draw[->] (-3,0) node[left] (w) {}--(5,0) node[right] (x) {x};
+    \draw[->] (0,-3) node[below] (s) {}--(0,5) node[above] (t) {t};
+    \draw[line width=.5pt] (.25,-.25) rectangle (-.25,.25) node (o) {};
+    \draw[line width=.5] (o)--(135:1) node[above] () {$\mathcal{\bar{O}}_0$, $\mathcal{O}_0$};
+
+    \draw[black,line width=2pt,->] (0,0)--(4,4) node[above] (t-bar) {{$\bar{t}$}};
+
+    \draw[dashed,line width=.5] (3,0) node[below] (x1) {$x_1$} --(3,3);
+    \draw[dashed,line width=.5] (0,3) node[left] (t1) {$t_1$} --(3,3);
+    \draw[line width=.5pt] (2.75,3.25) rectangle (3.25,2.75) node (f) {};
+    \draw (f) node[right] {$(x_1, t_1)$};
+
+    \draw [blue,thick,domain=225:270] plot ({3 + cos(\x)}, {3 + sin(\x)}) node (speed) {};
+    \draw (2.5, 1.8) node[right] (speed) {Tangent of this angle is $\bar{v}$};
+\end{tikzpicture}
+
+\section*{1.6 Invariance of the interval}
+
+\begin{tcolorbox}[
+    colback=green!5!white,
+    colframe=green!75!black,
+    colbacktitle=red!85!black,
+    enhanced,
+    attach boxed title to top center={yshift=-2mm},
+    title={
+        \parbox{10cm}{
+            Why does the equation contains only $\boldsymbol{M}_{\alpha\beta} + \boldsymbol{M}_{\beta\alpha}$ terms when $\alpha \ne \beta$, which guarantees $\boldsymbol{M}_{\alpha\beta} = \boldsymbol{M}_{\beta\alpha}$?
+        }
+    }]
+
+    \[\Delta\bar{s}^2 = \sum_{\alpha = 0}^3\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right)\]
+\end{tcolorbox}
+
+Before spending too much time on expanding the equation, we can pick up a pair of indices of
+$(\alpha, \beta) = (\alpha^*, \beta^*)$ where $\alpha^* \ne \beta^*$. Then we would definitely have the following 2
+terms in the expansion:
+
+\[ \boldsymbol{M}_{\alpha^*\beta^*}\left(\Delta x^{\alpha^*}\right)\left(\Delta x^{\beta^*}\right) \]
+\[ \boldsymbol{M}_{\beta^*\alpha^*}\left(\Delta x^{\beta^*}\right)\left(\Delta x^{\alpha^*}\right) \]
+
+Since
+
+\[ \left(\Delta x^{\alpha^*}\right)\left(\Delta x^{\beta^*}\right) = \left(\Delta x^{\beta^*}\right)\left(\Delta x^{\alpha^*}\right) \]
+
+We can then group these 2 terms and factor out the product, leaving
+
+\[
+    \left(\Delta x^{\alpha^*}\right)\left(\Delta x^{\beta^*}\right)\left( \boldsymbol{M}_{\alpha^*\beta^*} + \boldsymbol{M}_{\beta^*\alpha^*} \right)
+\]
+
+The terms of expanded $\Delta\bar{s}^2$ can be expressed in a matrix of
+
+\[
+    \renewcommand{\arraystretch}{4}
+    \begin{bmatrix}
+        \boldsymbol{M}_{00}\Delta x^0\Delta x^0 & \boldsymbol{M}_{01}\Delta x^0\Delta x^1 & \boldsymbol{M}_{02}\Delta x^0\Delta x^2  & \boldsymbol{M}_{03}\Delta x^0\Delta x^3 \\
+        \boldsymbol{M}_{10}\Delta x^1\Delta x^0 & \boldsymbol{M}_{11}\Delta x^1\Delta x^1 & \boldsymbol{M}_{12}\Delta x^1\Delta x^2  & \boldsymbol{M}_{13}\Delta x^1\Delta x^3 \\
+        \boldsymbol{M}_{20}\Delta x^2\Delta x^0 & \boldsymbol{M}_{21}\Delta x^2\Delta x^1 & \boldsymbol{M}_{22}\Delta x^2\Delta x^2  & \boldsymbol{M}_{23}\Delta x^2\Delta x^3 \\
+        \boldsymbol{M}_{30}\Delta x^3\Delta x^0 & \boldsymbol{M}_{31}\Delta x^3\Delta x^1 & \boldsymbol{M}_{32}\Delta x^3\Delta x^2  & \boldsymbol{M}_{33}\Delta x^3\Delta x^3 \\
+    \end{bmatrix}
+\]
+
+Because the off-diagonal terms always appear in paris above, we could effectively replace them with their mean value:
+
+\[
+    \boldsymbol{M}_{\alpha^*\beta^*} = \boldsymbol{M}_{\beta^*\alpha^*} = \frac{\left( \boldsymbol{M}_{\alpha^*\beta^*} + \boldsymbol{M}_{\beta^*\alpha^*}\right)}{2}
+\]
+
+where $\alpha^* \ne \beta^*$. And since $\boldsymbol{M}_{\alpha\beta} = \boldsymbol{M}_{\beta\alpha}$ if $\alpha = \beta$, we conclude that
+
+\begin{tcolorbox}[colback=green!5!white, colframe=green!75!black]
+    \begin{center}
+        $\boldsymbol{M}_{\alpha\beta} = \boldsymbol{M}_{\beta\alpha}$ for all $\alpha$ and $\beta$
+    \end{center}
+\end{tcolorbox}
+
+\section*{Why do we have a 2nd term in equation 1.3 on p.10?}
+
+\begin{align}
+    \Delta\bar{s}^2 &= \sum_{\alpha = 0}^3\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
+    &= \sum_{\alpha = 0}^0\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) + \sum_{\alpha = 0}^3\sum_{\beta = 0}^0 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
+    &= \sum_{\beta = 0}^3 \boldsymbol{M}_{0\beta}\Delta t \left(\Delta x^{\beta}\right) + \sum_{\alpha = 0}^3 \boldsymbol{M}_{\alpha0}\left(\Delta x^{\alpha}\right)\Delta t + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
+    &= \boldsymbol{M}_{00}\left( \Delta t \right)^2 + \sum_{\beta = 1}^3 \boldsymbol{M}_{0\beta}\Delta t \left(\Delta x^{\beta}\right) + \sum_{\alpha = 1}^3 \boldsymbol{M}_{\alpha0}\left(\Delta x^{\alpha}\right)\Delta t + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
+    &= \boldsymbol{M}_{00}\left( \Delta t \right)^2 + 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x^i\right) \right] + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right)
+\end{align}
+
+
+
+
+
+
+\subsection*{1.6 - Why $(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 - (\Delta t)^2 = 0$ for two events in the same light beam?}
+
+Let's say, in a simplified 1D case, event $\mathcal{E} = (x_0, t_0)$ and $\mathcal{P} = (x_1, t_1)$.
+
+\[ (\Delta x)^2 - (\Delta t)^2 = (x_1 - x_0)^2 - (t_1 - t_0)^2 \]
+
+Since the speed of light is 1,
+
+\[ (x_1 - x_0)^2 - (t_1 - t_0)^2 = (x_1 - x_0)^2 - (t_1 \times 1 - t_0 \times 1)^2 = (x_1 - x_0)^2 - (x_1 - x_0)^2 = 0 \]
