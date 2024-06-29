@@ -46,7 +46,9 @@ that passes the origin and the $(x_1, t_1)$:
     colback=green!5!white,
     colframe=green!75!black,
     colbacktitle=red!30!white,
-    title={Why $(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 - (\Delta t)^2 = 0$ for two events in the same light beam?}]
+    title={Why $(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 - (\Delta t)^2 = 0$ for two events in the same light beam?}
+    \phantomsection\hypertarget{zero-interval}
+]
 
     Let's say, in a simplified 1D case, event $\mathcal{E} = (x_0, t_0)$ and $\mathcal{P} = (x_1, t_1)$.
 
@@ -56,12 +58,6 @@ that passes the origin and the $(x_1, t_1)$:
 
     \[ (x_1 - x_0)^2 - (t_1 - t_0)^2 = (x_1 - x_0)^2 - (t_1 \times 1 - t_0 \times 1)^2 = (x_1 - x_0)^2 - (x_1 - x_0)^2 = 0 \]
 \end{tcolorbox}
-
-
-
-
-
-
 
 \begin{tcolorbox}[
     colback=green!5!white,
@@ -121,7 +117,6 @@ where $\alpha^* \ne \beta^*$. And since $\boldsymbol{M}_{\alpha\beta} = \boldsym
     \end{center}
 \end{tcolorbox}
 
-
 \begin{tcolorbox}[
     colback=green!5!white,
     colframe=green!75!black,
@@ -144,5 +139,22 @@ where $\alpha^* \ne \beta^*$. And since $\boldsymbol{M}_{\alpha\beta} = \boldsym
     &= \sum_{\alpha = 0}^0\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) + \sum_{\alpha = 0}^3\sum_{\beta = 0}^0 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
     &= \sum_{\beta = 0}^3 \boldsymbol{M}_{0\beta}\Delta t \left(\Delta x^{\beta}\right) + \sum_{\alpha = 0}^3 \boldsymbol{M}_{\alpha0}\left(\Delta x^{\alpha}\right)\Delta t + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
     &= \boldsymbol{M}_{00}\left( \Delta t \right)^2 + \sum_{\beta = 1}^3 \boldsymbol{M}_{0\beta}\Delta t \left(\Delta x^{\beta}\right) + \sum_{\alpha = 1}^3 \boldsymbol{M}_{\alpha0}\left(\Delta x^{\alpha}\right)\Delta t + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
-    &= \boldsymbol{M}_{00}\left( \Delta t \right)^2 + \boxed{2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x^i\right) \right]} + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right)
+    &= \boldsymbol{M}_{00}\left( \Delta t \right)^2 + \boxed{2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x^i\right) \right]} + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \label{eq:expand}
 \end{align}
+
+\begin{tcolorbox}[
+    colback=green!5!white,
+    colframe=green!75!black,
+    colbacktitle=red!30!white,
+    title={Why would $\boldsymbol{M}_{0i} = 0$ for $i = 1, 2, 3$ and $\boldsymbol{M}_{ij} = -\boldsymbol{M}_{00}\delta_{ij}$ in Equation \ref{eq:expand}?}]
+
+    Note that this statement is based on the aforementioned assumption that $\Delta \bar{s}^2 = \Delta s^2 = 0$, which has been proved \hyperlink{zero-interval}{here}. Therefore, by \ref{eq:expand}, we have
+
+    \begin{align}
+        &\Delta\bar{s}^2(\Delta t, \Delta x_1) - \Delta\bar{s}^2(\Delta t, \Delta x_2) \\
+        ={}& \boldsymbol{M}_{00}\left( \Delta t \right)^2 + 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x^i\right) \right] + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
+        ={}& 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_1^i\right) \right] + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_1^{\alpha}\right)\left(\Delta x_1^{\beta}\right) - \\
+        & 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_2^i\right) \right] - \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_2^{\alpha}\right)\left(\Delta x_2^{\beta}\right)
+    \end{align}
+
+\end{tcolorbox}
