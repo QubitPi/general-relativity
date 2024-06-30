@@ -71,7 +71,9 @@ that passes the origin and the $(x_1, t_1)$:
         }
     }]
 
-    \[\Delta\bar{s}^2 = \sum_{\alpha = 0}^3\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right)\]
+    \[
+        \Delta\bar{s}^2 = \sum_{\alpha = 0}^3\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right)
+    \]
 \end{tcolorbox}
 
 Before spending too much time on expanding the equation, we can pick up a pair of indices of
@@ -143,18 +145,50 @@ where $\alpha^* \ne \beta^*$. And since $\boldsymbol{M}_{\alpha\beta} = \boldsym
 \end{align}
 
 \begin{tcolorbox}[
+    breakable,
+    parbox=false,
     colback=green!5!white,
     colframe=green!75!black,
     colbacktitle=red!30!white,
     title={Why would $\boldsymbol{M}_{0i} = 0$ for $i = 1, 2, 3$ and $\boldsymbol{M}_{ij} = -\boldsymbol{M}_{00}\delta_{ij}$ in Equation \ref{eq:expand}?}]
+
+    \begin{tcolorbox}[
+        colframe=red,
+        colback=red!10,
+        coltitle=black,
+        colbacktitle=red!20,
+        title=The answer is: \textbf{not necessarily}. We are probably looking at a wrong problem.
+        \phantomsection\hypertarget{wrong-postulate}
+    ]
+        The solution to exercise 1.8 takes $\Delta x_1 = -\Delta x_2$ to simplify the equation \ref{eq:details}. This is not sufficient! What if $\Delta x_1 \ne -\Delta x_2$? This box takes a general approach where we \textbf{do not assume any relationship between $\Delta x_1$ and $\Delta x_2$}
+    \end{tcolorbox}
 
     Note that this statement is based on the aforementioned assumption that $\Delta \bar{s}^2 = \Delta s^2 = 0$, which has been proved \hyperlink{zero-interval}{here}. Therefore, by \ref{eq:expand}, we have
 
     \begin{align}
         &\Delta\bar{s}^2(\Delta t, \Delta x_1) - \Delta\bar{s}^2(\Delta t, \Delta x_2) \\
         ={}& \boldsymbol{M}_{00}\left( \Delta t \right)^2 + 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x^i\right) \right] + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
-        ={}& 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_1^i\right) \right] + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_1^{\alpha}\right)\left(\Delta x_1^{\beta}\right) - \\
-        & 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_2^i\right) \right] - \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_2^{\alpha}\right)\left(\Delta x_2^{\beta}\right)
+        ={}& 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_1^i\right) \right] + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_1^{\alpha}\right)\left(\Delta x_1^{\beta}\right) - \nonumber\\
+        & 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_2^i\right) \right] - \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_2^{\alpha}\right)\left(\Delta x_2^{\beta}\right) \\
+        ={}& \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_1^{\alpha}\right)\left(\Delta x_1^{\beta}\right) - \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x_2^{\alpha}\right)\left(\Delta x_2^{\beta}\right) + \nonumber\\
+        & 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_1^i\right) \right] - 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_2^i\right) \right] \\
+        ={}& \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta} \left[ \left(\Delta x_1^{\alpha}\right)\left(\Delta x_1^{\beta}\right) - \left(\Delta x_2^{\alpha}\right)\left(\Delta x_2^{\beta}\right) \right] + 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta t \left(\Delta x_1^i - \Delta x_2^i\right) \right] = 0 \label{eq:details}
     \end{align}
 
+    We won't be able to go further unless with some assumed relationships between $\Delta x_1^i$ and $\Delta x_2^i$.
+    But since \hyperlink{wrong-postulate}{we do not assume any relations between them}, let's step back and re-think about this problem then and forget about $\Delta x_1^i$ and $\Delta x_2^i$.
+
+    We go through all these for the proof of invariance of the interval. This is to work out a relation between $\Delta s^2$ and $\Delta \bar{s}^2$. The \roundinlinebox[red]{detail} is about $\Delta x_1^i$ and $\Delta x_2^i$ but the \roundinlinebox[green]{goal} is to derive some form of
+
+    \[
+        \Delta \bar{s}^2 = f\left( \Delta s^2 \right) = \sum_{\alpha = 0}^3\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right)
+    \]
+
+    where $\Delta s^2 = -(\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 = -(\Delta t)^2 + \sum_{i = 1}^3 (\Delta x)^2$
+
+    \begin{center}
+        \textit{Let's work on $f\left( \Delta s^2 \right)$ directly toward that goal then}
+    \end{center}
 \end{tcolorbox}
+
+Assuming $\Delta \bar{s}^2 = \Delta s^2 = 0$, we have $\Delta t = \pm\Delta x$,
