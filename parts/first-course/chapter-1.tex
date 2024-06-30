@@ -184,11 +184,27 @@ where $\alpha^* \ne \beta^*$. And since $\boldsymbol{M}_{\alpha\beta} = \boldsym
         \Delta \bar{s}^2 = f\left( \Delta s^2 \right) = \sum_{\alpha = 0}^3\sum_{\beta = 0}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right)
     \]
 
-    where $\Delta s^2 = -(\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 = -(\Delta t)^2 + \sum_{i = 1}^3 (\Delta x)^2$
+    where \[ \Delta s^2 = -(\Delta t)^2 + \sum_{i = 1}^3 (\Delta x^i)^2 \]
 
     \begin{center}
         \textit{Let's work on $f\left( \Delta s^2 \right)$ directly toward that goal then}
     \end{center}
 \end{tcolorbox}
 
-Assuming $\Delta \bar{s}^2 = \Delta s^2 = 0$, we have $\Delta t = \pm\Delta x$,
+Assuming $\Delta \bar{s}^2 = \Delta s^2 = 0$, we have $\Delta t = \pm\Delta x$; plugging it into Eq. \ref{eq:expand} gives us
+
+\begin{align}
+    \Delta\bar{s}^2 &= \boldsymbol{M}_{00}\sum_{i = 1}^3\left( \Delta x^i \right)^2 + 2\left[ \sum_{i = 1}^3\boldsymbol{M}_{0i}\left( \Delta x^i \right)^2 \right] + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \\
+    &= \left( \boldsymbol{M}_{00} + 2\boldsymbol{M}_{0i} \right)\sum_{i = 1}^3\left( \Delta x^i \right)^2 + \sum_{\alpha = 1}^3\sum_{\beta = 1}^3 \boldsymbol{M}_{\alpha\beta}\left(\Delta x^{\alpha}\right)\left(\Delta x^{\beta}\right) \label{eq:suggestive}
+\end{align}
+
+\textit{Eq.\ref{eq:suggestive} seems to suggest a linear relationship between $\Delta s^2$ and $\Delta\bar{s}^2$}. How do we go about proving it? We now start the \href{https://en.wikipedia.org/wiki/Derivations\_of\_the\_Lorentz\_transformations#Rigorous\_Statement\_and\_Proof\_of\_Proportionality_of_ds2_and_ds\%E2\%80\%B22}{formal proof of \textbf{Invariance of Interval}}
+
+\begin{mytheorem}{}{}
+    Let $n, p \ge 1$ be integers, $d := n + p$ and $V$ a vector space over $\mathbb{R}$ of dimension $d$. Let $h$ be
+    an indefinite-inner product\footnote{Start with page 447 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th Edition} for everything you need to know about indefinite-inner product} on $V$ with signature type $(n, p)$\footnote{Read Ch. 6 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th Edition} and then \href{https://mathworld.wolfram.com/MatrixSignature.html}{Matrix Signature}}. Suppose $g$ is a symmetric bilinear form on $V$
+    such that the null set of the associated quadratic form of $h$ is contained in that of $g$ (i.e. suppose that for
+    every $v \in V$, if $h(v, v) = 0$ then $g(v, v) = 0$). Then, there exists a constant $C \in \mathbb{R}$ such that
+    $g = Ch$. Futhermore, if we assume $n \ne p$ and that $g$ also has signature type $(n, p)$, then we have $C > 0$
+\end{mytheorem}
+
