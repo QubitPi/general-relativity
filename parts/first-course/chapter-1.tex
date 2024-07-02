@@ -4,14 +4,27 @@
     This section is not from the book, but simply my extra interests on the history of SR
 \end{marker}
 
-\begin{tcolorbox}[colback=green!5!white, colframe=green!75!black, colbacktitle=red!85!black]
+\begin{tcolorbox}[
+    colback=green!5!white,
+    colframe=green!75!black,
+    colbacktitle=red!85!black
+]
+    \phantomsection\hypertarget{sr-original-paper}
     The original paper is in \href{https://trello.com/c/ll9Yzd8h}{The Collected Papers of Albert Einstein, Vol.2}, page 140, \textit{On the Electrodynamics of Moving Bodies}
 \end{tcolorbox}
 
 Reading the original paper requires the prerequisites of
 
 \begin{itemize}
-    \item \hyperref[Michelson-Morley Experiment]{Michelson-Morley Experiment}
+    \item \href{https://en.wikipedia.org/wiki/Michelson\%E2\%80\%93Morley\_experiment}{Michelson-Morley Experiment}
+
+          \begin{itemize}
+              \item \href{https://youtu.be/3G_Q6AggQF8?si=ihpGM23NGq2PfsE2}{An excellent experiment intro}
+              \item What I care most about this experiment is the \textbf{way we handle "unsolvable" problems}. Michelson-Morley
+              experiment had led to extensive followups trying to explain what was seen in the experiment. All the
+              \textit{mediocre} conclusion simply said: "Dude, we don't know." Albert Einstein innovated a new era of Physics out of this conflict. \textbf{When a problem seems to lead to a dead end, it's time to innovate; it's time to take on the risk and bring the human into a new world of new opportunities!}
+          \end{itemize}
+
     \item \href{https://trello.com/c/SlPIXwCY}{Maxwell's Electrodynamics}
 
           \begin{tcolorbox}[
@@ -22,30 +35,87 @@ Reading the original paper requires the prerequisites of
               ``There exists a model of the universe which includes a field known as the Electromagnetic Field. This
               model does a remarkably good job of predicting the observations we make in the world. It does so good at
               making such predictions that it is often phrased as 'existing in the
-              world"\footnote{https://philosophy.stackexchange.com/a/28010}
+              world"\footnote{\href{https://philosophy.stackexchange.com/a/28010}{https://philosophy.stackexchange.com/a/28010}}
           \end{tcolorbox}
 \end{itemize}
 
-\subsection{\href{https://en.wikipedia.org/wiki/Michelson\%E2\%80\%93Morley\_experiment}{Michelson-Morley Experiment}}
-\label{Michelson-Morley Experiment}
+\subsection{Reading Notes...}
 
-\begin{itemize}
-    \item \href{https://youtu.be/3G_Q6AggQF8?si=ihpGM23NGq2PfsE2}{An excellent experiment intro}
-    \item What I care most about this experiment is the \textbf{way we handle "unsolvable" problems}. Michelson-Morley
-          experiment had led to extensive followups trying to explain what was seen in the experiment. All the
-          \textit{mediocre} conclusion simply said: "Dude, we don't know." Albert Einstein innovated a new era of Physics out of this conflict. \textbf{When a problem seems to lead to a dead end, it's time to innovate; it's time to take on the risk and bring the human into a new world of new opportunities!}
-\end{itemize}
+...of \hyperlink{sr-original-paper}{the Paper}
 
-\section{On ``Principle of relativity (Galileo)"}
+\subsubsection{Definition of Simultaneity}
 
-\subsection{Galilean invariance}
+\begin{tcolorbox}[enhanced,colframe=green!75!black,colback=green!5!white, title=Definition of ``Simultaneity"]
+    If an event occurs at $(t, x, y, z)$, then all observers would see this event at $(t, x', y', z')$, where
+    $x \ne x'$, $y \ne y'$, and $y \ne y'$
+\end{tcolorbox}
+
+This definition is ideal but proves to be inefficient if we are going to look at a series of events happening one after
+another, according to Einstein, because light takes time to travel. But two clocks can \textit{synchronize} in the
+following way:
+
+Suppose an event occurs at $A$ and a ray of light leaves from $A$ toward $B$ at $t_A$; the light is reflected from $B$
+towards $A$ at $t_B$, and arrives back at $A$ at $t'_A$. The two clocks at $A$ and $B$ satisfies
+
+\[
+    t_B - t_A = t'_A - t_B
+\]
+
+which means
+
+\begin{equation}\label{eq:tb-by-ta}
+    t_B = \frac{t'_A + t_A}{2}
+\end{equation}
+
+Imagine a person holding a watch and manages to precisely record $t_A$ and $t'_A$, they will be able to state with
+perfect confidence that any other person (or observer) at arbitrary location $B$ sees their event at time $t_B$, which
+can be calculated by Eq.\ref{eq:tb-by-ta}, where both $t_A$ and $t'_A$ can be read at that person's hand watch
+
+\begin{tcolorbox}[enhanced,colframe=green!75!black,colback=green!5!white, title=Definition of ``Synchronism"]
+    Suppose a ray of light leaves from $A$ toward $B$ at ``A-time" at $t_A$, is reflected from $B$ toward $A$ at
+    ``B-time" $t_B$, and arrives back at $A$ at ``A-time" $t'_A$. The two clocks are \textit{synchronous} by defintion
+    if
+
+    \begin{equation}
+        t_B - t_A = t'_A - t_B
+    \end{equation}
+\end{tcolorbox}
+
+If follows naturally that
+
+\begin{enumerate}
+    \item If the clock in $B$ is synchronous with the clock in $A$, then the clock in $A$ is synchronous with the clock
+          in $B$
+    \item If the clock in $A$ is synchronous with the clock in $B$ as well as with the clock in $C$, then the clocks in
+          $B$ and $C$ are also synchronous relative to each other
+\end{enumerate}
+
+The \textbf{speed of light as a universal constant in empty space is thus}:
+
+\begin{tcolorbox}[enhanced,colframe=green!75!black,colback=green!5!white]
+    \begin{equation}
+        c = \frac{2\overline{AB}}{t'_A - t_A}
+    \end{equation}
+\end{tcolorbox}
+
+and there is a BIG assumption: all clocks are at \textit{rest} in a system at \textit{rest}
+
+With that, we have a pretty good mechanism to talk about series of events in a system happening at different time,
+because we know how to synchronize them \includegraphics[height=0.05\textwidth]{可莉-35.png}
+
+\section{Fundamental principles of special relativity theory (SR)}
+
+\subsection{On ``Principle of relativity (Galileo)"}
+
+\subsubsection{Galilean invariance}
 
 \href{https://en.wikipedia.org/wiki/Newton\%27s_laws_of_motion}{Newton's laws of motion} hold in all frames related
 to one another by a \href{https://en.wikipedia.org/wiki/Galilean\_transformation}{Galilean transformation}. In
 other words, all frames related to one another by such a transformation are inertial (meaning, Newton's equation of
-motion is valid in these frames).\footnote{\href{https://en.wikipedia.org/wiki/Galilean_invariance}{Galilean invariance}} The proof has been given by the book on page 2.
+motion is valid in these frames).\footnote{\href{https://en.wikipedia.org/wiki/Galilean_invariance}{Galilean invariance}}
+The proof has been given by the book on page 2.
 
-\section{1.5 - Construction of the coordinates used by another observer}
+\section{Construction of the coordinates used by another observer}
 
 \subsection{Why would the tangent of the angle is the speed in Fig. 1.2?}
 
@@ -78,7 +148,7 @@ that passes the origin and the $(x_1, t_1)$:
     \draw (2.5, 1.8) node[right] (speed) {Tangent of this angle is $\bar{v}$};
 \end{tikzpicture}
 
-\section{1.6 Invariance of the interval}
+\section{Invariance of the interval}
 
 \begin{tcolorbox}[
     colback=green!5!white,
