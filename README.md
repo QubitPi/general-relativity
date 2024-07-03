@@ -5,10 +5,12 @@
 [![Ubuntu Font Badge][Ubuntu Font Badge]][Ubuntu Font URL]
 [![Apache License Badge]][Apache License URL]
 
+![Error loading black-hole.png](./img/black-hole.png)
+
 Documentation
 -------------
 
-### Install Required Packages
+### Installing Required Packages
 
 1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
 2. Install [Ubuntu Font][Ubuntu Font URL]
