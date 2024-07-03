@@ -1,19 +1,32 @@
+Study Notes on [General Relativity]
+===================================
+
+[![LaTeX Badge][LaTeX Badge]][LaTeX URL]
+[![Ubuntu Font Badge][Ubuntu Font Badge]][Ubuntu Font URL]
 [![Apache License Badge]][Apache License URL]
 
-Setup
------
+Documentation
+-------------
 
-Install XeLaTeX
+### Install Required Packages
 
-### Install Ubuntu Font
+1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
+2. Install [Ubuntu Font][Ubuntu Font URL]
 
-The main font used is Ubunt
+### Getting Study Notes Source Code
 
-### Compile Book
+```console
+https://github.com/QubitPi/general-relativity.git
+cd general-relativity
+```
+
+### Compiling the Notes
 
 ```console
 make
 ```
+
+You now have my love of Physics at [`./study-notes.pdf`](./study-notes.pdf)
 
 License
 -------
@@ -26,12 +39,14 @@ The use and distribution terms for this book are covered by the [Apache License,
     </a>
 </div>
 
+[General Relativity]: https://en.wikipedia.org/wiki/General_relativity
+
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License URL]: https://www.apache.org/licenses/LICENSE-2.0
 [Apache License, Version 2.0]: http://www.apache.org/licenses/LICENSE-2.0.html
 
+[LaTeX Badge]: https://img.shields.io/badge/LaTeX-TeX%20Live%E2%89%A52021-008080.svg?style=for-the-badge&logo=latex&logoColor=white
+[LaTeX URL]: https://tug.org/texlive/
 
-
-[//]: # ([![HelloTalk]&#40;https://img.shields.io/badge/HelloTalk-0054F7?style=for-the-badge&logoColor=white&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6bm9uZTtzdHJva2U6I2ZmZmZmZjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQzLjUsMjIuODNjMC04LjY4LTguNzMtMTUuNzEtMTkuNS0xNS43MS0xMC4yNiwwLTE4Ljc2LDYuNDEtMTkuNDUsMTQuNjYsMCwuMzQsMCwuNjksMCwxQzQuNSwzMSwxMi4xNywzNy42NCwyMiwzOC40NWgwYzIsLjEsMS44Mi4zMSwxLjgyLDEuNjJoMGMwLDEuMzEtLjA1LDIuODMtLjA1LDIuODMsMCwuOTIuNTEsMSwxLjE5LDEsMS4zLDAsNi4zNy0zLjE5LDkuMDctNS40NmEzMC45MywzMC45MywwLDAsMCw3Ljc5LTkuMjFoMGExMy4yOCwxMy4yOCwwLDAsMCwxLjY1LTUuMzJDNDMuNDgsMjMuNTMsNDMuNSwyMy4xOCw0My41LDIyLjgzWk0zMC4zNiwzMi4yMmEzLjA2LDMuMDYsMCwwLDEtMy4wNi0zLjA2aDBhMy4wNywzLjA3LDAsMSwxLDMuMDYsMy4wNlpNMjQuMzQsMTlhNC4zNSw0LjM1LDAsMCwxLDQuMzUtNC4zNWgwQTQuMzUsNC4zNSwwLDAsMSwzMywxOWgwYTQuMzUsNC4zNSwwLDEsMS04LjcsMFptLTcsMTEuNzJoMEE1LjY2LDUuNjYsMCwxLDEsMjMsMjUuMSw1LjY2LDUuNjYsMCwwLDEsMTcuMzcsMzAuNzZaIi8+PC9zdmc+&#41;]&#40;https://hellotalk.cn/u/_Klee_&#41;)
-
-[//]: # ([![Quizlet]&#40;https://img.shields.io/badge/Quizlet-4255FF?style=for-the-badge&logoColor=white&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yNS4zOTQzLDIuNTQ1NUEyMS4xNDcxLDIxLjE0NzEsMCwwLDAsNy45Nzk0LDkuODYzOWEyMS4zNSwyMS4zNSwwLDAsMCw3LjAwNDMsMzMuMjQwNiwyMS4xMSwyMS4xMSwwLDAsMCwxOC44NzItLjQwNjMuNTg3NS41ODc1LDAsMCwxLC4zLS4wNjM4LjU4MTcuNTgxNywwLDAsMSwuMjkxMy4wOTY0LDE2LjM3NiwxNi4zNzYsMCwwLDAsOS4zMTE5LDIuNzY4My41OTMyLjU5MzIsMCwwLDAsLjU5MzQtLjU5NDlWMzcuNjdhLjU5NzUuNTk3NSwwLDAsMC0uMTM2OS0uMzg4Ni41ODYzLjU4NjMsMCwwLDAtLjM1NTMtLjIwNjMsOC4zOTUsOC4zOTUsMCwwLDEtMS45ODE5LS41NzExLjU4OTEuNTg5MSwwLDAsMS0uMzI3My0uMzc1My42MTczLjYxNzMsMCwwLDEtLjAxNzctLjI1NTEuNjAzMy42MDMzLDAsMCwxLC4wODkyLS4yMzg5QTIxLjM2NTgsMjEuMzY1OCwwLDAsMCwzNS43NjYzLDYuMDc0LDIxLjEyMzcsMjEuMTIzNywwLDAsMCwyNS4zNywyLjUzMjdabS0xNC4yMTcsMjEuMjczYTEyLjkwODcsMTIuOTA4NywwLDAsMSw3LjkxODgtMTEuOTM2NkExMi43OTY3LDEyLjc5NjcsMCwwLDEsMzMuMDk3MywxNC42NzRhMTIuOTQzOCwxMi45NDM4LDAsMCwxLTEuOTQ5LDE5Ljg2NSwxMi44MDQzLDEyLjgwNDMsMCwwLDEtMTYuMjEzNy0xLjYwMzgsMTIuOTQyMSwxMi45NDIxLDAsMCwxLTMuNzY2MS05LjExNzlaIi8+PC9zdmc+&#41;]&#40;https://quizlet.com/jack20220723&#41;)
+[Ubuntu Font Badge]: https://img.shields.io/badge/Ubuntu%20Font-E95420.svg?style=for-the-badge&logo=ubuntu&logoColor=white
+[Ubuntu Font URL]: https://design.ubuntu.com/font

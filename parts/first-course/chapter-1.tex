@@ -45,10 +45,10 @@ Reading the original paper requires the prerequisites of
 
 \subsubsection{Definition of Simultaneity}
 
-\begin{tcolorbox}[enhanced,colframe=green!75!black,colback=green!5!white, title=Definition of ``Simultaneity"]
+\begin{Definition}{Simultaneity}{def:simultaneity}
     If an event occurs at $(t, x, y, z)$, then all observers would see this event at $(t, x', y', z')$, where
     $x \ne x'$, $y \ne y'$, and $y \ne y'$
-\end{tcolorbox}
+\end{Definition}
 
 This definition is ideal but proves to be inefficient if we are going to look at a series of events happening one after
 another, according to Einstein, because light takes time to travel. But two clocks can \textit{synchronize} in the
@@ -71,7 +71,7 @@ Imagine a person holding a watch and manages to precisely record $t_A$ and $t'_A
 perfect confidence that any other person (or observer) at arbitrary location $B$ sees their event at time $t_B$, which
 can be calculated by Eq.\ref{eq:tb-by-ta}, where both $t_A$ and $t'_A$ can be read at that person's hand watch
 
-\begin{tcolorbox}[enhanced,colframe=green!75!black,colback=green!5!white, title=Definition of ``Synchronism"]
+\begin{Definition}{Synchronism}{def:synchronism}
     Suppose a ray of light leaves from $A$ toward $B$ at ``A-time" at $t_A$, is reflected from $B$ toward $A$ at
     ``B-time" $t_B$, and arrives back at $A$ at ``A-time" $t'_A$. The two clocks are \textit{synchronous} by defintion
     if
@@ -79,7 +79,7 @@ can be calculated by Eq.\ref{eq:tb-by-ta}, where both $t_A$ and $t'_A$ can be re
     \begin{equation}
         t_B - t_A = t'_A - t_B
     \end{equation}
-\end{tcolorbox}
+\end{Definition}
 
 If follows naturally that
 
@@ -102,6 +102,33 @@ and there is a BIG assumption: all clocks are at \textit{rest} in a system at \t
 
 With that, we have a pretty good mechanism to talk about series of events in a system happening at different time,
 because we know how to synchronize them \includegraphics[height=0.05\textwidth]{可莉-35.png}
+
+\subsubsection{Principles}
+
+\begin{tcbraster}[raster columns=2,enhanced,boxrule=0.4pt,
+title=My title,attach boxed title to top center]
+    \begin{tcolorbox}[boxed title size=title]
+        This is a \textbf{tcolorbox}.
+    \end{tcolorbox}
+    \begin{tcolorbox}[boxed title size=copy]
+        This is a \textbf{tcolorbox}.
+    \end{tcolorbox}
+\end{tcbraster}
+
+\begin{tcolorbox}[
+    enhanced,
+    title=My title,
+    colframe=green!50!black,
+    colback=green!10!white,
+    arc=1mm,
+    colbacktitle=red!10!white,
+    coltitle=green!50!black,
+    attach boxed title to top text left={yshift=-0.50mm},
+    boxed title style={skin=enhancedfirst jigsaw, size=small,arc=1mm,bottom=-1mm,
+    interior style={fill=none, top color=green!30!white, bottom color=green!20!white}}
+]
+    This is a \textbf{tcolorbox}.
+\end{tcolorbox}
 
 \section{Fundamental principles of special relativity theory (SR)}
 
@@ -240,7 +267,7 @@ where $\alpha^* \ne \beta^*$. And since $\boldsymbol{M}_{\alpha\beta} = \boldsym
     }]
 
     \[
-        \Delta\bar{s}^2 = \boldsymbol{M}_{00}\left(\Delta r\right)^2 + \boxed{2\left( \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta x^i \right)\Delta r} + \sum_{i = 1}^3\sum_{i = 1}^3 \boldsymbol{M}_{ij}\Delta x^i\Delta x^j
+        \Delta\bar{s}^2 = \boldsymbol{M}_{00}\left(\Delta r\right)^2 + \tcbhighmath{2\left( \sum_{i = 1}^3\boldsymbol{M}_{0i}\Delta x^i \right)\Delta r} + \sum_{i = 1}^3\sum_{i = 1}^3 \boldsymbol{M}_{ij}\Delta x^i\Delta x^j
     \]
 \end{tcolorbox}
 
