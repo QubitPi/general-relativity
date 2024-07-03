@@ -19,14 +19,14 @@ Documentation
 1. [Tex Live][LaTeX URL] (version ≥ 2021)
 2. [Ubuntu Font][Ubuntu Font URL]
 
-### Getting Study Notes Source Code
+### Getting Source Code
 
 ```console
-https://github.com/QubitPi/general-relativity.git
+git clone https://github.com/QubitPi/general-relativity.git
 cd general-relativity
 ```
 
-### Compiling the Notes
+### Compiling LaTeX
 
 ```console
 make
