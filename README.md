@@ -5,7 +5,9 @@
 [![Ubuntu Font Badge][Ubuntu Font Badge]][Ubuntu Font URL]
 [![Apache License Badge]][Apache License URL]
 
-![Error loading black-hole.png](./img/black-hole.png)
+<div align="center">
+    <img src="./img/black-hole.png" width="50%"/>
+</div>
 
 Documentation
 -------------
