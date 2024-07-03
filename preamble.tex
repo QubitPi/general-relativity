@@ -39,16 +39,17 @@
 \usepackage{varioref}
 \usepackage{cleveref}
 
-\NewTcbTheorem[crefname={definition}{definitions}]
+\definecolor{myblue}{RGB}{0,163,243}
+\NewTcbTheorem[auto counter, crefname={definition}{definitions}]
 {Definition}{Definition}{
     fonttitle=\bfseries\upshape,
     fontupper=\slshape,
     arc=0mm,
-    colback=blue!5!white,
-    colframe=blue!75!black
+    colback=myblue!20,
+    colframe=myblue
 }{def}
 
-\newtcbtheorem[]{mytheorem}{Theorem}%
+\newtcbtheorem[]{mytheorem}{Theorem}
 {theorem style=plain apart,label type=theorem,enhanced,frame hidden,
 boxrule=2mm,titlerule=0mm,toptitle=1mm,bottomtitle=1mm,
 fonttitle=\bfseries\large,fontupper=\normalsize,
