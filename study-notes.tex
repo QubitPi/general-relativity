@@ -1,16 +1,32 @@
 \input{preamble.tex}
+\input{toc.tex}
 
 \begin{document}
 
-    \part{
-        \href{https://trello.com/c/jzmmeXHp}{A First Course on General Relativity}
-        \\[\bigskipamount]
-        \large By studying General Relativity, I spotted my weakness of being too submerged in details and not being able to solve problems systematically and as a whole
-        \\[\bigskipamount]
-        \large \textit{A person being able to master GR has the best advantage in analyzing business and technical problems right, which is why I study GR and Physics in general (Sorry, Einstein)}
-    }
+    \begin{tcolorbox}[breakable,enhanced jigsaw,title={Contents},fonttitle=\bfseries\Large,
+    colback=yellow!10!white,colframe=red!50!black,before=\par\bigskip\noindent,
+    interior style={fill overzoom image=goldshade.png,fill image opacity=0.25},
+    colbacktitle=red!50!yellow!75!black,
+    enlargepage flexible=\baselineskip,pad at break*=3mm,
+    watermark color=yellow!75!red!25!white,
+    watermark text={\bfseries\Large Contents},
+    attach boxed title to top center={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2},
+    boxed title style={enhanced,boxrule=0.5mm,
+    frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west) -- (frame.north west)
+        -- (frame.north east) -- ([xshift=4mm]frame.east)
+        -- (frame.south east) -- (frame.south west) -- cycle; },
+    interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+        -- (interior.north west) -- (interior.north east)
+        -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+        -- cycle;}  },
+    drop fuzzy shadow]
+        \makeatletter
+        \@starttoc{toc}
+        \makeatother
+    \end{tcolorbox}
 
-    \chapter{Special Relativity}
+    \part{\href{https://trello.com/c/jzmmeXHp}{A First Course on General Relativity}}
+        \chapter{Special Relativity}
 
     \input{parts/first-course/chapter-1}
 \end{document}

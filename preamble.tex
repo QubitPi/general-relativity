@@ -39,7 +39,7 @@
 \usepackage{varioref}
 \usepackage{cleveref}
 
-\NewTcbTheorem[number within=subsection,crefname={definition}{definitions}]
+\NewTcbTheorem[crefname={definition}{definitions}]
 {Definition}{Definition}{
     fonttitle=\bfseries\upshape,
     fontupper=\slshape,
@@ -48,7 +48,7 @@
     colframe=blue!75!black
 }{def}
 
-\newtcbtheorem[number within=section]{mytheorem}{Theorem}%
+\newtcbtheorem[]{mytheorem}{Theorem}%
 {theorem style=plain apart,label type=theorem,enhanced,frame hidden,
 boxrule=2mm,titlerule=0mm,toptitle=1mm,bottomtitle=1mm,
 fonttitle=\bfseries\large,fontupper=\normalsize,

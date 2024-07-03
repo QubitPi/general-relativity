@@ -13,11 +13,8 @@ all:
 	$(REMOVE_AUXILIARY)
 	$(PUBLISH_NOTES)
 
-clean-all:
-	rm -rf *.aux *.log *.out *.bbl *.blg $(PROJECT).pdf
-
 clean:
-	rm -rf *.aux *.log *.out *.bbl *.blg
+	rm -rf *.aux *.log *.out *.bbl *.blg *.toc
 
 git-push:
 	git add study-notes.pdf

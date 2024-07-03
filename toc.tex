@@ -1,0 +1,65 @@
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+
+% definition of some personal colors
+\definecolor{myred}{RGB}{127,0,0}
+\definecolor{myyellow}{RGB}{169,121,69}
+
+% command for the circle for the number of part entries
+\newcommand\Circle[1]{\tikz[overlay,remember picture]
+    \node[draw,circle, text width=18pt,line width=1pt] {#1};}
+
+% patching of \tableofcontents to use sans serif font for the tile
+\patchcmd{\tableofcontents}{\contentsname}{\contentsname}{}{}
+% patching of \@part to typeset the part number inside a framed box in its own line
+% and to add color
+\makeatletter
+\patchcmd{\@part}
+{\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}}
+{\addtocontents{toc}{\protect\addvspace{20pt}}
+    \addcontentsline{toc}{part}{\huge{\protect\color{myyellow}%
+        \setlength\fboxrule{2pt}\protect\Circle{%
+            \hfil\thepart\hfil%
+        }%
+    }\\[2ex]\color{myred}#1}}{}{}
+
+%\patchcmd{\@part}
+%  {\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}}
+%  {\addtocontents{toc}{\protect\addvspace{20pt}}
+%    \addcontentsline{toc}{part}{\huge{\protect\color{myyellow}%
+%      \setlength\fboxrule{2pt}\protect\fbox{\protect\parbox[c][1em][c]{1.5em}{%
+%        \hfil\thepart\hfil%
+%      }}%
+%    }\\[2ex]\color{myred}#1}}{}{}
+\makeatother
+
+% this is the environment used to typeset the chapter entries in the ToC
+% it is a modification of the leftbar environment of the framed package
+\renewenvironment{leftbar}
+{\def\FrameCommand{\hspace{6em}%
+{\color{myyellow}\vrule width 2pt depth 6pt}\hspace{1em}}%
+    \MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
+}
+{\endMakeFramed}
+
+% using titletoc we redefine the ToC entries for parts, chapters, sections, and subsections
+\titlecontents{part}
+[0em]{\centering}
+{\contentslabel}
+{}{}
+\titlecontents{chapter}
+[0em]{\vspace*{2\baselineskip}}
+{\parbox{4.5em}{%
+    \hfill\Huge\bfseries\color{myred}\thecontentspage}%
+    \vspace*{-2.3\baselineskip}\leftbar\textsc{\small\chaptername~\thecontentslabel}\\}
+{}{\endleftbar}
+\titlecontents{section}
+[8.4em]
+{\contentslabel{3em}}{}{}
+{\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+\titlecontents{subsection}
+[8.4em]
+{\contentslabel{3em}}{}{}
+{\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
