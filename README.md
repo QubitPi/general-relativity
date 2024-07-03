@@ -14,8 +14,8 @@ Documentation
 
 ### Installing Required Packages
 
-1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
-2. Install [Ubuntu Font][Ubuntu Font URL]
+1. [Tex Live][LaTeX URL] (version ≥ 2021)
+2. [Ubuntu Font][Ubuntu Font URL]
 
 ### Getting Study Notes Source Code
 
