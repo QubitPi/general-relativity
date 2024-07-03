@@ -1,4 +1,4 @@
-Study Notes on [General Relativity]
+[Study Notes on General Relativity]
 ===================================
 
 [![LaTeX Badge][LaTeX Badge]][LaTeX URL]
@@ -26,7 +26,7 @@ cd general-relativity
 make
 ```
 
-You now have my love of Physics at [`./study-notes.pdf`](./study-notes.pdf)
+You now have my love of Physics located at [`./study-notes.pdf`](./study-notes.pdf)
 
 License
 -------
@@ -39,7 +39,7 @@ The use and distribution terms for this book are covered by the [Apache License,
     </a>
 </div>
 
-[General Relativity]: https://en.wikipedia.org/wiki/General_relativity
+[Study Notes on General Relativity]: http://relativity.qubitpi.org/study-notes.pdf
 
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License URL]: https://www.apache.org/licenses/LICENSE-2.0
