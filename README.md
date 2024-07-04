@@ -14,10 +14,10 @@
 To me, Physics is a simplified version of Philosophy of how world actually works. Astrophysics is my favorite branch of 
 Physics because
 
-1. it stands as an opposing side of my familiar Quantum Mechanics, which allows to think about lots of problems from a 
-   different perspective, and
-2. __those who masters GR or Physics in general has their best advantage to analyze Business or Technical problems in a
-   systematic, logical, and correct way__
+1. it stands as an opposing side of my familiar Quantum Mechanics, which allows me to think about lots of problems from 
+   a different perspective, and
+2. __those who masters GR or Physics in general has their best advantage to learn and analyze Business or Technical 
+   problems in a systematic, logical, and correct way__
 
 I, hereby, present my ongoing effort of
 [__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the "Math" behind our universe
