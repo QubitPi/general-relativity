@@ -1,7 +1,7 @@
 [Study Notes on General Relativity]
 ===================================
 
-[![LaTeX Badge][LaTeX Badge]][LaTeX URL]
+[![LaTeX Badge][LaTeX Badge]]
 [![Ubuntu Font Badge][Ubuntu Font Badge]][Ubuntu Font URL]
 [![Apache License Badge]][Apache License URL]
 
@@ -11,7 +11,17 @@
     </a>
 </div>
 
-To me, Physics is a simplified version of Philosophy of how world actually works. 
+To me, Physics is a simplified version of Philosophy of how world actually works. Astrophysics stands as my favorite
+branch of Physics because
+
+1. it stands as an opposing side of my familiar Quantum Mechanics, which gives me more chance to think about problems
+   from a different perspective, and
+2. __those who masters GR or Physics in general has their best advantage to analyze Business or Technical problems in a
+   systematic, logical, and correct way__
+
+I, hereby, present my ongoing effort of
+[Study Notes on General Theory of Relativity][Study Notes on General Relativity], the "Math" behind our universe in this 
+repository
 
 Documentation on How to Compile [The Notes][Study Notes on General Relativity]
 ------------------------------------------------------------------------------
