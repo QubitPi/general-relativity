@@ -11,7 +11,7 @@ Study Notes on General Relativity
     </a>
 </div>
 
-To me, Physics is a simplified version of Philosophy of how world actually works. Astrophysics is my favorite branch of 
+To me, Physics is a quantified version of Philosophy of how world actually works. Astrophysics is my favorite branch of 
 Physics because
 
 1. it stands as an opposing side of my familiar Quantum Mechanics, which allows me to think about lots of problems from 
