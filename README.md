@@ -17,7 +17,7 @@ Documentation
 ### Setup
 
 1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
-2. Install [Ubuntu Font][Ubuntu Font URL]; to install font.
+2. Download and install [Ubuntu Font][Ubuntu Font URL]. For how to install a new System font:
 
    - Linux users shall consult [this thread](https://askubuntu.com/a/191782)
    - Mac users can follow [this Apple support](https://support.apple.com/guide/font-book/install-and-validate-fonts-fntbk1000/mac)
