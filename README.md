@@ -11,8 +11,8 @@
     </a>
 </div>
 
-Documentation
--------------
+Documentation on How to Compile [The Notes][Study Notes on General Relativity]
+------------------------------------------------------------------------------
 
 ### Setup
 
