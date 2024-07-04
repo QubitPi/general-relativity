@@ -14,10 +14,11 @@
 Documentation
 -------------
 
-### Installing Required Packages
+### Setup
 
-1. [Tex Live][LaTeX URL] (version ≥ 2021)
-2. [Ubuntu Font][Ubuntu Font URL]
+1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
+2. Install [Ubuntu Font][Ubuntu Font URL]
+3. Make sure [GNU Make] is installed
 
 ### Getting Source Code
 
@@ -26,7 +27,7 @@ git clone https://github.com/QubitPi/general-relativity.git
 cd general-relativity
 ```
 
-### Compiling LaTeX
+### Compiling Notes
 
 ```console
 make
@@ -50,6 +51,8 @@ The use and distribution terms for this book are covered by the [Apache License,
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License URL]: https://www.apache.org/licenses/LICENSE-2.0
 [Apache License, Version 2.0]: http://www.apache.org/licenses/LICENSE-2.0.html
+
+[GNU Make]: https://trello.com/c/xv3Hso1O
 
 [LaTeX Badge]: https://img.shields.io/badge/LaTeX-TeX%20Live%E2%89%A52021-008080.svg?style=for-the-badge&logo=latex&logoColor=white
 [LaTeX URL]: https://tug.org/texlive/
