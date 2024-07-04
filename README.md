@@ -20,8 +20,7 @@ Physics because
    systematic, logical, and correct way__
 
 I, hereby, present my ongoing effort of
-[Study Notes on General Theory of Relativity][Study Notes on General Relativity], the "Math" behind our universe in this 
-repository
+[Study Notes on General Theory of Relativity][Study Notes on General Relativity], the "Math" behind our universe
 
 Documentation on How to Compile [The Notes][Study Notes on General Relativity]
 ------------------------------------------------------------------------------
