@@ -11,6 +11,8 @@
     </a>
 </div>
 
+To me, Physics is a simplified version of Philosophy of how world actually works. 
+
 Documentation on How to Compile [The Notes][Study Notes on General Relativity]
 ------------------------------------------------------------------------------
 
