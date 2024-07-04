@@ -1,5 +1,5 @@
-[Study Notes on General Relativity]
-===================================
+Study Notes on General Relativity
+=================================
 
 [![LaTeX Badge][LaTeX Badge]][LaTeX URL]
 [![Ubuntu Font Badge][Ubuntu Font Badge]][Ubuntu Font URL]
