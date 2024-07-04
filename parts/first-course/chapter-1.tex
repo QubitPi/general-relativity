@@ -76,7 +76,7 @@ can be calculated by Eq.\ref{eq:tb-by-ta}, where both $t_A$ and $t'_A$ can be re
     ``B-time" $t_B$, and arrives back at $A$ at ``A-time" $t'_A$. The two clocks are \textit{synchronous} by defintion
     if
 
-    \begin{equation}
+    \begin{equation}\label{eq:synchronism}
         t_B - t_A = t'_A - t_B
     \end{equation}
 \end{Definition}
@@ -94,7 +94,7 @@ The \textbf{speed of light as a universal constant in empty space is thus}:
 
 \begin{tcolorbox}[enhanced,colframe=green!75!black,colback=green!5!white]
     \begin{equation}
-        c = \frac{2\overline{AB}}{t'_A - t_A}
+        V = \frac{2\overline{AB}}{t'_A - t_A}
     \end{equation}
 \end{tcolorbox}
 
@@ -105,7 +105,7 @@ The \textbf{speed of light as a universal constant in empty space is thus}:
 With that, we have a pretty good mechanism to talk about series of events in a system happening at different time,
 because we know how to synchronize them \includegraphics[height=0.05\textwidth]{可莉-35.png}
 
-\subsubsection{\hfil \S2. On the relativity of lengths and times \hfil}
+\subsubsection{\hfil \S2. Something Stops Working\ldots \hfil}
 
 \begin{tcolorbox}[
     enhanced,
@@ -141,12 +141,92 @@ because we know how to synchronize them \includegraphics[height=0.05\textwidth]{
         interior style={fill=none, top color=green!30!white, bottom color=green!20!white}
     }
 ]
+    \phantomsection\hypertarget{constant-c-principle}
     Each ray of light moves in the coordinate system ``at rest" with the definite velocity $V$ independent of
     whether this ray of light is emitted by a body at rest or a body in motion
 \end{tcolorbox}
 
 2 principles above along with the Def.\ref{def:synchronism} shall present us an surprising result that a moving rod
 with a stationary length $l$ will be measured to have a length different from $l$
+
+Suppose the rod is moving in the x-direction at a constant speed $v$. Let the length of the moving rod, measured in the
+system at rest, be denoted as $r_{AB}$, where $A$ and $B$ are the two ends of the rod.
+
+If two clocks at $A$, $B$, and the clock at rest are all synchronized in accordance with Def.\ref{def:synchronism},
+then \textit{Eq.\ref{eq:synchronism} must hold}
+
+By \hyperlink{constant-c-principle}{the principle of the constant speed of light}, we can also safely say, without
+worrying about which end of the rod corresponds to $A$ or $B$, that
+
+\[
+    t_B - t_A = \frac{r_{AB}}{V - v}
+\]
+
+and
+
+\[
+    t'_A - t_B = \frac{r_{AB}}{V + v}
+\]
+
+\begin{tcolorbox}[
+    skin=enhancedlast jigsaw,interior hidden,
+    boxsep=0pt,top=0pt,colframe=red,coltitle=red!50!black,
+    attach boxed title to bottom center,
+    boxed title style={empty,boxrule=0.5mm},
+    varwidth boxed title=0.5\linewidth,
+    underlay boxed title={
+        \draw[white,line width=0.5mm]
+        ([xshift=0.3mm-\tcboxedtitleheight*2,yshift=0.3mm]title.north west)
+        --([xshift=-0.3mm+\tcboxedtitleheight*2,yshift=0.3mm]title.north east);
+        \path[draw=red,top color=white,bottom color=red!50!white,line width=0.5mm]
+        ([xshift=0.25mm-\tcboxedtitleheight*2,yshift=0.25mm]title.north west)
+        cos +(\tcboxedtitleheight,-\tcboxedtitleheight/2)
+        sin +(\tcboxedtitleheight,-\tcboxedtitleheight/2)
+        -- ([xshift=0.25mm,yshift=0.25mm]title.south west)
+        -- ([yshift=0.25mm]title.south east)
+        cos +(\tcboxedtitleheight,\tcboxedtitleheight/2)
+        sin +(\tcboxedtitleheight,\tcboxedtitleheight/2); },
+    title=we have a contradiction
+]
+    Clearly,
+
+    \begin{equation}\label{eq:unsynchronized-clocks}
+        \frac{r_{AB}}{V - v} \ne \frac{r_{AB}}{V + v}
+    \end{equation}
+
+    which means
+
+    \[
+        t_B - t_A \ne t'_A - t_B
+    \]
+
+    but we have stated previously that \textit{Eq.\ref{eq:synchronism} must hold}, which also means
+
+    \[
+        t_B - t_A = t'_A - t_B
+    \]
+
+    in this case
+\end{tcolorbox}
+
+The observers co-moving with $A$ and $B$, according to Eq.\ref{eq:unsynchronized-clocks}, would thus find that the two
+clocks \textbf{DO NOT} run synchronously while the observers in the system at rest syncing the two clocks using
+Def.\ref{def:synchronism} would declare they \textbf{DO} run synchronously
+
+\begin{tcolorbox}[
+    colback=green!5!white,
+    colframe=green!55!black,
+    title=How do we resolve the contradiction?
+]
+    \begin{center}
+        \textbf{There is No \textit{Absolute} Simultaneity}
+    \end{center}
+
+    Instead, two events that are simultaneous when observed from some particular coordinate system can no longer be
+    considered simultaneous when observed from a system that is moving relative to that system
+\end{tcolorbox}
+
+\subsubsection{\hfil \S3. Lorentz Transformation - Quantifying Non-Simultaneity \hfil}
 
 \section{Fundamental principles of special relativity theory (SR)}
 
