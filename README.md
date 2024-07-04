@@ -18,7 +18,25 @@ Documentation
 
 1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
 2. Install [Ubuntu Font][Ubuntu Font URL]
-3. Make sure [GNU Make] is installed
+3. Make sure [GNU Make] is installed with
+
+   ```console
+   make --version
+   ```
+   
+   which when installed outputs
+
+   ```console
+   GNU Make 3.81
+   Copyright (C) 2006  Free Software Foundation, Inc.
+   This is free software; see the source for copying conditions.
+   There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+   PARTICULAR PURPOSE.
+
+   This program built for i386-apple-darwin11.3.0
+   ```
+   
+   `make` should be installed in almost every Linux distribution and Mac user can install via `brew install make`
 
 ### Getting Source Code
 
