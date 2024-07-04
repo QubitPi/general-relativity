@@ -33,7 +33,7 @@ cd general-relativity
 make
 ```
 
-You now have my love of Physics located at [`./study-notes.pdf`](./study-notes.pdf)
+You now have my love of Physics located at [`./study-notes.pdf`][Study Notes on General Relativity]
 
 License
 -------
