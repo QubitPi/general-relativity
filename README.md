@@ -17,14 +17,18 @@ Documentation
 ### Setup
 
 1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
-2. Install [Ubuntu Font][Ubuntu Font URL]
+2. Install [Ubuntu Font][Ubuntu Font URL]; to install font.
+
+   - Linux users shall consult [this thread](https://askubuntu.com/a/191782)
+   - Mac users can follow [this Apple support](https://support.apple.com/guide/font-book/install-and-validate-fonts-fntbk1000/mac)
+
 3. Make sure [GNU Make] is installed with
 
    ```console
    make --version
    ```
    
-   which when installed outputs
+   which, when installed, outputs something like this
 
    ```console
    GNU Make 3.81
