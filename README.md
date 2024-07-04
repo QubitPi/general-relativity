@@ -14,8 +14,8 @@ Study Notes on General Relativity
 Physics is, as I view it, a quantified version of Philosophy of how world actually works. Astrophysics is my favorite
 branch of Physics because
 
-1. it stands as an opposing side of my familiar Quantum Mechanics and trains me to think about lots of problems from
-   different perspectives, and
+1. it stands as an opposing side of my familiar Quantum Mechanics and trains me the skill of thinking about lots of
+   problems from different perspectives, and
 2. __those who masters GR or Physics in general has their best advantage to learn and analyze Business or Technical 
    problems in a systematic, logical, and correct way__
 
