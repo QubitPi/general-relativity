@@ -11,13 +11,13 @@ Study Notes on General Relativity
     </a>
 </div>
 
-Physics is, as I view it, a quantified version of Philosophy of how world actually works. Astrophysics is my favorite
+Physics is, as I view it, a quantified version of Philosophy on how world actually works. Astrophysics is my favorite
 branch of Physics because
 
 1. it stands as an opposing side of my familiar Quantum Mechanics and trains me the skill of thinking about lots of
    problems from different perspectives, and
-2. __those who masters GR or Physics in general has their best advantage to learn and analyze Business or Technical 
-   problems in a systematic, logical, and correct way__
+2. __those who masters General Relativity or Physics in general has their best advantage to learn and analyze Business
+   or Technical problems in a systematic, logical, and correct way__
 
 I, hereby, present my ongoing effort of
 [__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the "Math" behind our universe
