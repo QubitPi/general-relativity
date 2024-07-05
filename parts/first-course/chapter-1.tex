@@ -231,6 +231,112 @@ Def.\ref{def:synchronism} would declare they \textbf{DO} run synchronously
 
 \subsubsection{\hfil \S3. Lorentz Transformation - Quantifying Non-Simultaneity \hfil}
 
+Let's formulate the problem we see at the end of the previous section:
+
+For every event at $(x, y, z, t)$ in a system $K$ at rest, there corresponds to an event $(\xi, \eta, \zeta, \tau)$ in
+a system $k$ moving in the x-direction relative to $K$ that fixes the deviation from that event from K
+
+This section derives the relation of $(\xi, \eta, \zeta, \tau)$ = $f(x, y, z, t)$
+
+In this setup, after some time $t$, a point $x$ in $K$ shall become the point $x'$ in $k$ where
+
+\[
+    x' = x - vt
+\]
+
+Let's suppose that at time $\tau_0$ a light ray is sent from the origin of the system $k$ along the x-axis to $x'$ and
+is reflected from there at time $\tau_1$ toward the origin, where it arrives at time $\tau_2$; we then must have
+
+\[
+    \tau_2 - \tau_1 = \tau_1 - \tau_0
+\]
+
+\begin{equation} \label{eq:tau_012}
+    \frac{1}{2}(\tau_0 + \tau_2) = \tau_1
+\end{equation}
+
+Since it is also true that $\tau_2 = \tau_0 + \frac{x'}{V - v} + \frac{x'}{V + v}$, by writing out the parameters of
+$\tau$ in Eq.\ref{eq:tau_012}, we have the following general equation of
+
+\begin{equation}
+    \frac{1}{2}\left[ \tau(0, 0, 0, t) + \tau\left( 0, 0, 0, \tau_0 + \frac{x'}{V - v} + \frac{x'}{V + v} \right) \right] = \tau\left( x', 0, 0, t + \frac{x'}{V -v} \right)
+\end{equation}
+
+Taking the derivative of $\tau$ with respect to $x'$ and applying the Chain Rule of
+
+\[
+    \frac{\partial\tau}{\partial x'} = \frac{\partial\tau}{\partial t}\frac{\partial t}{\partial x'}
+\]
+
+give us
+
+\begin{equation}
+    \frac{1}{2}\frac{\partial\tau}{\partial t}\left[ \frac{1}{V - v} + \frac{1}{V + v} \right] = \frac{\partial\tau}{\partial x'} + \left( \frac{1}{V - v} \right)\frac{\partial\tau}{\partial t}
+\end{equation}
+
+which simplifies down to
+
+\begin{equation}\label{eq:tau_t_general}
+    \tcbhighmath[
+        enhanced,colframe=red,colback=white,arc=0pt,boxrule=1pt,
+        fuzzy halo=1mm with blue!50!white,
+        arc=2pt,
+        boxrule=0pt,
+        frame hidden
+    ]{
+        \frac{\partial\tau}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial\tau}{\partial t} = 0
+    }
+\end{equation}
+
+It should be noted that $\mathscr{L} = \frac{\partial}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial}{\partial t}$
+is a Linear operator
+\footnote{See \href{https://trello.com/c/5L46ePJQ}{Partial Differential Equations}, Strauss, page 2 for definition of \textit{Linearity}}
+because
+
+\begin{align}
+    \mathscr{L}(\tau_1 + \tau_2) &= \frac{\partial(\tau_1 + \tau_2)}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial(\tau_1 + \tau_2)}{\partial t} \\
+    &= \frac{\partial\tau_1}{\partial x'} + \frac{\partial\tau_2}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial\tau_1}{\partial t} + \frac{v}{V^2 - v^2}\frac{\partial\tau_2}{\partial t} \\
+    & = \mathscr{L}(\tau_1) + \mathscr{L}(\tau_2)
+\end{align}
+
+and
+
+\begin{equation}
+    \mathscr{L}(c\tau) = \frac{\partial c\tau}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial c\tau}{\partial t} = c\left( \frac{\partial\tau}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial\tau}{\partial t} \right) = c\mathscr{L}(\tau)
+\end{equation}
+
+Therefore Eq.\ref{eq:tau_t_general} has a solution of the form\footnote{See \href{https://trello.com/c/5L46ePJQ}{Partial Differential Equations}, Strauss, page 6}
+
+\begin{equation}
+    \tau = f\left( \frac{v}{V^2 - v^2} x - t \right)
+\end{equation}
+
+We shall declare that
+
+\begin{equation}
+    \underbrace{f\left( \frac{v}{V^2 - v^2} x - t \right)}_{Mathematics} = \underbrace{\varphi(v)\left( \frac{v}{V^2 - v^2} x - t \right)}_{Physics}
+\end{equation}
+
+which assumes taht transformation between $\tau$ and $t$ must be \textit{linear} which can be inferred by the
+following fundamental postulate:
+
+\begin{tcolorbox}[
+    enhanced,frame hidden,boxrule=0pt,interior style={top color=green!10!white,
+    bottom color=green!10!white,middle color=green!50!yellow},
+    fuzzy halo=1pt with green
+]
+    \begin{center}
+        \textbf{Space and time are homogeneous}\footnote{\textit{What proof do we have that the universe is
+        homogenous?} In physics we can't prove something like this. It must be a postulate - something we take as a
+        fundamental assumption on which to base our theories. If the assumption is wrong then eventually we will find
+        experimental evidence of this. What we can say is that currently there is no evidence for any lack of
+        homegeneity or isotropy in the universe.}
+    \end{center}
+\end{tcolorbox}
+
+The postulate leaves with us the last question: \textit{How does homogeneity lead to linearity of Lorentz
+transformation?}
+
 \section{Fundamental principles of special relativity theory (SR)}
 
 \subsection{On ``Principle of relativity (Galileo)"}
