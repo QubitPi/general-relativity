@@ -147,26 +147,98 @@ because we know how to synchronize them \includegraphics[height=0.05\textwidth]{
 \end{tcolorbox}
 
 2 principles above along with the Def.\ref{def:synchronism} shall present us an surprising result that a moving rod
-with a stationary length $l$ will be measured to have a length different from $l$
+with a stationary length $r_{AB}$ will be measured to have a length different from $r_{AB}$, where both two lengths
+are measured by a stationary observer in a system ``at rest"
 
-Suppose the rod is moving in the x-direction at a constant speed $v$. Let the length of the moving rod, measured in the
-system at rest, be denoted as $r_{AB}$, where $A$ and $B$ are the two ends of the rod.
+\begin{tcolorbox}[
+    breakable,
+    parbox=false,
+    skin=bicolor,
+    sidebyside,
+    boxrule=0pt,
+    frame style={
+        top color=blue!50!white
+    },
+    colback=red!5!white,
+    colbacklower=green!5!white,
+    title={Suppose the rod is moving in the x-direction at a constant speed $v$. Let the length of the moving rod, measured in the system at rest, be denoted as $r_{AB}$, where $A$ and $B$ are the two ends of the rod.}
+]
+    \begin{center}
+        \textbf{Classically}
+    \end{center}
+
+    The observer measures the stationary rod to have a length of $t_B - t_A = t'_A - t_B = \frac{l}{V}$, where $V$ is
+    the speed of light and $t_B, t_A, t'_A, t_B$ are all drawn from Def.\ref{def:synchronism}.
+
+    The observer then measures the moving rod. The light travels, due to
+    \href{https://en.wikipedia.org/wiki/Inertia}{Classical Intertia}, at a speed of $ \color{red} v + V$, relative to
+    the observer. They see the light reaches the other end of the rod at $\Delta t = t_B - t_A$. The light ends up
+    travelling a distance of $(v + V)\Delta t$; this distance must also equal to the sum of the \textit{stationary rod
+    length} plus the \textit{extra distance that the rod travels}:
+
+    \begin{equation}
+        (v + V)\Delta t = r_{AB} + v\Delta t
+    \end{equation}
+
+    Thus
+
+    \begin{equation}
+        t_B - t_A = \frac{r_{AB}}{V}
+    \end{equation}
+
+    When the light reflects back:
+
+    \begin{equation}
+        (V - v)\Delta t = v\Delta t - r_{AB}
+    \end{equation}
+
+    \begin{equation}
+        t'_A - t_B = \frac{r_{AB}}{V}
+    \end{equation}
+
+    Therefore, classically, a moving rod with a stationary length $r_{AB}$ is still measured the same length.
+
+    \tcblower
+
+    \begin{center}
+        \textbf{Relativistically}
+    \end{center}
+
+    The observer measures the stationary rod to have a length of $t_B - t_A = t'_A - t_B = \frac{l}{V}$, where $V$ is
+    the speed of light and $t_B, t_A, t'_A, t_B$ are all drawn from Def.\ref{def:synchronism}.
+
+    The observer then measures the moving rod. The light travels, by
+    \hyperlink{constant-c-principle}{the Principle of the Constant Speed of Light}, at a speed of $ \color{green} V$,
+    relative to the observer. They see the light reaches the other end of the rod at $\Delta t = t_B - t_A$. The
+    light ends up travelling a distance of $V\Delta t$; this distance must also equal to the sum of the
+    \textit{stationary rod length} plus the \textit{extra distance that the rod travels}:
+
+    \begin{equation}
+        V\Delta t = r_{AB} + v\Delta t
+    \end{equation}
+
+    Thus
+
+    \begin{equation}\label{eq:forward-relativistic-propagation}
+        t_B - t_A = \frac{r_{AB}}{V - v}
+    \end{equation}
+
+    When the light reflects back:
+
+    \begin{equation}
+        V\Delta t = v\Delta t - r_{AB}
+    \end{equation}
+
+    \begin{equation}
+        t'_A - t_B = \frac{r_{AB}}{V + v}
+    \end{equation}
+
+    Therefore, relativistically, a moving rod with a stationary length $r_{AB}$ is measured to be shorter.
+
+\end{tcolorbox}
 
 If two clocks at $A$, $B$, and the clock at rest are all synchronized in accordance with Def.\ref{def:synchronism},
 then \textit{Eq.\ref{eq:synchronism} must hold}
-
-By \hyperlink{constant-c-principle}{the principle of the constant speed of light}, we can also safely say, without
-worrying about which end of the rod corresponds to $A$ or $B$, that
-
-\[
-    t_B - t_A = \frac{r_{AB}}{V - v}
-\]
-
-and
-
-\[
-    t'_A - t_B = \frac{r_{AB}}{V + v}
-\]
 
 \begin{tcolorbox}[
     enhanced,
@@ -241,7 +313,7 @@ This section derives the relation of $(\xi, \eta, \zeta, \tau)$ = $f(x, y, z, t)
 In this setup, after some time $t$, a point $x$ in $K$ shall become the point $x'$ in $k$ where
 
 \[
-    x' = x - vt
+    x' = x + vt
 \]
 
 Let's suppose that at time $\tau_0$ a light ray is sent from the origin of the system $k$ along the x-axis to $x'$ and
@@ -313,12 +385,12 @@ Therefore Eq.\ref{eq:tau_t_general} has a solution of the form\footnote{See \hre
 
 We shall declare that
 
-\begin{equation}
-    \underbrace{f\left( \frac{v}{V^2 - v^2} x - t \right)}_{Mathematics} = \underbrace{\varphi(v)\left( \frac{v}{V^2 - v^2} x - t \right)}_{Physics}
+\begin{equation}\label{eq:transformation}
+    \tau = \underbrace{f\left( \frac{v}{V^2 - v^2} x - t \right)}_{Mathematics} = \underbrace{\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right)}_{Physics}
 \end{equation}
 
 which assumes that transformation between $\tau$ and $t$ must be \textit{linear} which can be inferred by the
-following fundamental postulate:
+following fundamental postulate\footnote{In a\href{https://download.wpsoftware.net/causality-lorentz-group-zeeman.pdf}{1964 paper}, Erik Christopher Zeeman showed that the Lorentz transformation can be proven by applying the homogeneity principle to equations that represent the corresponding quantities at rest. This shows that the Lorentz transformation must be linear in both space and time coordinates}:
 
 \begin{tcolorbox}[
     enhanced,frame hidden,boxrule=0pt,interior style={top color=green!10!white,
@@ -334,8 +406,91 @@ following fundamental postulate:
     \end{center}
 \end{tcolorbox}
 
-The postulate leaves with us the last question: \textit{How does homogeneity lead to linearity of Lorentz
-transformation?}
+With Eq.\ref{eq:transformation}, we shall deduct the first 3 positional transformations in $(\xi, \eta, \zeta, \tau)$.
+For a light ray emitted at time $\tau = 0$ in the direction of increasing $\xi$, we have
+
+\begin{equation}
+    \xi = V\tau = V\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right)
+\end{equation}
+
+which, combined with Eq.\ref{eq:forward-relativistic-propagation}, gives
+
+\begin{equation}\label{eq:x-transformation}
+    \xi = \varphi(v)\left( \frac{V^2}{V^2 - v^2} \right) x
+\end{equation}
+
+Analogously, by considering light rays moving along the two other moving axes:
+
+\begin{equation}\label{eq:y-transformation}
+    \left\{
+    \begin{array}{l}
+        \eta = V\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right) \\
+        y^2 + (vt)^2 = (Vt)^2 \\
+        x = 0
+    \end{array}
+    \right.
+    \Rightarrow
+    \eta = \varphi(v)\frac{V}{\sqrt{V^2 - v^2}}y
+\end{equation}
+
+\begin{equation}\label{eq:z-transformation}
+    \left\{
+    \begin{array}{l}
+        \zeta = V\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right) \\
+        z^2 + (vt)^2 = (Vt)^2 \\
+        x = 0
+    \end{array}
+    \right.
+    \Rightarrow
+    \zeta = \varphi(v)\frac{V}{\sqrt{V^2 - v^2}}z
+\end{equation}
+
+Note that Eq.\ref{eq:x-transformation}, \ref{eq:y-transformation}, and \ref{eq:z-transformation} are based on the
+assumption that $k$ starts out at the same point of $K$'s origin
+
+It does not lose generality to say if $k$ is moving relative to $K$ at speed $v$ then $K$ is moving relative to $k$ at
+speed $-v$. Directly measuring coordinates in $K$ is effectively the same thing as transforming $(x, y, z, t)$ in $K$
+to $(\xi, \eta, \zeta, \tau)$ and then back to $(x, y, z, t)$ so we have along the x-axis:
+
+\begin{equation}
+    x = \varphi(-v)\left( \frac{V^2}{V^2 - v^2} \right) \varphi(v)\left( \frac{V^2}{V^2 - v^2} \right) x = \varphi(v)\varphi(-v)\left( \frac{V^2}{V^2 - v^2} \right)^2 x
+\end{equation}
+
+where $v$ is the speed of $K$ relative to $K$, which is clearly 0. Therefore
+
+\begin{equation}
+    x = \varphi(v)\varphi(-v)\left( \frac{V^2}{V^2 - 0^2} \right)^2 x = \varphi(v)\varphi(-v) x
+\end{equation}
+
+which leads to the identity transformation of
+
+\begin{equation}\label{eq:trans-coef-prod-1}
+    \varphi(v)\varphi(-v) = 1
+\end{equation}
+
+Let's place a rod of length $l$ at the origin of $k$ perpendicular to $\xi$-axis. If $k$ is moving to the x-direction
+relative to $K$ at speed $v$, the measurement of the rod length, which we denote $y_1$, in $K$ satisfy
+
+\begin{equation}
+    l = \varphi(v)\frac{V}{\sqrt{V^2 - v^2}}y_1
+\end{equation}
+
+By symmetry
+
+\begin{equation}
+    l = \varphi(-v)\frac{V}{\sqrt{V^2 - v^2}}y_1
+\end{equation}
+
+\begin{equation}\label{eq:trans-coef-equal}
+    \varphi(v) = \varphi(-v)
+\end{equation}
+
+Combining \ref{eq:trans-coef-equal} and \ref{eq:trans-coef-prod-1} leads to
+
+\begin{equation}
+    \varphi(v) = 1
+\end{equation}
+
 
 \section{Fundamental principles of special relativity theory (SR)}
 
