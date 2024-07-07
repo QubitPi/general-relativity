@@ -228,13 +228,17 @@ are measured by a stationary observer in a system ``at rest"
         V\Delta t = v\Delta t - r_{AB}
     \end{equation}
 
-    \begin{equation}
+    \begin{equation}\label{eq:backward-relativistic-propagation}
         t'_A - t_B = \frac{r_{AB}}{V + v}
     \end{equation}
 
     Therefore, relativistically, a moving rod with a stationary length $r_{AB}$ is measured to be shorter.
 
 \end{tcolorbox}
+
+Note that neither Eq.\ref{eq:forward-relativistic-propagation} nor Eq.\ref{eq:backward-relativistic-propagation} is
+related to the $\text{time} = \frac{\text{distance}}{\text{speed}}$. \href{https://qr.ae/psQeNd}{The numerators of
+both equations are NOT the distance traveled and the denominator is not the speed of the travel}
 
 \begin{tcolorbox}[
     enhanced,
@@ -695,8 +699,55 @@ Assuming $\Delta \bar{s}^2 = \Delta s^2 = 0$, we have $\Delta t = \pm\Delta x$; 
 
 \begin{mytheorem}{}{}
     Let $n, p \ge 1$ be integers, $d := n + p$ and $V$ a vector space over $\mathbb{R}$ of dimension $d$. Let $h$ be
-    an indefinite-inner product\footnote{Start with page 447 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th Edition} for everything you need to know about indefinite-inner product} on $V$ with signature type $(n, p)$\footnote{Read Ch. 6 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th Edition} and then \href{https://mathworld.wolfram.com/MatrixSignature.html}{Matrix Signature}}. Suppose $g$ is a symmetric bilinear form on $V$
+    an indefinite-inner product\footnote{It's essentially a function which is the product of other two functions. For it's Mathematics, start with page 447 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th Edition} for everything you need to know about indefinite-inner product.} on $V$ with signature type $(n, p)$\footnote{Read Ch. 6 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th Edition} and then \href{https://mathworld.wolfram.com/MatrixSignature.html}{Matrix Signature}}. Suppose $g$ is a symmetric bilinear form on $V$
     such that the null set of the associated quadratic form of $h$ is contained in that of $g$ (i.e. suppose that for
     every $v \in V$, if $h(v, v) = 0$ then $g(v, v) = 0$). Then, there exists a constant $C \in \mathbb{R}$ such that
     $g = Ch$. Futhermore, if we assume $n \ne p$ and that $g$ also has signature type $(n, p)$, then we have $C > 0$
 \end{mytheorem}
+
+\begin{Definition}{Vector Space}{vector-space}
+    The space $\mathbb{R}^n$ consists of all column vectors $\boldsymbol{v}$ with $n$ components\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 120}
+\end{Definition}
+
+\begin{Definition}{Linear Transformation}{linear-transformation}
+    The transformation is \textbf{linear} if it meets these requirements for all $\boldsymbol{v}$ and $\boldsymbol{w}$\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 375}:
+
+    \begin{equation}
+        T(c\boldsymbol{v} + d\boldsymbol{w}) = cT(\boldsymbol{v}) + dT(\boldsymbol{w})
+    \end{equation}
+
+    for all $c$ and $d$
+\end{Definition}
+
+\begin{Definition}{Field}{field}
+    A field is a set of elements in which a pair of operations called multiplication and addition is defined analogous
+    to the operations of multiplication and addition in the real number system (which is itself an example of a
+    field)\footnote{\href{https://projecteuclid.org/ebooks/notre-dame-mathematical-lectures/Chapter-I-Linear-Algebra/chapter/Chapter-I-Linear-Algebra/ndml/1175197044}{A. Fields, Chapter I: Linear Algebra}, Galois Theory: Lectures Delivered at the University of Notre Dame, Project Euclid}
+\end{Definition}
+
+In each field F there exist unique elements called $0$ and $1$ which, under the operations of addition and
+multiplication, behave with respect to all the other elements of F exactly as their correspondents in the real number
+system. The analogy is, however, not complete:
+
+\begin{itemize}
+    \item Multiplication is not assumed to be commutative in every field, and
+    \item a field may have only a finite number of elements
+\end{itemize}
+
+If multiplication in the field is commutative, then the field is called a \textbf{commutative field}.
+
+How does ``Field" connect to ``Linear Algebra"?
+
+\begin{itemize}
+    \item It gives a more quantitative definition of Vector Space than Def.\ref{def:vector-space} does:
+          \begin{Definition}{Vector Space (Field Theory)}{vector-space-field}
+              If V is an additive abelian group\footnote{\href{https://en.wikipedia.org/wiki/Group\_\%28mathematics\%29\#Definition}{Definition on Group}} with elements $A, B, \ldots$, F a field with elements $a, b, \dots$, and if for each $a \in F$ and $A \in V$ the product $aA$ denotes element of V, then V is called a \textbf{(left) vector space over F} if the following assumptions hold:
+
+              \begin{align}
+                  a(A + B) &= aA + aB \\
+                  (a + b)A &= aA + bA \\
+                  a(bA) &= (ab)A \\
+                  1A &= A \\
+              \end{align}
+          \end{Definition}
+\end{itemize}
