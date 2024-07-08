@@ -673,7 +673,9 @@ where $\alpha^* \ne \beta^*$. And since $\boldsymbol{M}_{\alpha\beta} = \boldsym
     \end{align}
 
     We won't be able to go further unless with some assumed relationships between $\Delta x_1^i$ and $\Delta x_2^i$.
-    But since \hyperlink{wrong-postulate}{we do not assume any relations between them}, let's step back and re-think about this problem then and forget about $\Delta x_1^i$ and $\Delta x_2^i$.
+    But since \hyperlink{wrong-postulate}{we do not assume any relations between them}\ldots \includegraphics[width=0.1\textwidth]{纳西妲-22.png}
+
+    \ldots let's step back and re-think about this problem then and forget about $\Delta x_1^i$ and $\Delta x_2^i$.
 
     We go through all these for the proof of invariance of the interval. This is to work out a relation between $\Delta s^2$ and $\Delta \bar{s}^2$. The \roundinlinebox[red]{detail} is about $\Delta x_1^i$ and $\Delta x_2^i$ but the \roundinlinebox[green]{goal} is to derive some form of
 
@@ -705,49 +707,72 @@ Assuming $\Delta \bar{s}^2 = \Delta s^2 = 0$, we have $\Delta t = \pm\Delta x$; 
     $g = Ch$. Futhermore, if we assume $n \ne p$ and that $g$ also has signature type $(n, p)$, then we have $C > 0$
 \end{mytheorem}
 
-\begin{Definition}{Vector Space}{vector-space}
-    The space $\mathbb{R}^n$ consists of all column vectors $\boldsymbol{v}$ with $n$ components\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 120}
-\end{Definition}
+\begin{Definition}{Bilinear Form}{bilinear-form}
+    Let $F$ be a field and $V$ a vector space over $F$. A \textit{bilinear form} on $V$ is a function
+    $B: V \times V \rightarrow F$ that is linear in each variable when the other one is fixed. That is
 
-\begin{Definition}{Linear Transformation}{linear-transformation}
-    The transformation is \textbf{linear} if it meets these requirements for all $\boldsymbol{v}$ and $\boldsymbol{w}$\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 375}:
+    \begin{align}
+        B(v + v', w) &= B(v, w) + B(v', w) \\
+        B(cv, w)     &= cB(v, w)
+    \end{align}
+
+    for all $v, v', w \in V$ and $c \in F$, and
+
+    \begin{align}
+        B(v, w + w') &= B(v, w) + B(v, w') \\
+        B(v, cw)     &= cB(v, w)
+    \end{align}
+
+    for all $v, v, w' \in V$ and $c \in F$
+
+    We call $B$ \textit{symmetric} when
 
     \begin{equation}
-        T(c\boldsymbol{v} + d\boldsymbol{w}) = cT(\boldsymbol{v}) + dT(\boldsymbol{w})
+        B(v, w) = B(w, v)
     \end{equation}
 
-    for all $c$ and $d$
+    for all $v, w \in V$
+
+    \begin{Definition}{Field}{field}
+        A field is a set of elements in which a pair of operations called multiplication and addition is defined analogous
+        to the operations of multiplication and addition in the real number system (which is itself an example of a
+        field)\footnote{\href{https://projecteuclid.org/ebooks/notre-dame-mathematical-lectures/Chapter-I-Linear-Algebra/chapter/Chapter-I-Linear-Algebra/ndml/1175197044}{A. Fields, Chapter I: Linear Algebra}, Galois Theory: Lectures Delivered at the University of Notre Dame, Project Euclid}
+    \end{Definition}
+
+    \begin{Definition}{Group}{group}
+        \href{https://www.maths.gla.ac.uk/~mwemyss/teaching/3alg1-7.pdf}{A group} is a non-empty set $G$ together with a rule that assigns to each pair $g$ and $h$ of
+        elements of $G$ and element $g * h$ such that
+        \begin{itemize}
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png}  $g * h \in G$, which we say $G$ is \textbf{closed} under $*$
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} $g * (h * k) = (g * h) * k$ for all $g, h, k \in G$, which we call $*$ being
+            \textbf{associative}
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} There exists an \textbf{identity} element $e \in G$ such that $e * g = g * e$ for all
+            $g \in G$
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} Every element $g \in G$ has an \textbf{inverse} $g^{-1}$ such that
+            $g * g^{-1} = g^{-1} * g = e$
+        \end{itemize}
+    \end{Definition}
+
+    \begin{Definition}{Vector Space (Field Theory)}{vector-space-field}
+        If V is an additive abelian group with elements $A, B, \ldots$, $F$ a field with elements $a, b, \dots$, and if for each $a \in F$ and
+        $A \in V$ the product $aA$ denotes element of V, then V is called a \textbf{(left) vector space over F}
+        if the following assumptions hold:
+
+        \begin{align}
+            a(A + B) &= aA + aB \\
+            (a + b)A &= aA + bA \\
+            a(bA) &= (ab)A \\
+            1A &= A \\
+        \end{align}
+    \end{Definition}
+
+    \begin{Definition}{Linear Transformation}{linear-transformation}
+        The transformation is \textbf{linear} if it meets these requirements for all $\boldsymbol{v}$ and $\boldsymbol{w}$\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 375}:
+
+        \begin{equation}
+            T(c\boldsymbol{v} + d\boldsymbol{w}) = cT(\boldsymbol{v}) + dT(\boldsymbol{w})
+        \end{equation}
+
+        for all $c$ and $d$
+    \end{Definition}
 \end{Definition}
-
-\begin{Definition}{Field}{field}
-    A field is a set of elements in which a pair of operations called multiplication and addition is defined analogous
-    to the operations of multiplication and addition in the real number system (which is itself an example of a
-    field)\footnote{\href{https://projecteuclid.org/ebooks/notre-dame-mathematical-lectures/Chapter-I-Linear-Algebra/chapter/Chapter-I-Linear-Algebra/ndml/1175197044}{A. Fields, Chapter I: Linear Algebra}, Galois Theory: Lectures Delivered at the University of Notre Dame, Project Euclid}
-\end{Definition}
-
-In each field F there exist unique elements called $0$ and $1$ which, under the operations of addition and
-multiplication, behave with respect to all the other elements of F exactly as their correspondents in the real number
-system. The analogy is, however, not complete:
-
-\begin{itemize}
-    \item Multiplication is not assumed to be commutative in every field, and
-    \item a field may have only a finite number of elements
-\end{itemize}
-
-If multiplication in the field is commutative, then the field is called a \textbf{commutative field}.
-
-How does ``Field" connect to ``Linear Algebra"?
-
-\begin{itemize}
-    \item It gives a more quantitative definition of Vector Space than Def.\ref{def:vector-space} does:
-          \begin{Definition}{Vector Space (Field Theory)}{vector-space-field}
-              If V is an additive abelian group\footnote{\href{https://en.wikipedia.org/wiki/Group\_\%28mathematics\%29\#Definition}{Definition on Group}} with elements $A, B, \ldots$, F a field with elements $a, b, \dots$, and if for each $a \in F$ and $A \in V$ the product $aA$ denotes element of V, then V is called a \textbf{(left) vector space over F} if the following assumptions hold:
-
-              \begin{align}
-                  a(A + B) &= aA + aB \\
-                  (a + b)A &= aA + bA \\
-                  a(bA) &= (ab)A \\
-                  1A &= A \\
-              \end{align}
-          \end{Definition}
-\end{itemize}

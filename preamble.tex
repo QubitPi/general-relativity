@@ -45,6 +45,8 @@
 \definecolor{myblue}{RGB}{0,163,243}
 \NewTcbTheorem[auto counter, crefname={definition}{definitions}]
 {Definition}{Definition}{
+    breakable,
+    parbox=false,
     fonttitle=\bfseries\upshape,
     fontupper=\slshape,
     arc=0mm,
@@ -90,6 +92,7 @@ drop fuzzy shadow,#1}
 \usepackage{parskip}
 
 \setlength{\parindent}{0pt}
+\renewcommand{\labelitemi}{\includegraphics[width=0.05\textwidth]{嘟嘟可.png}}
 
 % Text highlighting
 \usepackage{soul}
