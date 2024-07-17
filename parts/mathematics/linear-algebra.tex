@@ -1,0 +1,159 @@
+\section{Metric Spaces}
+
+The materials of this section refers largely to \href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}
+
+\begin{Definition}{Linear Space}{linear-space}
+    Let $L$ be a non-empty set, and assume that each pair of elements $x$ and $y$ in $L$ can be combined by a process
+    called \textbf{addition} to yield an element $z$ in $L$ denoted by $z = x + y$. Assume also that this operation of
+    addition satisfies the following conditions:
+
+    \begin{itemize}
+        \item $x + y = y + x$
+        \item $x + (y + z) = (x + y) + z$
+        \item There exists in $L$ a unique element, denoted by $0$ and called the \textbf{zero element}, or the origin,
+              such that $x + 0 = x$ for every $x$
+        \item To each element $x$ in $L$ there corresponds a unique element in $L$, denoted by $-x$ and called the
+              negative of $x$, such that $x + (-x) = 0$.
+    \end{itemize}
+
+    We adopt the device of referring to the system of real numbers or to the system of complex numbers as the
+    \textbf{scalers}. We now assume that each scalar $\alpha$ and each element $x$ in $L$ can be combined by a process
+    called \textbf{scalar multiplication} to yield an element $y$ in $L$ denoted by $y = \alpha x$ in such a way that
+
+    \begin{itemize}
+        \item $\alpha(x + y) = \alpha x + \alpha y$
+        \item $(\alpha + \beta)x = \alpha x + \beta x$
+        \item $(\alpha\beta)x = \alpha(\beta x)$
+        \item $1 \cdot x = x$
+    \end{itemize}
+
+    The albegraic system $L$ defined by these operations and axioms is called a \textbf{linear space}
+\end{Definition}
+
+Depending on the numbers admitted as scalars (only the real numbers, or all the complex numbers), we distinguish when
+necessary between \textit{real linear spaces} and \textit{complex linear spaces}. A linear space is often called a
+\hypertarget{vector-space}{vector space} and its elements are spoken of as \textit{vectors}.
+
+\section{Vector Spaces and Subspaces}
+
+\begin{Definition}{Vector Space}{vector-space}
+    \phantomsection\hypertarget{vector-space}
+    The space $\mathbb{R}^n$ consists of all column vectors $\boldsymbol{v}$ with $n$ components\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 120}
+\end{Definition}
+
+The components of $\boldsymbol{v}$ are real numbers, which is the reason for the letter $\mathbb{R}$. A vector whose $n$
+components are complex numbers lies in the space $\mathbb{C}^n$
+
+\begin{Definition}{Subspace}{subspace}
+    A \textbf{subspace}\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 122}
+    of a \hyperlink{vector-space}{vector space} is a set of vectors (including $\boldsymbol{0}$) that satisfies 2
+    requirements: If $\boldsymbol{v}$ and $\boldsymbol{w}$ are vectors in the subspace and $c$ any scalar, then
+
+    \begin{itemize}
+        \item $\boldsymbol{v} + \boldsymbol{w}$ is in the subspace
+        \item $c\boldsymbol{v}$ is in the subspace
+    \end{itemize}
+
+    In other words, the set of vectors is ``\textbf{closed}" under addition and multiplication - \textbf{all linear combinations
+    stay in the subspace}
+
+\end{Definition}
+
+Intuitively, we can visualize a subspace in the 3-dimensional space $\mathbb{R}^3$. Choose a plane through the
+origin $(0, 0, 0)$. That plane is a vector space in its own right. If we add two vectors in the plane, their sum is in
+the plane; if we multiply an in-plane vector by $2$ or $-5$, it is still in the plane. This plane is a vector space
+\textbf{inside $\mathbb{R}^3$} or is a subspace of the full vector space $\mathbb{R}^3$
+
+\begin{Definition}{Column Space}{column-space}
+    \phantomsection\hypertarget{column-space}
+    The \textbf{column space}, $C(A)$, consists of all linear combinations of the columns, i.e. the combinations of all
+    possible vectors $A\boldsymbol{x}$
+
+    The subspece $C(A)$ is the ``\textbf{span}" of matrix $A$
+\end{Definition}
+
+\begin{Definition}{Basis for a Vector Space}{basis}
+    A \textbf{basis}\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 172} for a vector space is a sequence of vectors with 2 properties
+
+    \begin{itemize}
+        \item The basis vectors are linearly independent, and
+        \item they \hyperlink{column-space}{span} the space
+    \end{itemize}
+\end{Definition}
+
+For a basis $\{\boldsymbol{v_1}, \ldots, \boldsymbol{v_d}\}$ of $V$
+
+\begin{Definition}{Bilinear Form}{bilinear-form}
+    \phantomsection\hypertarget{bilinear-form}
+    Let $F$ be a field and $V$ a vector space over $F$. A \textit{bilinear form} on $V$ is a function
+    $B: V \times V \rightarrow F$ that is linear in each variable when the other one is fixed. That is
+
+    \begin{align}
+        B(v + v', w) &= B(v, w) + B(v', w) \\
+        B(cv, w)     &= cB(v, w)
+    \end{align}
+
+    for all $v, v', w \in V$ and $c \in F$, and
+
+    \begin{align}
+        B(v, w + w') &= B(v, w) + B(v, w') \\
+        B(v, cw)     &= cB(v, w)
+    \end{align}
+
+    for all $v, v, w' \in V$ and $c \in F$
+
+    We call $B$ \textit{symmetric} when
+
+    \begin{equation}
+        B(v, w) = B(w, v)
+    \end{equation}
+
+    for all $v, w \in V$\footnote{\href{https://kconrad.math.uconn.edu/blurbs/linmultialg/bilinearform.pdf}{Keith Conrad}}
+
+    \begin{tcbraster}[
+        raster columns=2,
+        raster equal height
+    ]
+        \begin{Definition}{Linear Transformation}{linear-transformation}
+            The transformation is \textbf{linear} if it meets these requirements for all $\boldsymbol{v}$ and $\boldsymbol{w}$\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 375}:
+
+            \begin{equation}
+                T(c\boldsymbol{v} + d\boldsymbol{w}) = cT(\boldsymbol{v}) + dT(\boldsymbol{w})
+            \end{equation}
+
+            for all $c$ and $d$
+        \end{Definition}
+        \begin{Definition}{Field}{field}
+            A field is a set of elements in which a pair of operations called multiplication and addition is defined analogous
+            to the operations of multiplication and addition in the real number system (which is itself an example of a
+            field)\footnote{\href{https://projecteuclid.org/ebooks/notre-dame-mathematical-lectures/Chapter-I-Linear-Algebra/chapter/Chapter-I-Linear-Algebra/ndml/1175197044}{A. Fields, Chapter I: Linear Algebra}, Galois Theory: Lectures Delivered at the University of Notre Dame, Project Euclid}
+        \end{Definition}
+    \end{tcbraster}
+
+    \begin{Definition}{Group}{group}
+        A group\footnote{\href{https://www.maths.gla.ac.uk/~mwemyss/teaching/3alg1-7.pdf}{Introduction to Group Theory, Michael Wemyss}} is a non-empty set $G$ together with a rule that assigns to each pair $g$ and $h$ of elements of $G$
+        and element $g * h$ such that
+        \begin{itemize}
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png}  $g * h \in G$, which we say $G$ is \textbf{closed} under $*$
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} $g * (h * k) = (g * h) * k$ for all $g, h, k \in G$, which we call $*$ being
+            \textbf{associative}
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} There exists an \textbf{identity} element $e \in G$ such that $e * g = g * e$ for all
+            $g \in G$
+            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} Every element $g \in G$ has an \textbf{inverse} $g^{-1}$ such that
+            $g * g^{-1} = g^{-1} * g = e$
+        \end{itemize}
+    \end{Definition}
+
+    \begin{Definition}{Vector Space (Field Theory)}{vector-space-field}
+        If $V$ is an additive abelian group with elements $A, B, \ldots$, $F$ a field with elements $a, b, \dots$, and if
+        for each $a \in F$ and $A \in V$ the product $aA$ denotes element of $V$, then $V$ is called a
+        \textbf{(left) vector space over F} if the following assumptions hold:
+
+        \begin{align}
+            a(A + B) &= aA + aB \\
+            (a + b)A &= aA + bA \\
+            a(bA) &= (ab)A \\
+            1A &= A \\
+        \end{align}
+    \end{Definition}
+\end{Definition}

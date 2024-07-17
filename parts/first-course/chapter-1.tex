@@ -699,14 +699,13 @@ Assuming $\Delta \bar{s}^2 = \Delta s^2 = 0$, we have $\Delta t = \pm\Delta x$; 
 
 \textit{Eq.\ref{eq:suggestive} seems to suggest a linear relationship between $\Delta s^2$ and $\Delta\bar{s}^2$}. How do we go about proving it? We now start the \href{https://en.wikipedia.org/wiki/Derivations\_of\_the\_Lorentz\_transformations#Rigorous\_Statement\_and\_Proof\_of\_Proportionality_of_ds2_and_ds\%E2\%80\%B22}{formal proof of \textbf{Invariance of Interval}}
 
-\begin{Theorem}{Proportionality of $ds^2$ and $ds'^2$}{quadratic-porportionality}
+\begin{Theorem}{\href{https://en.wikipedia.org/wiki/Derivations\_of\_the\_Lorentz\_transformations\#Rigorous\_Statement\_and\_Proof\_of\_Proportionality\_of\_ds2\_and\_ds\%E2\%80\%B22}{Proportionality of $ds^2$ and $ds'^2$}}{quadratic-porportionality}
     Let $n, p \ge 1$ be integers, $d := n + p$ and $V$ a vector space over $\mathbb{R}$ of dimension $d$. Let $h$ be
-    an indefinite-inner product\footnote{It's essentially a function which is the product of other two functions. For
-    it's Mathematics, start with page 447 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th
-    Edition} for everything you need to know about indefinite-inner product.} on $V$ with signature type $(n, p)$\footnote{Read Ch. 6 of \href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, 4th Edition} and then \href{https://mathworld.wolfram.com/MatrixSignature.html}{Matrix Signature}}. Suppose $g$ is a \hyperlink{bilinear-form}{symmetric bilinear form} on $V$
-    such that the null set of the associated quadratic form of $h$ is contained in that of $g$ (i.e. suppose that for
-    every $v \in V$, if $h(v, v) = 0$ then $g(v, v) = 0$). Then, there exists a constant $C \in \mathbb{R}$ such that
-    $g = Ch$. Futhermore, if we assume $n \ne p$ and that $g$ also has signature type $(n, p)$, then we have $C > 0$
+    an indefinite-inner product on $V$ with signature type $(n, p)$. Suppose $g$ is a
+    \hyperlink{bilinear-form}{symmetric bilinear form} on $V$ such that the null set of the associated quadratic form of
+    $h$ is contained in that of $g$ (i.e. suppose that for every $v \in V$, if $h(v, v) = 0$ then $g(v, v) = 0$). Then,
+    there exists a constant $C \in \mathbb{R}$ such that $g = Ch$. Futhermore, if we assume $n \ne p$ and that $g$ also
+    has signature type $(n, p)$, then we have $C > 0$
 \end{Theorem}
 
 The assumptions above on $h$ means that $h: V \times V \rightarrow \mathbb{R}$ is a bilinear form which is symmetric
@@ -721,77 +720,5 @@ $\{\boldsymbol{v_1}, \dots, \boldsymbol{v_n}, \boldsymbol{v_{n + 1}}, \dots, \bo
     \end{cases}
 \end{equation}
 
-\begin{Definition}{Bilinear Form}{bilinear-form}
-    \phantomsection\hypertarget{bilinear-form}
-    Let $F$ be a field and $V$ a vector space over $F$. A \textit{bilinear form} on $V$ is a function
-    $B: V \times V \rightarrow F$ that is linear in each variable when the other one is fixed. That is
-
-    \begin{align}
-        B(v + v', w) &= B(v, w) + B(v', w) \\
-        B(cv, w)     &= cB(v, w)
-    \end{align}
-
-    for all $v, v', w \in V$ and $c \in F$, and
-
-    \begin{align}
-        B(v, w + w') &= B(v, w) + B(v, w') \\
-        B(v, cw)     &= cB(v, w)
-    \end{align}
-
-    for all $v, v, w' \in V$ and $c \in F$
-
-    We call $B$ \textit{symmetric} when
-
-    \begin{equation}
-        B(v, w) = B(w, v)
-    \end{equation}
-
-    for all $v, w \in V$\footnote{\href{https://kconrad.math.uconn.edu/blurbs/linmultialg/bilinearform.pdf}{Keith Conrad}}
-
-    \begin{tcbraster}[
-        raster columns=2,
-        raster equal height
-    ]
-        \begin{Definition}{Linear Transformation}{linear-transformation}
-            The transformation is \textbf{linear} if it meets these requirements for all $\boldsymbol{v}$ and $\boldsymbol{w}$\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 375}:
-
-            \begin{equation}
-                T(c\boldsymbol{v} + d\boldsymbol{w}) = cT(\boldsymbol{v}) + dT(\boldsymbol{w})
-            \end{equation}
-
-            for all $c$ and $d$
-        \end{Definition}
-        \begin{Definition}{Field}{field}
-            A field is a set of elements in which a pair of operations called multiplication and addition is defined analogous
-            to the operations of multiplication and addition in the real number system (which is itself an example of a
-            field)\footnote{\href{https://projecteuclid.org/ebooks/notre-dame-mathematical-lectures/Chapter-I-Linear-Algebra/chapter/Chapter-I-Linear-Algebra/ndml/1175197044}{A. Fields, Chapter I: Linear Algebra}, Galois Theory: Lectures Delivered at the University of Notre Dame, Project Euclid}
-        \end{Definition}
-    \end{tcbraster}
-
-    \begin{Definition}{Group}{group}
-        A group\footnote{\href{https://www.maths.gla.ac.uk/~mwemyss/teaching/3alg1-7.pdf}{Introduction to Group Theory, Michael Wemyss}} is a non-empty set $G$ together with a rule that assigns to each pair $g$ and $h$ of elements of $G$
-        and element $g * h$ such that
-        \begin{itemize}
-            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png}  $g * h \in G$, which we say $G$ is \textbf{closed} under $*$
-            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} $g * (h * k) = (g * h) * k$ for all $g, h, k \in G$, which we call $*$ being
-            \textbf{associative}
-            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} There exists an \textbf{identity} element $e \in G$ such that $e * g = g * e$ for all
-            $g \in G$
-            \item[] \includegraphics[width=0.05\textwidth]{嘟嘟可.png} Every element $g \in G$ has an \textbf{inverse} $g^{-1}$ such that
-            $g * g^{-1} = g^{-1} * g = e$
-        \end{itemize}
-    \end{Definition}
-
-    \begin{Definition}{Vector Space (Field Theory)}{vector-space-field}
-        If $V$ is an additive abelian group with elements $A, B, \ldots$, $F$ a field with elements $a, b, \dots$, and if
-        for each $a \in F$ and $A \in V$ the product $aA$ denotes element of $V$, then $V$ is called a
-        \textbf{(left) vector space over F} if the following assumptions hold:
-
-        \begin{align}
-            a(A + B) &= aA + aB \\
-            (a + b)A &= aA + bA \\
-            a(bA) &= (ab)A \\
-            1A &= A \\
-        \end{align}
-    \end{Definition}
-\end{Definition}
+If we are considering the special case where $n = 1, p = 3$ then we are talking about the situation of a matrix
+signature in 4-dimensions
