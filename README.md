@@ -6,9 +6,11 @@ Study Notes on General Relativity
 [![Apache License Badge]][Apache License URL]
 
 <div align="center">
-    <a href="https://youtu.be/Z6Jt4lCe8_I?si=-hP36nqsIn0ZT7MN">
-        <img src="./img/black-hole.png" width="50%"/>
+    <img src="img/Lynette.png" />
+    <a href="http://relativity.qubitpi.org/study-notes.pdf">
+        <img src="./img/sample.png" width="50%"/>
     </a>
+    <img src="img/Lyney.png" />
 </div>
 
 Physics is, as I view it, a quantified version of Philosophy on how world actually works. Astrophysics is my favorite

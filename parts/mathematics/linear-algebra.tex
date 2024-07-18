@@ -1,6 +1,11 @@
 \section{Metric Spaces}
 
-The materials of this section refers largely to \href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}
+\begin{tcolorbox}[enhanced,arc=3mm,boxrule=1.5mm,
+    frame hidden,colback=blue!10!white,
+    borderline={1mm}{0mm}{blue,dotted} ]
+    The materials of this section refers largely to
+    \href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}
+\end{tcolorbox}
 
 \begin{Definition}{Linear Space}{linear-space}
     Let $L$ be a non-empty set, and assume that each pair of elements $x$ and $y$ in $L$ can be combined by a process
@@ -27,17 +32,34 @@ The materials of this section refers largely to \href{https://trello.com/c/3EPcc
         \item $1 \cdot x = x$
     \end{itemize}
 
-    The albegraic system $L$ defined by these operations and axioms is called a \textbf{linear space}
+    The albegraic system $L$ defined by these operations and axioms is called a
+    \textbf{linear space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
 \end{Definition}
 
 Depending on the numbers admitted as scalars (only the real numbers, or all the complex numbers), we distinguish when
 necessary between \textit{real linear spaces} and \textit{complex linear spaces}. A linear space is often called a
-\hypertarget{vector-space}{vector space} and its elements are spoken of as \textit{vectors}.
+\hyperlink{vector-space}{\textit{vector space}} and its elements are spoken of as \textit{vectors}.
+
+\begin{Definition}{Normed Linear Space}{normed-linear-space}
+    A \textbf{Normed Linear Space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
+    is a linear space on which there is a \textbf{norm} defined, i.e. a function which assigns to each element $x$ in
+    the space a real number $\Vert x \Vert$ in such a manner that
+
+    \begin{itemize}
+        \item $\Vert x \Vert \ge 0$, and $\Vert x \Vert = 0 \iff x = 0$
+        \item $\Vert x + y \Vert \le \Vert x \Vert + \Vert y \Vert$
+        \item $\Vert \alpha x \Vert = \vert \alpha \vert \Vert x \Vert$
+    \end{itemize}
+\end{Definition}
+
+Intuitively, a normed linear space is simply a linear space in which a notion of the distance from an arbitrary element
+to origin is defined.
+
+
 
 \section{Vector Spaces and Subspaces}
 
-\begin{Definition}{Vector Space}{vector-space}
-    \phantomsection\hypertarget{vector-space}
+\begin{Definition}{Vector Space \phantomsection\hypertarget{vector-space}}{vector-space}
     The space $\mathbb{R}^n$ consists of all column vectors $\boldsymbol{v}$ with $n$ components\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 120}
 \end{Definition}
 
@@ -64,8 +86,7 @@ origin $(0, 0, 0)$. That plane is a vector space in its own right. If we add two
 the plane; if we multiply an in-plane vector by $2$ or $-5$, it is still in the plane. This plane is a vector space
 \textbf{inside $\mathbb{R}^3$} or is a subspace of the full vector space $\mathbb{R}^3$
 
-\begin{Definition}{Column Space}{column-space}
-    \phantomsection\hypertarget{column-space}
+\begin{Definition}{Column Space \phantomsection\hypertarget{column-space}}{column-space}
     The \textbf{column space}, $C(A)$, consists of all linear combinations of the columns, i.e. the combinations of all
     possible vectors $A\boldsymbol{x}$
 
@@ -83,8 +104,7 @@ the plane; if we multiply an in-plane vector by $2$ or $-5$, it is still in the 
 
 For a basis $\{\boldsymbol{v_1}, \ldots, \boldsymbol{v_d}\}$ of $V$
 
-\begin{Definition}{Bilinear Form}{bilinear-form}
-    \phantomsection\hypertarget{bilinear-form}
+\begin{Definition}{Bilinear Form \phantomsection\hypertarget{bilinear-form}}{bilinear-form}
     Let $F$ be a field and $V$ a vector space over $F$. A \textit{bilinear form} on $V$ is a function
     $B: V \times V \rightarrow F$ that is linear in each variable when the other one is fixed. That is
 
