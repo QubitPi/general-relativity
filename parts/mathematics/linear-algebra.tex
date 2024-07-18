@@ -7,6 +7,50 @@
     \href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}
 \end{tcolorbox}
 
+\begin{Definition}{Metric Space}{metric-space}
+    Let $X$ be a non-empty set. A \textbf{metric}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
+    on $X$ is a real function $d$ of ordered pairs of elements of $X$ which satisfies the following conditions
+
+    \begin{itemize}
+        \item $d(x, y) \ge 0$, and $d(x, y) = 0 \iff x = y$
+        \item $d(x, y) = d(y, x)$ (symmetry)
+        \item $d(x, y) \le d(x, z) + d(z, y)$ (the triangle inequality)
+    \end{itemize}
+\end{Definition}
+
+$d(x, y)$ is called the \textit{distance} between $x$ and $y$. Thus a metric space consists of 2 objects:
+
+\begin{enumerate}
+    \item a non-empty set $X$, and
+    \item a metric $d$ on $X$
+\end{enumerate}
+
+Now let $X$ be a metric space with metric $d$, and let
+
+\begin{equation}
+    \{ x_n \} = \{ x_1, x_2, \cdots, x_n, \cdot \}
+\end{equation}
+
+be a sequence of points in $X$. We say that $\{ x_n \}$ is \textbf{convergent} if there exists a point $x$ in $X$ such
+that either
+
+\begin{enumerate}
+    \item for each $\epsilon > 0$, there exists a positive integer $n_0$ such that $n \ge n_0 \Rightarrow d(x_n, x) < \epsilon$,
+          or, equivalently,
+    \item for each open sphere $S_{\epsilon}(x)$ centered on $x$, there exists a positive integer $n_0$ such that $x_n$
+          is in $S_{\epsilon}(x)$ for all $n \ge n_0$
+\end{enumerate}
+
+We say in this case that $x_n$ converges to $x$ and $x$ is called the \textit{limit} of the sequence $\{ x_n \}$ and we
+sometimes write $x_n \rightarrow x$ in the form of
+
+\[ \lim x_n = x \]
+
+Every convergent sequence $\{ x_n \}$ has the following property: for each $\epsilon > 0$, there eixsts a positive
+integer $n_0$ such that $m, n \ge n_0 \Rightarrow d(x_m, x_n) < \epsilon$
+
+
+
 \begin{Definition}{Linear Space}{linear-space}
     Let $L$ be a non-empty set, and assume that each pair of elements $x$ and $y$ in $L$ can be combined by a process
     called \textbf{addition} to yield an element $z$ in $L$ denoted by $z = x + y$. Assume also that this operation of
@@ -54,8 +98,6 @@ necessary between \textit{real linear spaces} and \textit{complex linear spaces}
 
 Intuitively, a normed linear space is simply a linear space in which a notion of the distance from an arbitrary element
 to origin is defined.
-
-
 
 \section{Vector Spaces and Subspaces}
 
