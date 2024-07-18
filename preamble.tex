@@ -33,6 +33,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \graphicspath{ {./img/} }
+\usepackage{wrapfig}
 
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
@@ -94,7 +95,7 @@ drop fuzzy shadow,#1}
 \setlength{\parindent}{0pt}
 \renewcommand{\labelitemi}{\includegraphics[width=0.05\textwidth]{嘟嘟可.png}}
 
-% Text highlighting
+% Text highlighting - https://tex.stackexchange.com/a/6029
 \usepackage{soul}
 \usetikzlibrary{calc}
 \usetikzlibrary{decorations.pathmorphing}
@@ -182,3 +183,5 @@ drop fuzzy shadow,#1}
     \SOUL@
 }
 \makeatother
+
+\usepackage{amsthm}

@@ -14,47 +14,119 @@
     where $\epsilon_1$ and $\epsilon_2 \rightarrow 0$ as $\Delta x$ and $\Delta y \rightarrow 0$
 \end{Theorem}
 
-To prove this statement, we analyze the change $\Delta z$ in 2 steps
+\begin{proof}
+    \begin{wrapfigure}{r}{0.3\textwidth}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw [<->] (0,4) -- (0,0) -- (4,0);
+                \node [below right] at (4,0) {$x$};
+                \node [left] at (0,4) {$y$};
 
-\begin{tikzpicture}
-    \draw [thick, <->] (0,4) -- (0,0) -- (4,0);
-    \node [below right] at (4,0) {$x$};
-    \node [left] at (0,4) {$y$};
+                \draw[fill] (1,1) circle [radius=0.025];
+                \draw[fill] (3,1) circle [radius=0.025];
+                \draw[fill] (3,3) circle [radius=0.025];
 
-    \draw[fill] (1,1) circle [radius=0.025];
-    \draw[fill] (3,1) circle [radius=0.025];
-    \draw[fill] (3,3) circle [radius=0.025];
+                \node [below] at (1,1) {$(x_0, y_0)$};
+                \node [below] at (3,1) {$(x_0 + \Delta x, y_0)$};
+                \node [above] at (3,3) {$(x_0 + \Delta x, y_0 + \Delta y)$};
 
-    \node [below] at (1,1) {$(x_0, y_0)$};
-    \node [below] at (3,1) {$(x_0 + \Delta x, y_0)$};
-    \node [above] at (3,3) {$(x_0 + \Delta x, y_0 + \Delta y)$};
+                \draw [->][thick, red] (1,1) -- node[above] {$\Delta x$} (3,1);
+                \draw [->][thick, red] (3,1) -- node[left] {$\Delta y$} (3,3);
+            \end{tikzpicture}
+            \caption{
+                We assume $\Delta z = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0)$ and
+                $\Delta z = \Delta_1 z + \Delta_2 z$
+            }
+            \label{fig:proof-fundamental-lemma}
+        \end{center}
+    \end{wrapfigure}
 
-    \draw [->][red] (1,1) -- node[above] {$\Delta x$} (3,1);
-    \draw [->][red] (3,1) -- node[left] {$\Delta y$} (3,3);
-\end{tikzpicture}
-
-\begin{Theorem}{
-    The Mean Value Theorem\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons}, p. 76}
-}{mean-value-theorem}
-    Let $y = f(x)$ be a function with the following two properties:
+    To prove this
+    statement\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons}, p. 841},
+    we analyze the change $\Delta z$ in 2 steps as shown in Fig.~\ref{fig:proof-fundamental-lemma}:
 
     \begin{enumerate}
-        \item $f(x)$ is continuous on the closed interval $[a, b]$; and
-        \item $f(x)$ is differentiable on the open interval $(a, b)$
+        \item changing $x$ alone and moving from $(x_0, y_0)$ to $(x_0 + \Delta x, y_0)$, and then
+        \item changing $y$ alone and moving from $(x_0 + \Delta x, y_0)$ to $(x_0 + \Delta x, y_0 + \Delta y)$
     \end{enumerate}
 
-    Then there exists at least one point $c$ in the open interval $(a, b)$ such that
+    We denote the first change in $z$ by $\Delta_1 z$, so that
 
-    \[
-        f'(c) = \frac{f(b) - f(a)}{b - a}
-    \]
+    \begin{equation}
+        \Delta_1 z = f(x_0 + \Delta x, y_0) - f(x_0, y_0)
+    \end{equation}
 
-    or equivalently,
+    By The Mean Value Theorem\footnote{
+        \begin{Theorem}{
+            The Mean Value Theorem\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons}, p. 76}
+        }{mean-value-theorem}
+            Let $y = f(x)$ be a function with the following two properties:
 
-    \[
-        f(b) - f(a) = f'(c)(b - a)
-    \]
-\end{Theorem}
+            \begin{enumerate}
+                \item $f(x)$ is continuous on the closed interval $[a, b]$; and
+                \item $f(x)$ is differentiable on the open interval $(a, b)$
+            \end{enumerate}
+
+            Then there exists at least one point $c$ in the open interval $(a, b)$ such that
+
+            \[
+                f'(c) = \frac{f(b) - f(a)}{b - a}
+            \]
+
+            or equivalently,
+
+            \[
+                f(b) - f(a) = f'(c)(b - a)
+            \]
+        \end{Theorem}
+    }, we can write this as
+
+    \begin{equation}\label{eq:first-change-z-mean-val-theo}
+    \Delta_1 z = \Delta x f_x(x_1, y_0)
+    \end{equation}
+
+    where $x_1$ is between $x_0$ and $x_0 + \Delta x$. Smilary, if we denote the second part of the change in $z$ by
+    $\Delta_1 z$, so that
+
+    \begin{equation}
+        \Delta_2 z = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0 + \Delta x, y_0)
+    \end{equation}
+
+    then
+
+    \begin{equation}\label{eq:second-change-z-mean-val-theo}
+    \Delta_2 z = \Delta y f_y(x_0 + \Delta x, y_1)
+    \end{equation}
+
+    where $y_1$ is between $y_0$ and $y_0 + \Delta y$.
+
+    Now as $\Delta x$ and $\Delta y \rightarrow 0$, $x_1 \rightarrow x_0$ and $y_1 \rightarrow y_0$. By the assumed
+    continuity of $f_x$ and $f_y$ at $(x_0, y_0)$, we can write
+
+    \begin{align}
+        f_x(x_1, y_0) = f_x(x_0, y_0) + \epsilon_1 \label{eq:first-change-z-epsilon} \\
+        f_y(x_0 + \Delta x, y_1) = f_y(x_0, y_0) + \epsilon_2 \label{eq:second-change-z-epsilon}
+    \end{align}
+
+    where $\epsilon_1$ and $\epsilon_2 \rightarrow 0$ as $\Delta x$ and $\Delta y \rightarrow 0$. Plugging
+    Eq.\ref{eq:first-change-z-epsilon} into Eq.\ref{eq:first-change-z-mean-val-theo} gives us
+
+    \begin{equation}
+        \Delta_1 z = \Delta x\left[ f_x(x_0, y_0) + \epsilon_1 \right] = \Delta x f_x(x_0, y_0) + \Delta x\epsilon_1
+    \end{equation}
+
+    and similarly Eq.\ref{eq:second-change-z-epsilon} into Eq.\ref{eq:second-change-z-mean-val-theo}
+
+    \begin{equation}
+        \Delta_2 z = \Delta y\left[ f_y(x_0, y_0) + \epsilon_2 \right] = \Delta y f_y(x_0, y_0) + \Delta y\epsilon_2
+    \end{equation}
+
+    Since we have assumed $\Delta z = \Delta_1 z + \Delta_2 z$
+
+    \begin{equation}
+        \Delta z = \Delta x f_x(x_0, y_0) + \Delta x\epsilon_1 + \Delta y f_y(x_0, y_0) + \Delta y\epsilon_2 = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y + \epsilon_1\Delta x + \epsilon_2\Delta y
+    \end{equation}
+\end{proof}
 
 \subsection{Gradient}
 
