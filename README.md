@@ -13,6 +13,8 @@ Study Notes on General Relativity
     <img src="img/Lyney.png" width="15%" />
 </div>
 
+[embed]https://github.com/QubitPi/general-relativity/blob/master/study-notes.pdf[/embed]
+
 Physics is, as I view it, a quantified version of Philosophy on how world actually works. Astrophysics is my favorite
 branch of Physics because
 
