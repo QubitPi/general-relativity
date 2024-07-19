@@ -191,11 +191,11 @@ Writing it in the dot product form:
 
 where
 
-\begin{equation}
+\begin{equation}\label{eq:def-gradient}
     \nabla T \equiv \frac{\partial T}{\partial x}\boldsymbol{\hat{x}} + \frac{\partial T}{\partial y}\boldsymbol{\hat{y}} + \frac{\partial T}{\partial z}\boldsymbol{\hat{z}}
 \end{equation}
 
-is the \textbf{gradient} of $T$.
+is the \textbf{gradient} of $T$. We also call $\nabla$ as the \textbf{vector operator} that \textit{acts upon} $T$
 
 \begin{tcolorbox}[
     parbox=false,
@@ -213,8 +213,34 @@ is the \textbf{gradient} of $T$.
 
     \begin{tcolorbox}[colback=red!10!white]
         \begin{center}
-            \textcolor{white}{\textbf{The gradient $\nabla T$ points in the direction of the maximum increase of $T$, and its magnitude
-            $\vert \nabla T \vert$ gives the slope (rate of increase) along this maximal direction}}
+            \textcolor[HTML]{8F8FF5}{\textbf{The gradient $\nabla T$ points in the direction of the maximum increase of $T$,
+            and its magnitude $\vert \nabla T \vert$ gives the slope (rate of increase) along this maximal direction}}
         \end{center}
     \end{tcolorbox}
 \end{tcolorbox}
+
+Now there are 3 ways the operator $\nabla$ can act:
+
+\begin{enumerate}
+    \item On a scalar function $T$: $\nabla T$ (the gradient, which we've discussed so far)
+    \item On a vector function via the dot product: $\nabla \cdot \boldsymbol{v}$ (the \textbf{divergence})
+    \item On a vector function via the cross product: $\nabla \times \boldsymbol{v}$ (the \textbf{curl})
+\end{enumerate}
+
+\subsection{Divergence}
+
+From \hyperref[eq:def-gradient]{the definition of $\nabla$}, we construct the divergence
+
+\begin{align}
+    \nabla \cdot \boldsymbol{v} &= \left( \frac{\partial T}{\partial x}\boldsymbol{\hat{x}} + \frac{\partial T}{\partial y}\boldsymbol{\hat{y}} + \frac{\partial T}{\partial z}\boldsymbol{\hat{z}} \right) \cdot (v_x\boldsymbol{\hat{x}} + v_y\boldsymbol{\hat{y}} + v_z\boldsymbol{\hat{z}}) \\
+    &= \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}
+\end{align}
+
+%\begin{tcolorbox}[
+%    parbox=false,
+%    colbacktitle=red!10!white,
+%    colback=blue!10!white,coltitle=red!70!black,
+%    title=The Geometrical Interpretation of the Divergence
+%]
+%    The divergence is a measure of how much the vector $\boldsymbol{v}$ spreads out (diverges) from the point in question
+%\end{tcolorbox}
