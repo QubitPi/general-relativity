@@ -2,6 +2,7 @@
 
 \begin{Theorem}{
     Fundamental Lemma\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons}, p. 680}
+    \phantomsection\hypertarget{fundamental-lemma}
 }{fundamental-lemma}
     Suppose that a function $z = f(x, y)$ and its partial derivatives $f_x$ and $f_y$ are defined at a point
     $(x_0, y_0)$, and also through some neighborhood of this point. Suppose further that $f_x$ and $f_y$ are continuous
@@ -124,12 +125,53 @@ Since we have assumed $\Delta z = \Delta_1 z + \Delta_2 z$
 
 \qed
 
-Now Let $f(x, y, z)$ be a function of 3 variables defined throughout some region of three-dimensional space, and let $P$
-be a point in this region. At what rate does $f$ change as we move away from $P$ in a specified direction? In the
-directions of the positive x, y, and z-axes, we know that the rates of change off are given by
-the partial derivatives $\frac{\partial f}{\partial x}$, $\frac{\partial f}{\partial y}$, and
-$\frac{\partial f}{\partial z}$. But how do we calculate the rate of change of $f$ if we move away from $P$ in a
-direction that is not a coordinate direction?
+\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons}, p. 681} Now Let
+$f(x, y, z)$ be a function of 3 variables defined throughout some region of three-dimensional space, and let $P$ be a
+point in this region. At what rate does $f$ change as we move away from $P$ in a specified direction? In the directions
+of the positive x, y, and z-axes, we know that the rates of change off are given by the partial derivatives
+$\frac{\partial f}{\partial x}$, $\frac{\partial f}{\partial y}$, and $\frac{\partial f}{\partial z}$. But how do we
+calculate the rate of change of $f$ if we move away from $P$ in a direction that is not a coordinate direction?
+
+Let $P = (x, y, z)$ and $\boldsymbol{R} = x\boldsymbol{i} + y\boldsymbol{j} + z\boldsymbol{k}$ being the position vector
+of $P$. If we move away from $P$ to a nearby point $Q = (x + \Delta x, y + \Delta y, z + \Delta z)$, then the function
+will change by an amoutn $\Delta f$. Let $\Delta s$ denote the distance between $P$ and $Q$, then we have
+
+\begin{equation}\label{eq:def-df-over-ds}
+    \frac{df}{ds} = \lim\limits_{\Delta s \rightarrow 0}\frac{\Delta f}{\Delta s}
+\end{equation}
+
+We further assume that $f(x, y, z)$ has continuous partial derivatives with respect to $x$, $y$, and $z$.
+
+\begin{marker}
+    Unless explicitly stated otherwise, all functions we deal with are always continuous in all of our discussions
+\end{marker}
+
+The \hyperlink{fundamental-lemma}{Fundamental Lemma} enables us to write $\Delta f$ in the form of
+
+\begin{equation}\label{eq:df-in-3-partials}
+    \Delta f = \frac{\partial f}{\partial x}\Delta x + \frac{\partial f}{\partial y}\Delta y + \frac{\partial f}{\partial z}\Delta z + \epsilon_1\Delta x + \epsilon_2\Delta y + \epsilon_3\Delta z
+\end{equation}
+
+As $\Delta s \rightarrow 0$, i.e. as $\Delta x \rightarrow 0$, $\Delta y \rightarrow 0$, and $\Delta z \rightarrow 0$,
+$\epsilon_1, \epsilon_2, \epsilon_3 \rightarrow 0$. Dividing Eq.\ref{eq:df-in-3-partials} by $\Delta s$ gives
+
+\begin{equation}\label{eq:df-over-ds-in-3-partials}
+    \lim\limits_{\Delta s \rightarrow 0}\frac{\Delta f}{\Delta s} = \frac{\partial f}{\partial x}\frac{dx}{ds} + \frac{\partial f}{\partial y}\frac{dy}{ds} + \frac{\partial f}{\partial z}\frac{dz}{ds}
+\end{equation}
+
+Combing Eq.\ref{eq:df-over-ds-in-3-partials} and \ref{eq:def-df-over-ds} results in
+
+\begin{equation}\label{eq:partial-chain-rule}
+    \tcbhighmath[
+        enhanced,colframe=red,colback=white,arc=0pt,boxrule=1pt,
+        fuzzy halo=1mm with blue!50!white,
+        arc=2pt,
+        boxrule=0pt,
+        frame hidden
+    ]{
+        \frac{df}{ds} = \frac{\partial f}{\partial x}\frac{dx}{ds} + \frac{\partial f}{\partial y}\frac{dy}{ds} + \frac{\partial f}{\partial z}\frac{dz}{ds}
+    }
+\end{equation}
 
 \subsection{Gradient}
 
