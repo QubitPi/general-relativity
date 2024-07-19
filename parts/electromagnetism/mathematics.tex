@@ -175,8 +175,46 @@ Combing Eq.\ref{eq:df-over-ds-in-3-partials} and \ref{eq:def-df-over-ds} results
 
 \subsection{Gradient}
 
-
+\footnote{\href{https://trello.com/c/U6HhhDq6}{Introduction to Electrodynamics by Griffiths, 3rd}, p. 13} The theorem
+on \hyperref[eq:partial-chain-rule]{partial derivaves states} that
 
 \begin{equation}
     dT = \left( \frac{\partial T}{\partial x} \right) dx + \left( \frac{\partial T}{\partial y} \right) dy + \left( \frac{\partial T}{\partial z} \right) dz
 \end{equation}
+
+Writing it in the dot product form:
+
+\begin{align}
+    dT &= \left( \frac{\partial T}{\partial x}\boldsymbol{\hat{x}} + \frac{\partial T}{\partial y}\boldsymbol{\hat{y}} + \frac{\partial T}{\partial z}\boldsymbol{\hat{z}} \right) \cdot (dx\boldsymbol{\hat{x}} + dy\boldsymbol{\hat{y}} + dz\boldsymbol{\hat{z}}) \\
+      &= \nabla T \cdot d\boldsymbol{l} \label{eq:dt-dot}
+\end{align}
+
+where
+
+\begin{equation}
+    \nabla T \equiv \frac{\partial T}{\partial x}\boldsymbol{\hat{x}} + \frac{\partial T}{\partial y}\boldsymbol{\hat{y}} + \frac{\partial T}{\partial z}\boldsymbol{\hat{z}}
+\end{equation}
+
+is the \textbf{gradient} of $T$.
+
+\begin{tcolorbox}[
+    parbox=false,
+    colbacktitle=red!10!white,
+    colback=blue!10!white,coltitle=red!70!black,
+    title=The Geometrical Interpretation of the Gradient
+]
+    The doc product~\ref{eq:dt-dot} can be written as
+
+    \begin{equation}
+        dT = \nabla T \cdot d\boldsymbol{l} = \vert \nabla T \vert \vert d\boldsymbol{l} \vert \cos{\theta}
+    \end{equation}
+
+    We soon realize that the \textit{maximum} change of T occurs when $\theta = 0$, therefore
+
+    \begin{tcolorbox}[colback=red!10!white]
+        \begin{center}
+            \textcolor{white}{\textbf{The gradient $\nabla T$ points in the direction of the maximum increase of $T$, and its magnitude
+            $\vert \nabla T \vert$ gives the slope (rate of increase) along this maximal direction}}
+        \end{center}
+    \end{tcolorbox}
+\end{tcolorbox}
