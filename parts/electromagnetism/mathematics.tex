@@ -232,7 +232,7 @@ Now there are 3 ways the operator $\nabla$ can act:
 From \hyperref[eq:def-gradient]{the definition of $\nabla$}, we construct the divergence
 
 \begin{align}
-    \nabla \cdot \boldsymbol{v} &= \left( \frac{\partial T}{\partial x}\boldsymbol{\hat{x}} + \frac{\partial T}{\partial y}\boldsymbol{\hat{y}} + \frac{\partial T}{\partial z}\boldsymbol{\hat{z}} \right) \cdot (v_x\boldsymbol{\hat{x}} + v_y\boldsymbol{\hat{y}} + v_z\boldsymbol{\hat{z}}) \\
+    \nabla \cdot \boldsymbol{v} &= \left( \frac{\partial T}{\partial x}\boldsymbol{\hat{x}} + \frac{\partial T}{\partial y}\boldsymbol{\hat{y}} + \frac{\partial T}{\partial z}\boldsymbol{\hat{z}} \right) \cdot (v_x\boldsymbol{\hat{x}} + v_y\boldsymbol{\hat{y}} + v_z\boldsymbol{\hat{z}}) \label{eq:divergence-dot-product} \\
     &= \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}
 \end{align}
 
@@ -244,3 +244,153 @@ From \hyperref[eq:def-gradient]{the definition of $\nabla$}, we construct the di
 %]
 %    The divergence is a measure of how much the vector $\boldsymbol{v}$ spreads out (diverges) from the point in question
 %\end{tcolorbox}
+
+\subsection{Curl}
+
+\subsubsection{The Cross Prudct of Two Vectors}
+
+\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons}, p. 640} Many
+problems in geometry require us to find a vector that is perpendicular to each of two given vectors $\boldsymbol{A}$ and
+$\boldsymbol{B}$. A routine way of doing this is provided by the \textit{cross product} (or \textit{vector product}) of
+$\boldsymbol{A}$ and $\boldsymbol{B}$, denoted by $\boldsymbol{A} \times \boldsymbol{B}$. This cross product is very
+different from the \hyperref[eq:divergence-dot-product]{dot product} $\boldsymbol{A} \cdot \boldsymbol{B}$, because
+$\boldsymbol{A} \times \boldsymbol{B}$ is a vector while $\boldsymbol{A} \cdot \boldsymbol{B}$ is a scalar.
+
+Consider two nonzero vectors $\boldsymbol{A}$ and $\boldsymbol{B}$. Suppose their tails conincide and let $\theta$ be
+the angle from $\boldsymbol{A}$ to $\boldsymbol{B}$ (\textit{not} from $\boldsymbol{B}$ to $\boldsymbol{A}$) with
+$0 \le \theta \le \pi$.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw[-,fill=white!95!red](0,0)--(3,0)--(4,1)--(1,1)--cycle;
+        \node at (2,0.5) {$|\textcolor{blue}{\boldsymbol{A}}\times \textcolor{red}{\boldsymbol{B}}|$};
+        \draw[ultra thick,-latex,blue](0,0)--(3,0)node[midway,below]{$\boldsymbol{A}$};
+        \draw[ultra thick,-latex,red](0,0)--(1,1)node[midway,above]{$\boldsymbol{B}$};
+        \draw[ultra thick,-latex,blue!50!red](0,0)--(0,3)node[pos=0.7,right]{$\boldsymbol{A} \times \boldsymbol{B}$};
+        \draw[ultra thick,-latex,blue!50!red](0,0)--(0,3)node[pos=0.5,right]{$\boldsymbol{n}$};
+        \draw (0.6,0) arc [start angle=0,end angle=45,radius=0.6]
+        node[pos=0.7,right]{$\theta$};
+    \end{tikzpicture}
+    \caption{The plane defined by $\boldsymbol{A}$ and $\boldsymbol{B}$}
+    \label{fig:cross-prod}
+\end{figure}
+
+These 2 vectors determine a plane, as shown in Fig.~\ref{fig:cross-prod}. We now choose the unit
+vector $\boldsymbol{n}$ which is normal (perpendicular) to this plane and whose direction is determined by the
+\textit{right-hand thumb rule}\footnote{This means that if the right hand is placed so that the thumb is perpendicular
+to the plane of $\boldsymbol{A}$ and $\boldsymbol{B}$ and the fingers curl from $\boldsymbol{A}$ to $\boldsymbol{B}$ in
+the direction of angle $\theta$, then $\boldsymbol{n}$ points in the same direction as the thumb of this hand}.
+\textit{This gives the direction of $\boldsymbol{A} \times \boldsymbol{B}$}
+
+Vectors $\boldsymbol{A}$ and $\boldsymbol{B}$ also defines a parallelogram in this plane of area
+$\vert \boldsymbol{A} \vert\vert \boldsymbol{B} \vert\sin{\theta}$, which defines \textit{the magnitude of
+$\boldsymbol{A} \times \boldsymbol{B}$}.
+
+\begin{Definition}{Cross Product of $\boldsymbol{A}$ and $\boldsymbol{B}$}{cross-product}
+    \begin{equation}
+        \boldsymbol{A} \times \boldsymbol{B} = \vert \boldsymbol{A} \vert\vert \boldsymbol{B} \vert\sin{\theta}
+    \end{equation}
+\end{Definition}
+
+Our next objective is to develop a convenient formula for calculating $\boldsymbol{A} \times \boldsymbol{B}$ where
+
+\begin{equation}\label{eq:cross-product-of-two}
+    \boldsymbol{A} = a_1\boldsymbol{\hat{i}} + a_2\boldsymbol{\hat{j}} + a_3\boldsymbol{\hat{k}} \text{\ \ \ \ \ \ and \ \ \ \ \ \ }
+    \boldsymbol{B} = b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}
+\end{equation}
+
+We need to know that the cross product possesses the following algebraic properties
+
+\begin{align}
+    (c\boldsymbol{A}) \times \boldsymbol{B} &= c(\boldsymbol{A} \times \boldsymbol{B}) = \boldsymbol{A} \times (c\boldsymbol{B})\label{eq:cross-product-order}, \\
+    \boldsymbol{A} \times (\boldsymbol{B} + \boldsymbol{C}) &= \boldsymbol{A} \times \boldsymbol{B} + \boldsymbol{A} \times \boldsymbol{C}\label{eq:cross-product-distributive-right}, \\
+    (\boldsymbol{A} + \boldsymbol{B}) \times \boldsymbol{C} &= \boldsymbol{A} \times \boldsymbol{C} + \boldsymbol{B} \times \boldsymbol{C}\label{eq:cross-product-distributive-left}
+\end{align}
+
+Property~\ref{eq:cross-product-order} is easily established directly from Definition~\ref{def:cross-product}
+
+We continue with our task of multiplying out the \hyperref[eq:cross-product-of-two]{cross product of the vectors} using
+Eq.~\ref{eq:cross-product-order},~\ref{eq:cross-product-distributive-right}, and ~\ref{eq:cross-product-distributive-left}.
+By substituting $b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}$ with $\boldsymbol{B}$:
+
+\begin{align}
+    \boldsymbol{A} \times \boldsymbol{B} &= (a_1\boldsymbol{\hat{i}} + a_2\boldsymbol{\hat{j}} + a_3\boldsymbol{\hat{k}}) \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) \\
+    &= (a_1\boldsymbol{\hat{i}} + a_2\boldsymbol{\hat{j}} + a_3\boldsymbol{\hat{k}}) \times \boldsymbol{B} \\
+    &= a_1\boldsymbol{\hat{i}} \times \boldsymbol{B} + a_2\boldsymbol{\hat{j}} \times \boldsymbol{B} + a_3\boldsymbol{\hat{k}} \times \boldsymbol{B} \\
+    &= a_1\boldsymbol{\hat{i}} \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) + a_2\boldsymbol{\hat{j}} \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) + a_3\boldsymbol{\hat{k}} \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) \\
+    &= a_1 b_1 \boldsymbol{\hat{i}} \times \boldsymbol{\hat{i}} + a_1 b_2 \boldsymbol{\hat{i}} \times \boldsymbol{\hat{j}} + a_1 b_3 \boldsymbol{\hat{i}} \times \boldsymbol{\hat{k}} + a_2 b_1 \boldsymbol{\hat{j}} \times \boldsymbol{\hat{i}} + a_2 b_2 \boldsymbol{\hat{j}} \times \boldsymbol{\hat{j}} + a_2 b_3 \boldsymbol{\hat{j}} \times \boldsymbol{\hat{k}} + a_3 b_1 \boldsymbol{\hat{k}} \times \boldsymbol{\hat{i}} + a_3 b_2 \boldsymbol{\hat{k}} \times \boldsymbol{\hat{j}} + a_3 b_3 \boldsymbol{\hat{k}} \times \boldsymbol{\hat{k}}\label{eq:cross-product-complete-expand}
+\end{align}
+
+With the following corollary,
+
+\begin{align}
+    \boldsymbol{\hat{i}} \times \boldsymbol{\hat{i}} = 0 \\
+    \boldsymbol{\hat{j}} \times \boldsymbol{\hat{j}} = 0 \\
+    \boldsymbol{\hat{k}} \times \boldsymbol{\hat{k}} = 0 \\
+    \boldsymbol{\hat{i}} \times \boldsymbol{\hat{j}} = -\boldsymbol{\hat{j}} \times \boldsymbol{\hat{i}} = \boldsymbol{\hat{k}} \\
+    \boldsymbol{\hat{j}} \times \boldsymbol{\hat{k}} = -\boldsymbol{\hat{k}} \times \boldsymbol{\hat{j}} = \boldsymbol{\hat{i}} \\
+    \boldsymbol{\hat{k}} \times \boldsymbol{\hat{i}} = -\boldsymbol{\hat{i}} \times \boldsymbol{\hat{k}} = \boldsymbol{\hat{j}} \\
+\end{align}
+
+Eq.~\ref{eq:cross-product-complete-expand} simplifies down to
+
+\begin{align}
+    \boldsymbol{A} \times \boldsymbol{B} &= a_1 b_2 \boldsymbol{\hat{k}} - a_1 b_3 \boldsymbol{\hat{j}} - a_2 b_1 \boldsymbol{\hat{k}} + a_2 b_3 \boldsymbol{\hat{i}} + a_3 b_1 \boldsymbol{\hat{j}} - a_3 b_2 \boldsymbol{\hat{i}} \\
+    &= (a_2 b_3 - a_3 b_2)\boldsymbol{\hat{i}} - (a_1 b_3 - a_3 b_1)\boldsymbol{\hat{j}} + (a_1 b_2 - a_2 b_1)\boldsymbol{\hat{k}}\label{eq:cross-product-algebraic-form}
+\end{align}
+
+We recall that a determinant of order 2 is defined by
+
+\begin{equation}
+    \renewcommand{\arraystretch}{2}
+    \begin{bmatrix}
+        a_1 & a_2 \\
+        b_1 & b_2 \\
+    \end{bmatrix} = a_1 b_2 - a_2 b_1
+\end{equation}
+
+A determinant of order 3 can be defined in terms of determinants of order 2 as
+
+\begin{equation}
+    \begin{bmatrix}
+        a_1 & a_2 & a_3 \\
+        b_1 & b_2 & b_3 \\
+        c_1 & c_2 & c_3 \\
+    \end{bmatrix} =
+    a_1 \begin{bmatrix}
+        b_2 & b_3 \\
+        c_2 & c_3 \\
+    \end{bmatrix} -
+    a_2 \begin{bmatrix}
+        b_1 & b_3 \\
+        c_1 & c_3 \\
+    \end{bmatrix} +
+    a_3 \begin{bmatrix}
+        b_1 & b_2 \\
+        c_1 & c_2 \\
+    \end{bmatrix}
+\end{equation}
+
+Eq.~\ref{eq:cross-product-algebraic-form} is equivalent to
+
+\begin{equation}
+    \boldsymbol{A} \times \boldsymbol{B} =
+    \begin{bmatrix}
+        a_2 & a_3 \\
+        b_2 & b_3 \\
+    \end{bmatrix} \boldsymbol{\hat{i}} -
+    \begin{bmatrix}
+        a_1 & a_3 \\
+        b_1 & b_3 \\
+    \end{bmatrix} \boldsymbol{\hat{j}} +
+    \begin{bmatrix}
+        a_1 & a_2 \\
+        b_1 & b_2 \\
+    \end{bmatrix} \boldsymbol{\hat{k}} =
+    \begin{bmatrix}
+        \boldsymbol{\hat{i}} & \boldsymbol{\hat{j}} & \boldsymbol{\hat{j}} \\
+        a_1 & a_2 & a_3 \\
+        b_1 & b_2 & b_3 \\
+    \end{bmatrix}
+\end{equation}
