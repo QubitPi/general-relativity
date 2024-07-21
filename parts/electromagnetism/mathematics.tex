@@ -236,15 +236,6 @@ From \hyperref[eq:def-gradient]{the definition of $\nabla$}, we construct the di
     &= \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}
 \end{align}
 
-%\begin{tcolorbox}[
-%    parbox=false,
-%    colbacktitle=red!10!white,
-%    colback=blue!10!white,coltitle=red!70!black,
-%    title=The Geometrical Interpretation of the Divergence
-%]
-%    The divergence is a measure of how much the vector $\boldsymbol{v}$ spreads out (diverges) from the point in question
-%\end{tcolorbox}
-
 \subsection{Curl}
 
 \subsubsection{The Cross Prudct of Two Vectors}
@@ -267,8 +258,8 @@ $0 \le \theta \le \pi$.
         \node at (2,0.5) {$|\textcolor{blue}{\boldsymbol{A}}\times \textcolor{red}{\boldsymbol{B}}|$};
         \draw[ultra thick,-latex,blue](0,0)--(3,0)node[midway,below]{$\boldsymbol{A}$};
         \draw[ultra thick,-latex,red](0,0)--(1,1)node[midway,above]{$\boldsymbol{B}$};
-        \draw[ultra thick,-latex,blue!50!red](0,0)--(0,3)node[pos=0.7,right]{$\boldsymbol{A} \times \boldsymbol{B}$};
-        \draw[ultra thick,-latex,blue!50!red](0,0)--(0,3)node[pos=0.5,right]{$\boldsymbol{n}$};
+        \draw[ultra thick,-latex,blue!50!red](0,0)--(0,3)node[pos=0.8,right]{$\boldsymbol{A} \times \boldsymbol{B}$};
+        \draw[ultra thick,-latex,blue!50!red](0,0)--(0,2)node[pos=0.7,right]{$\boldsymbol{n}$};
         \draw (0.6,0) arc [start angle=0,end angle=45,radius=0.6]
         node[pos=0.7,right]{$\theta$};
     \end{tikzpicture}
@@ -303,26 +294,124 @@ Our next objective is to develop a convenient formula for calculating $\boldsymb
 We need to know that the cross product possesses the following algebraic properties
 
 \begin{align}
-    (c\boldsymbol{A}) \times \boldsymbol{B} &= c(\boldsymbol{A} \times \boldsymbol{B}) = \boldsymbol{A} \times (c\boldsymbol{B})\label{eq:cross-product-order}, \\
+    (c\boldsymbol{A}) \times \boldsymbol{B} &= c(\boldsymbol{A} \times \boldsymbol{B}) = \boldsymbol{A} \times (c\boldsymbol{B})\label{eq:cross-product-homogeneity}, \\
     \boldsymbol{A} \times (\boldsymbol{B} + \boldsymbol{C}) &= \boldsymbol{A} \times \boldsymbol{B} + \boldsymbol{A} \times \boldsymbol{C}\label{eq:cross-product-distributive-right}, \\
     (\boldsymbol{A} + \boldsymbol{B}) \times \boldsymbol{C} &= \boldsymbol{A} \times \boldsymbol{C} + \boldsymbol{B} \times \boldsymbol{C}\label{eq:cross-product-distributive-left}
 \end{align}
 
-Property~\ref{eq:cross-product-order} is easily established directly from Definition~\ref{def:cross-product}
+Property~\ref{eq:cross-product-homogeneity}, also called \textit{homogeneous} in each
+argument\footnote{\href{https://en.wikiversity.org/wiki/Cross_product}{Cross product}, Wikiversity}, is easily
+established directly from Definition~\ref{def:cross-product}.
+
+The proof of Eq.~\ref{eq:cross-product-distributive-right} starts with a unit vector $\boldsymbol{\hat{n}}$ and 3
+arbitrary vectors $\boldsymbol{B}$, $\boldsymbol{C}$, and $\boldsymbol{B + C}$.
+$\boldsymbol{\hat{n}} \times \boldsymbol{(B + C)}$ can be constructed by performing the following two operations:
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm]
+        \fill[white!95!red](-3, 0, 2.5)--(3, 0, 2.5)--(3.5, 0, -1)--(-2.5, 0, -1)--cycle;
+
+        % Axes
+        \draw [thick, -{latex[scale=3.0]}] (0,0,0) -- (0,1,0) node [at end, right] {$\boldsymbol{A}$};
+
+        % Vectors
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,0,0) -- (-1,3,1)node[pos=0.7,right]{$\boldsymbol{B} + \boldsymbol{C}$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,0,0) -- (0,2,2)node[pos=0.5,below]{$\boldsymbol{B}$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,2,2) -- (-1,3,1)node[pos=0.5,left]{$\boldsymbol{C}$};
+
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,0,0) -- (-1,0,1)node[pos=1.0,above]{$(\boldsymbol{B} + \boldsymbol{C})'$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,0,0) -- (0,0,2)node[pos=0.9,below]{$\boldsymbol{B}'$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,0,2) -- (-1,0,1)node[pos=0.4,left]{$\boldsymbol{C}'$};
+
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,0,0) -- (1,0,1)node[pos=0.9,below]{$(\boldsymbol{B} + \boldsymbol{C})''$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (0,0,0) -- (2,0,0)node[pos=1.0,above]{$\boldsymbol{B}''$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (2,0,0) -- (1,0,1)node[pos=0.6,below]{$\boldsymbol{C}''$};
+
+        % Dashes
+        \draw [loosely dashed, thick] (-1,3,1) -- (-1,0,1);
+        \draw [loosely dashed, thick] (0,2,2) -- (0,0,2);
+
+        \draw [line width=0mm, white!45!red] (0, 0, 1) coordinate (a)
+        -- (0, 0, 0) coordinate (b)
+        -- (1, 0, 0) coordinate (c)
+        pic["$\theta$", draw=black, <->, angle eccentricity=1.5, angle radius=0.3cm] {angle=a--b--c};
+    \end{tikzpicture}
+\end{figure}
+
+\begin{enumerate}
+    \item Project $\boldsymbol{B}$, $\boldsymbol{C}$, and $\boldsymbol{(B + C)}$ onto the plane perpendicular to
+          $\boldsymbol{\hat{n}}$ to obtain a vector $\boldsymbol{B}'$, $\boldsymbol{C}'$, and $\boldsymbol{(B + C)'}$.
+          By the nature of projection, the head and tails of $\boldsymbol{B'}$, $\boldsymbol{C'}$, and
+          $\boldsymbol{(B + C)'}$ still coincide. Then,
+    \item rotate the triangle formed by $\boldsymbol{B}'$, $\boldsymbol{C}'$, and $\boldsymbol{(B + C)'}$ by 90 degrees
+          counterclockwise with respect to the tail of $\boldsymbol{\hat{n}}$ to obtain $\boldsymbol{B}''$,
+          $\boldsymbol{C}''$, and $\boldsymbol{(B + C)''}$, which still form a triangle.
+\end{enumerate}
+
+Therefore, we have
+
+\[
+    (\boldsymbol{B} + \boldsymbol{C})'' = \boldsymbol{B}'' + \boldsymbol{C}''
+\]
+
+What this means is, geometrically, the operation of $\boldsymbol{\hat{n}} \times (\boldsymbol{B} + \boldsymbol{C})$ and
+$\boldsymbol{\hat{n}} \times \boldsymbol{B} + \boldsymbol{\hat{n}} \times \boldsymbol{C}$ produces the same result, i.e.
+the vector $(\boldsymbol{B} + \boldsymbol{C})''$. Therefore
+
+\[
+    \boldsymbol{\hat{n}} \times (\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{\hat{n}} \times \boldsymbol{B} + \boldsymbol{\hat{n}} \times \boldsymbol{C}
+\]
+
+Now let
+
+\begin{equation}
+    \boldsymbol{A} = c \boldsymbol{\hat{n}}
+\end{equation}
+
+We will then have
+
+\[
+    \cancel{\frac{1}{c}}\boldsymbol{A} \times (\boldsymbol{B} + \boldsymbol{C}) = \cancel{\frac{1}{c}}\boldsymbol{A} \times \boldsymbol{B} + \cancel{\frac{1}{c}}\boldsymbol{A} \times \boldsymbol{C}
+\]
+
+ending up with the original formula of
+
+\[
+    \boldsymbol{A} \times (\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{A} \times \boldsymbol{B} + \boldsymbol{A} \times \boldsymbol{C}
+\]
+
+\qed
+
+Eq.~\ref{eq:cross-product-distributive-left} follows from Eq~\ref{eq:cross-product-distributive-right} combined with the
+corollary of
+
+\begin{equation}
+    \boldsymbol{A} \times \boldsymbol{B} = - \boldsymbol{B} \times \boldsymbol{A}
+\end{equation}
+
+\begin{align*}
+    (\boldsymbol{A} + \boldsymbol{B}) \times \boldsymbol{C} &= - \left[ \boldsymbol{C} \times (\boldsymbol{A} + \boldsymbol{B}) \right] \\
+    &= - (\boldsymbol{C} \times \boldsymbol{A} + \boldsymbol{C} \times \boldsymbol{B}) \\
+    &= - \boldsymbol{C} \times \boldsymbol{A} - \boldsymbol{C} \times \boldsymbol{B} \\
+    &= \boldsymbol{A} \times \boldsymbol{C} + \boldsymbol{B} \times \boldsymbol{C}
+\end{align*}
+
+\qed
 
 We continue with our task of multiplying out the \hyperref[eq:cross-product-of-two]{cross product of the vectors} using
-Eq.~\ref{eq:cross-product-order},~\ref{eq:cross-product-distributive-right}, and ~\ref{eq:cross-product-distributive-left}.
+Eq.~\ref{eq:cross-product-homogeneity},~\ref{eq:cross-product-distributive-right}, and ~\ref{eq:cross-product-distributive-left}.
 By substituting $b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}$ with $\boldsymbol{B}$:
 
 \begin{align}
     \boldsymbol{A} \times \boldsymbol{B} &= (a_1\boldsymbol{\hat{i}} + a_2\boldsymbol{\hat{j}} + a_3\boldsymbol{\hat{k}}) \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) \\
-    &= (a_1\boldsymbol{\hat{i}} + a_2\boldsymbol{\hat{j}} + a_3\boldsymbol{\hat{k}}) \times \boldsymbol{B} \\
+    &= (a_1\boldsymbol{\hat{i}} + a_2\boldsymbol{\hat{j}} + a_3\boldsymbol{\hat{k}}) \times \boldsymbol{B}\label{eq:cross-product-assumed-distributivity} \\
     &= a_1\boldsymbol{\hat{i}} \times \boldsymbol{B} + a_2\boldsymbol{\hat{j}} \times \boldsymbol{B} + a_3\boldsymbol{\hat{k}} \times \boldsymbol{B} \\
     &= a_1\boldsymbol{\hat{i}} \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) + a_2\boldsymbol{\hat{j}} \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) + a_3\boldsymbol{\hat{k}} \times (b_1\boldsymbol{\hat{i}} + b_2\boldsymbol{\hat{j}} + b_3\boldsymbol{\hat{k}}) \\
     &= a_1 b_1 \boldsymbol{\hat{i}} \times \boldsymbol{\hat{i}} + a_1 b_2 \boldsymbol{\hat{i}} \times \boldsymbol{\hat{j}} + a_1 b_3 \boldsymbol{\hat{i}} \times \boldsymbol{\hat{k}} + a_2 b_1 \boldsymbol{\hat{j}} \times \boldsymbol{\hat{i}} + a_2 b_2 \boldsymbol{\hat{j}} \times \boldsymbol{\hat{j}} + a_2 b_3 \boldsymbol{\hat{j}} \times \boldsymbol{\hat{k}} + a_3 b_1 \boldsymbol{\hat{k}} \times \boldsymbol{\hat{i}} + a_3 b_2 \boldsymbol{\hat{k}} \times \boldsymbol{\hat{j}} + a_3 b_3 \boldsymbol{\hat{k}} \times \boldsymbol{\hat{k}}\label{eq:cross-product-complete-expand}
 \end{align}
 
-With the following corollary,
+With the following corollaries,
 
 \begin{align}
     \boldsymbol{\hat{i}} \times \boldsymbol{\hat{i}} = 0 \\
@@ -337,60 +426,76 @@ Eq.~\ref{eq:cross-product-complete-expand} simplifies down to
 
 \begin{align}
     \boldsymbol{A} \times \boldsymbol{B} &= a_1 b_2 \boldsymbol{\hat{k}} - a_1 b_3 \boldsymbol{\hat{j}} - a_2 b_1 \boldsymbol{\hat{k}} + a_2 b_3 \boldsymbol{\hat{i}} + a_3 b_1 \boldsymbol{\hat{j}} - a_3 b_2 \boldsymbol{\hat{i}} \\
-    &= (a_2 b_3 - a_3 b_2)\boldsymbol{\hat{i}} - (a_1 b_3 - a_3 b_1)\boldsymbol{\hat{j}} + (a_1 b_2 - a_2 b_1)\boldsymbol{\hat{k}}\label{eq:cross-product-algebraic-form}
+    &= (a_2 b_3 - a_3 b_2)\boldsymbol{\hat{i}} - (a_1 b_3 - a_3 b_1)\boldsymbol{\hat{j}} + (a_1 b_2 - a_2 b_1)\boldsymbol{\hat{k}}\label{eq:cross-product-algebraic-expand}
 \end{align}
 
 We recall that a determinant of order 2 is defined by
 
 \begin{equation}
-    \renewcommand{\arraystretch}{2}
-    \begin{bmatrix}
+    \begin{vmatrix}
         a_1 & a_2 \\
         b_1 & b_2 \\
-    \end{bmatrix} = a_1 b_2 - a_2 b_1
+    \end{vmatrix} = a_1 b_2 - a_2 b_1
 \end{equation}
 
 A determinant of order 3 can be defined in terms of determinants of order 2 as
 
 \begin{equation}
-    \begin{bmatrix}
+    \begin{vmatrix}
         a_1 & a_2 & a_3 \\
         b_1 & b_2 & b_3 \\
         c_1 & c_2 & c_3 \\
-    \end{bmatrix} =
-    a_1 \begin{bmatrix}
+    \end{vmatrix} =
+    a_1 \begin{vmatrix}
         b_2 & b_3 \\
         c_2 & c_3 \\
-    \end{bmatrix} -
-    a_2 \begin{bmatrix}
+    \end{vmatrix} -
+    a_2 \begin{vmatrix}
         b_1 & b_3 \\
         c_1 & c_3 \\
-    \end{bmatrix} +
-    a_3 \begin{bmatrix}
+    \end{vmatrix} +
+    a_3 \begin{vmatrix}
         b_1 & b_2 \\
         c_1 & c_2 \\
-    \end{bmatrix}
+    \end{vmatrix}
 \end{equation}
 
-Eq.~\ref{eq:cross-product-algebraic-form} is equivalent to
+Eq.~\ref{eq:cross-product-algebraic-expand} is equivalent to
 
-\begin{equation}
-    \boldsymbol{A} \times \boldsymbol{B} =
-    \begin{bmatrix}
+\begin{align}
+    \boldsymbol{A} \times \boldsymbol{B} &=
+    \begin{vmatrix}
         a_2 & a_3 \\
         b_2 & b_3 \\
-    \end{bmatrix} \boldsymbol{\hat{i}} -
-    \begin{bmatrix}
+    \end{vmatrix} \boldsymbol{\hat{i}} -
+    \begin{vmatrix}
         a_1 & a_3 \\
         b_1 & b_3 \\
-    \end{bmatrix} \boldsymbol{\hat{j}} +
-    \begin{bmatrix}
+    \end{vmatrix} \boldsymbol{\hat{j}} +
+    \begin{vmatrix}
         a_1 & a_2 \\
         b_1 & b_2 \\
-    \end{bmatrix} \boldsymbol{\hat{k}} =
-    \begin{bmatrix}
+    \end{vmatrix} \boldsymbol{\hat{k}} \\ &=
+    \begin{vmatrix}
         \boldsymbol{\hat{i}} & \boldsymbol{\hat{j}} & \boldsymbol{\hat{j}} \\
         a_1 & a_2 & a_3 \\
         b_1 & b_2 & b_3 \\
-    \end{bmatrix}
-\end{equation}
+    \end{vmatrix} \label{eq:cross-product-algebraic-form}
+\end{align}
+
+\begin{tcolorbox}[
+    parbox=false,
+    enhanced,
+    colback=red!5!white,colframe=red!75!black,
+    watermark tikz={\draw[line width=2mm] circle (1cm) node{\fontfamily{ptm}\fontseries{b}\fontsize{20mm}{20mm}\selectfont !};}
+]
+    It should be noted that formula~\ref{eq:cross-product-algebraic-form} is by no means a definition of cross product,
+    because obtaining it must assume the \hyperref[eq:cross-product-assumed-distributivity]{distributivity law}
+    \footnote{\href{https://math.stackexchange.com/questions/362139/how-to-prove-the-distributive-property-of-cross-product\#comment5670827\_362161}{The determinant pre-assumes the distributivity of cross product}}.
+    We should view \ref{eq:cross-product-algebraic-form} simply as a convenient tool for making calculations
+
+    In addition, Definition like \ref{def:cross-product} that avoid dependence on explicit representations of vectors in
+    terms of any particular coordinate system are called \textit{invariant} or \textit{coordinate-free}.
+    \ref{eq:cross-product-algebraic-form} doesn't preserve such invariant because it assumes a Cartesian
+    space\footnote{\href{https://en.wikiversity.org/wiki/Cross_product\#Algebraic\_Definition}{Cross product}, Wikiversity}
+\end{tcolorbox}
