@@ -679,3 +679,128 @@ Eq.~\ref{eq:cross-product-algebraic-form} we construct the curl:
     \caption{Curl of vector fields}
     \label{fig:curl-examples}
 \end{figure}
+
+\subsection{Line Integrals}
+
+\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons, 2nd}, p. 751}
+Throughout our discussion we assime that the functions under discussion have all the continuity and differentiability
+properties that are needed in any given situation
+
+If a charge is moving in an electromagnetic field with a constant force $\boldsymbol{F}$ (constant in both direction and
+magnitude), then we know that the work done by this force is the product of the component of $\boldsymbol{F}$ in the
+direction of motion and the distance the charged particle moves, i.e.
+
+\begin{equation}
+    W = \boldsymbol{F} \cdot \Delta \boldsymbol{R}
+\end{equation}
+
+where $\boldsymbol{R}$ is the vector from the initial position of the particle to its final position. Now suppose that
+$\boldsymbol{F}$ is not constant, but instead is a vector function that varies from point to pint throughout a certain
+region of the plane, say
+
+\begin{equation}\label{eq:vector-valued-function}
+    \boldsymbol{F} = \boldsymbol{F}(x, y) = M(x, y)\boldsymbol{\hat{i}} + N(x, y)\boldsymbol{\hat{j}}
+\end{equation}
+
+\begin{tcolorbox}[
+    enhanced,
+    arc=3mm,boxrule=1.5mm,
+    frame hidden,colback=blue!10!white,
+    borderline={1mm}{0mm}{blue,dotted}
+]
+    The vector-value function~\ref{eq:vector-valued-function} is usually called \textit{force field}. More generally,
+    a \textit{vector field} in the plane is any vector-valued function that associates a vector with each point $(x, y)$
+    in a certain plane region $R$. In this context a function whose values are numbers (scalars) is called a
+    \textit{scalar field}. Every scalar field $f(x, y)$ gives rise to a corresponding vector field
+
+    \begin{equation}
+        \nabla f(x, y) = \frac{\partial f}{\partial x}\boldsymbol{\hat{i}} + \frac{\partial f}{\partial y}\boldsymbol{\hat{y}}
+    \end{equation}
+
+    This is called the \textit{gradient field} of $f$. Some vector fields are gradient fields, but most are not. Those
+    gradient fields, however, are of special importance
+\end{tcolorbox}
+
+Suppose also that this variable force pushes the charged particle along a smooth curve $C$ with a parametric equations
+
+\begin{equation}
+    x = x(t) \text{\ \ \ \ \ \ and \ \ \ \ \ \ } y = y(t)\text{, \ \ \ \ \ \ } t_1 \le t \le t^2
+\end{equation}
+
+The work done by this force is denoted by
+
+\begin{equation}
+    \int_{C} \boldsymbol{F} \cdot d\boldsymbol{R} \text{\ \ \ \ \ \ or \ \ \ \ \ \ } \int_{C}M(x, y)dx + N(x, y)dy
+\end{equation}
+
+This is called the \textbf{line integral}
+
+We approximate the curve by a polygonal path as shown in Fig.~\ref{fig:line-integral}. That is, choose points
+$P_0 = A, P_1, P_2, \ldots, P_{n - 1}, P_n = B$ along C in this order; let $\boldsymbol{R_k}$ be the position vector of
+$P_k$ and define the $n$ incremental vectors by $\Delta \boldsymbol{R_k} = \boldsymbol{R_{k + 1}} - \boldsymbol{R_k}$,
+where $k = 0, 1, \ldots, n - 1$
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \colorlet{xcol}{blue!70!black}
+        \colorlet{acol}{red!50!blue!80!black!80}
+        \tikzstyle{vector}=[->,very thick,xcol,line cap=round]
+
+        \def\ul{0.6}
+        \def\Ra{1.4}
+        \def\Rb{0.8}
+        \coordinate (A) at (0, 0);
+        \coordinate (B) at (1,1);
+        \coordinate (C) at (2,0);
+        \coordinate (D) at (3,1);
+        \coordinate (E) at (4,0);
+
+        \draw[xcol,thick]
+        (A)++(-140:0.4) to[out=20,in=-120]
+        (A) to[out=60, in=-170]
+        (B) to[out=-10, in=170]
+        (C) to[out=10, in=-170]
+        (D) to[out=-10, in=170,]
+        (E) to[out=10, in=-130]++ (40:0.4);
+
+        \fill[xcol] (A) circle (2pt) node[above left=-1] {$P_0 = A$};
+        \fill[xcol] (B) circle (2pt) node[above left=-1] {$P_1$};
+        \fill[xcol] (C) circle (2pt) node[below left=-1] {$P_2$};
+        \fill[xcol] (D) circle (2pt) node[above left=-1] {$P_{n - 1}$};
+        \fill[xcol] (E) circle (2pt) node[below right=-1] {$P_n = B$};
+
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (A) -- (B)node[pos=0.5,left]{$\Delta\boldsymbol{R_0}$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (B) -- (C)node[pos=0.8,left]{$\Delta\boldsymbol{R_1}$};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (C) -- (D)node[pos=0.5,left]{\ldots};
+        \draw [very thick, -{latex[scale=3.0]}, white!45!red] (D) -- (E)node[pos=0.5,right]{$\Delta\boldsymbol{R_{n - 1}}$};
+    \end{tikzpicture}
+    \caption{Approximating line integral}
+    \label{fig:line-integral}
+\end{figure}
+
+If we denote by $\boldsymbol{F_k}$ the value of the vector function $\boldsymbol{F}$ at $P_k$ and form the sum
+
+\begin{equation}
+    \sum_{k = 0}^{n - 1}\boldsymbol{F_k} \cdot \Delta\boldsymbol{R_k}
+\end{equation}
+
+then the \textit{line integral of} $\boldsymbol{F}$ \textit{along} $C$ is defined to be the limit of sums
+
+\begin{equation}
+    \int_{C} \boldsymbol{F} \cdot d\boldsymbol{R} = \lim \sum_{k = 0}^{n - 1}\boldsymbol{F_k} \cdot \Delta\boldsymbol{R_k}
+\end{equation}
+
+\begin{tcolorbox}[enhanced,arc=3mm,boxrule=1.5mm,
+    frame hidden,colback=blue!10!white,
+    borderline={1mm}{0mm}{blue,dotted}
+]
+    \footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons, 2nd}, p. 757} It
+    will often be necessary to consider situations in which th path of integration $C$ is a \textit{closed} curve. In this
+    case a line integral is usually written with a small circle on the integral sign, as in
+
+    \[
+        \oint_{C} \boldsymbol{F} \cdot d\boldsymbol{R}
+    \]
+\end{tcolorbox}
+
