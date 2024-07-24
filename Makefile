@@ -19,4 +19,4 @@ clean:
 git-push:
 	git add study-notes.pdf
 	git commit -m "Update notes"
-	git push origin master
+	# git push origin master
