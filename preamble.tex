@@ -56,15 +56,24 @@
 }{def}
 
 \newtcbtheorem[]{Theorem}{Theorem}
-{theorem style=plain apart,label type=theorem,enhanced,frame hidden,
-boxrule=2mm,titlerule=0mm,toptitle=1mm,bottomtitle=1mm,
-fonttitle=\bfseries\large,fontupper=\normalsize,
-coltitle=green!35!black,colbacktitle=green!15!white,
-colback=green!50!yellow!15!white,borderline={1pt}{0pt}{green!25!blue},
+{
+    breakable,
+    parbox=false,
+    theorem style=plain apart,
+    label type=theorem,
+    enhanced,
+    frame hidden,
+    boxrule=2mm,titlerule=0mm,toptitle=1mm,bottomtitle=1mm,
+    fonttitle=\bfseries\large,fontupper=\normalsize,
+    coltitle=green!35!black,colbacktitle=green!15!white,
+    colback=green!50!yellow!15!white,
+    borderline={1pt}{0pt}{green!25!blue},
 }{theo}
 
 \NewTcbTheorem[auto counter, crefname={corollary}{corollaries}]%
 {Corollary}{Corollary}{
+    breakable,
+    parbox=false,
     colframe=green!50!black,colback=green!10!white,
     colbacktitle=green!20!white,coltitle=blue!75!black
 }{cor}
