@@ -1,7 +1,7 @@
 \section{Metric Spaces}
 
 \begin{Definition}{Metric Space}{metric-space}
-    Let $X$ be a non-empty set. A \textbf{metric}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
+    Let $X$ be a non-empty set. A \textbf{metric}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.51}
     on $X$ is a real function $d$ of ordered pairs of elements of $X$ which satisfies the following conditions
 
     \begin{itemize}
@@ -18,6 +18,7 @@ $d(x, y)$ is called the \textit{distance} between $x$ and $y$. Thus a metric spa
     \item a metric $d$ on $X$
 \end{enumerate}
 
+\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.70}
 Now let $X$ be a metric space with metric $d$, and let
 
 \begin{equation}
@@ -39,10 +40,80 @@ sometimes write $x_n \rightarrow x$ in the form of
 
 \[ \lim x_n = x \]
 
-Every convergent sequence $\{ x_n \}$ has the following property: for each $\epsilon > 0$, there eixsts a positive
-integer $n_0$ such that $m, n \ge n_0 \Rightarrow d(x_m, x_n) < \epsilon$
+Now let's consider two cases of convergence:
 
+\begin{itemize}
+    \item for each $\epsilon > 0$, there exists a positive integer $n_0$ such that $n \ge n_0 \Rightarrow d(x_n, x) < \epsilon$ (the same definition above)
+    \item for each $\epsilon > 0$, there exists a positive integer $n_0$ such that $m \ge n_0 \Rightarrow d(x_m, x) < \epsilon$
+\end{itemize}
 
+By the \textit{symmetry} and \textit{triangle inequality} of the Def.~\ref{def:metric-space}:
+
+\begin{equation}
+    d(x_m, x_n) \le d(x_m, x) + d(x, x_n) = d(x_m, x) + d(x_n, x) \le \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+\end{equation}
+
+for all $m, n \lg n_0$. Therefore, every convergent sequence $\{ x_n \}$ has the following property:
+
+\begin{tcolorbox}[
+    colback=green!5!white,
+    colframe=green!75!black,
+    colbacktitle=red!85!black
+]
+    \begin{center}
+        For each $\epsilon > 0$, there exists a positive integer $n_0$ such that $m, n \ge n_0 \Rightarrow d(x_m, x_n) < \epsilon$
+    \end{center}
+\end{tcolorbox}
+
+A sequence with this property is called a \roundinlinebox[green]{Cauchy sequence}. Intuitively, a Cauchy sequence is a
+sequence whose elements become arbitrarily close to each other as the sequence progress:
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[->] (-0.2,0) -- (4.5,0) node[right] {$n$};
+        \draw[->] (0,-1.2) -- (0,2.5) node[above] {$x_n$};
+        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=blue,domain=0:4,samples=100]  plot (\x,{1+ sin(10*\x r)*e^(-\x)});
+        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=red,dashed,thin,domain=0:4,samples=100]  plot (\x,{1+e^(-\x)});
+        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=red,dashed,thin,domain=0:4,samples=100]  plot (\x,{1-e^(-\x)});
+    \end{tikzpicture}
+\end{center}
+
+In addition, we have also shown that every convergent sequence is a Cauchy sequence. \textit{The converse of this,
+however, is not necessarily true}. That is, a Cauchy sequence is not necessarily convergent. As an example, consider the
+subspace $X = (0, 1]$ of the real line where $x_n \in X$. The sequence defined by $x_n = \frac{1}{n}$ is easily seen to
+be a Cauchy sequence in this space, but it is not convergent, because the point $0 \not\in X$ is not a point of the
+space
+
+\begin{center}
+    \begin{tikzpicture}
+        \colorlet{mygreen}{green!70!black}
+
+        \draw[->] (-0.2,0) -- (10,0) node[right] {$n$};
+        \draw[->] (0,-1.2) -- (0,3) node[above] {$x_n$};
+        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=blue,domain=0.3:1,samples=20]  plot (\x,{\x^(-1)});
+        \draw[line width=0.5mm,color=blue,domain=1:10]  plot (\x,{\x^(-1)});
+
+        \coordinate (A) at (0, 1);
+        \coordinate (B) at (0, 0);
+        \fill[mygreen] (A) circle (1.5pt) node[left=1] {$x_n = 1 \in X$};
+        \fill[red] (B) circle (1.5pt) node[left=1] {$x_n = 0 \not\in X$};
+
+        \draw [dashed] (A) -- (1, 1);
+    \end{tikzpicture}
+\end{center}
+
+\highlight[green]{The notion of a convergent sequence is not intrinsic to the sequence itself, but also depends on
+the structure of the space in which it lies}. A convergent sequence is not convergent "on its own"; it must converge to
+some point in the space.
+
+Sounds wordy? When the space \href{https://www.reddit.com/r/learnmath/comments/exp735/comment/fgaqd8p/?utm\_source=share&utm\_medium=web3x&utm\_name=web3xcss&utm\_term=1&utm\_content=share\_button}{has a hole} in it. Like if you remove 0 from $\mathbb{R}$ like in the case above, then
+$\frac{1}{n}$ is a Cauchy sequence that doesn't converge.
+
+We are now ready to introduce the concept of \textit{complete metric space}, which we define as follows:
+
+\begin{Definition}{Complete Metric Space}{complete-metric-space}
+    A complete metric space is a metric space in which every Cauchy sequence is convergent
+\end{Definition}
 
 \begin{Definition}{Linear Space}{linear-space}
     Let $L$ be a non-empty set, and assume that each pair of elements $x$ and $y$ in $L$ can be combined by a process
