@@ -55,6 +55,7 @@ We denote the first change in $z$ by $\Delta_1 z$, so that
 By The Mean Value Theorem\footnote{
     \begin{Theorem}{
         The Mean Value Theorem\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons, 2nd}, p. 76}
+        \phantomsection\hypertarget{theo:mean-value-theorem}
     }{mean-value-theorem}
         Let $y = f(x)$ be a function with the following two properties:
 
@@ -861,7 +862,7 @@ of differentiation likewise predate the fundamental theorem of calculus by hundr
 historical relevance of the fundamental theorem of calculus is not the ability to calculate these operations, but the
 realization that the two seeminly distinct operations are actually closely related}
 
-\begin{Theorem}{The First Fundamental Theorem of Calculus}{fundamental-theorem-of-calculus-part-1}
+\begin{Theorem}{\href{https://en.wikipedia.org/wiki/Fundamental\_theorem\_of\_calculus\#First\_part}{The First Fundamental Theorem of Calculus}}{fundamental-theorem-of-calculus-part-1}
     Let $f$ be a continuous real-valued function defined ona closed interval $[a, b]$. Let $F$ be the function defined,
     for all $x$ in $[a, b]$, by
 
@@ -897,10 +898,9 @@ For any two number $x_1$ and $x_1 + \Delta x$ in $[a, b]$, we have
 
 To be able to go any further, we shall introduce the \textit{Mean value theorem for definite integrals}
 
-\begin{Theorem}{Mean Value Theorem for Definite Integrals}{mean-value-theorem-def-integrals}
+\begin{Theorem}{\href{https://en.wikipedia.org/wiki/Mean\_value\_theorem\#First\_mean\_value\_theorem\_for\_definite\_integrals}{Mean Value Theorem for Definite Integrals}}{mean-value-theorem-def-integrals}
     If $f: [a, b] \rightarrow \mathbb{R}$ is continuous and $g$ is an integrable function that does not change sign on
-    $[a, b]$, then there exists $c$ in $(a, b)$ such
-    that\footnote{\href{https://en.wikipedia.org/wiki/Mean\_value\_theorem\#First\_mean\_value\_theorem\_for\_definite\_integrals}{Mean value theorems for definite integrals}, Wikipedia}
+    $[a, b]$, then there exists $c$ in $(a, b)$ such that
 
     \begin{equation}
         \int_a^b f(x)g(x)dx = f(c)\int_a^b g(x)dx
@@ -988,7 +988,7 @@ that is,
     F'(x_1) = f(x_1)
 \end{equation}
 
-\begin{Corollary}{Corollary of Theorem~\ref{theo:fundamental-theorem-of-calculus-part-1}}{fundamental-theorem-of-calculus-part-1-corollary}
+\begin{Corollary}{\href{https://en.wikipedia.org/wiki/Fundamental\_theorem\_of\_calculus\#Corollary}{Corollary} of Theorem~\ref{theo:fundamental-theorem-of-calculus-part-1}}{fundamental-theorem-of-calculus-part-1-corollary}
     If $f$ is a real-valued continuous function on $[a, b]$ and $F$ an antiderivative of $f$ in $[a, b]$, then
 
     \begin{equation}
@@ -999,8 +999,9 @@ that is,
     Theorem~\ref{theo:fundamental-theorem-of-calculus-part-2}
 \end{Corollary}
 
-\paragraph{Proof of Corollary~\ref{cor:fundamental-theorem-of-calculus-part-1-corollary}}
+\paragraph{Proof of Corollary~\ref{cor:fundamental-theorem-of-calculus-part-1-corollary}}\footnote{}
 
+\footnote{\href{https://en.wikipedia.org/wiki/Fundamental\_theorem\_of\_calculus\#Proof\_of\_the\_corollary}{Proof of the corollary, Fundamental theorem of calculus}, Wikipedia}
 Suppose $F$ is an antiderivative of $f$, which is continuous on $[a, b]$. Let $G(x)$ also be an antiderivative of $f$:
 
 \begin{equation}
@@ -1054,7 +1055,7 @@ Therefore
 
 \qed
 
-\begin{Theorem}{The Second Fundamental Theorem of Calculus: Newton-Leibniz Theorem}{fundamental-theorem-of-calculus-part-2}
+\begin{Theorem}{\href{https://en.wikipedia.org/wiki/Fundamental\_theorem\_of\_calculus\#Second\_part}{The Second Fundamental Theorem of Calculus}: Newton-Leibniz Theorem}{fundamental-theorem-of-calculus-part-2}
     Let $f$ be a real-valued function on a closed interval $[a, b]$ and $F$ a continuous function on $[a, b]$ which is
     an antiderivative of $f$ in $(a, b)$:
 
@@ -1070,6 +1071,69 @@ Therefore
 
     Here we \textbf{do not assume $f$ is continuous}
 \end{Theorem}
+
+\paragraph{Proof of Theorem~\ref{theo:fundamental-theorem-of-calculus-part-2}}
+
+\footnote{\href{https://en.wikipedia.org/wiki/Fundamental\_theorem\_of\_calculus\#Proof\_of\_the\_second\_part}{Proof of the second part, Fundamental theorem of calculus}, Wikipedia}
+Let $f$ be \hyperref[eq:riemann-integral]{Riemann integrable} on $[a, b]$ and let $f$ admit an antiderivative $F$ on
+$(a, b)$ such that $F$ is continuous on $[a, b]$.
+
+Begin with the quantity $F(b) - F(a)$. Let there be numbers $x_0, \ldots, x_n$ such that
+
+\begin{equation}
+    a = x_0 < x_1 < x_2 < \ldots < x_{n - 1} < x_n = b
+\end{equation}
+
+If follows that
+
+\begin{equation}
+    F(b) - F(a) = F(x_n) - F(x_0)
+\end{equation}
+
+Now, we add each $F(x_i)$ along with its additive inverse, so that the resulting quantity is equal:
+
+\begin{align}
+    &F(b) - F(a) \\
+    ={}& F(x_n) + [-F(x_{n - 1} + F(x_{n - 1})] + \ldots + [-F(x_{1} + F(x_{1})] - F(x_0) \\
+    ={}& [F(x_n) - F(x_{n - 1})] + [F(x_{n - 1}) - F(x_{n - 2})] + \ldots + [F(x_2) - F(x_1)] + [F(x_{1}) - F(x_0)] \\
+    ={}& \sum_{i = 1}^n \left[ F(x_i) - F(x_{i - 1}) \right] \label{eq:sum-of-subtractives}
+\end{align}
+
+Since $F$ is differentiable on interval $(a, b)$ and continuous on $[a, b]$, it is also differentiable on each interval
+$(x_{i - 1}, x_i)$ and continuous on each interval $[x_{i - 1}, x_i]$. According to the
+\hyperlink{theo:mean-value-theorem}{Mean Value Theorem}, for each $i$ there exists a $c_i$ in $(x_{i - 1}, x_i)$ such
+that
+
+\begin{equation}
+    F(x_i) - F(x_{i - 1}) = F'(c_i)(x_i - x_{i - 1})
+\end{equation}
+
+Plugging this equation into Eq.~\ref{eq:sum-of-subtractives}, we get
+
+\begin{equation}
+    F(b) - F(a) = \sum_{i = 1}^n \left[ F'(c_i)(x_i - x_{i - 1}) \right] = \sum_{i = 1}^n \left[ f(c_i)\Delta x_i \right]
+\end{equation}
+
+We are describing the area of a rectangle, with the width times the height, and we are adding the areas together. Each
+rectangle, by virtue of the Mean Value Theorem, describes an approximation of the curve section it is drawn over. Also
+$\Delta x_i$ need not be the same for all values of $i$. What we will do is to approximate the curve with $n$
+rectangles. As the widths of the partitions get smaller and $n$ increases, we get closer to the actual areas
+
+Since $f$ is Riemann integrable:
+
+\begin{equation}
+    \lim\limits_{\Vert \Delta x_i \Vert \rightarrow 0}F(b) - F(a) = \lim\limits_{\Vert \Delta x_i \Vert \rightarrow 0}\sum_{i = 1}^n \left[ f(c_i)\Delta x_i \right]
+\end{equation}
+
+\begin{equation}
+    F(b) - F(a) = \lim\limits_{\Vert \Delta x_i \Vert \rightarrow 0}\sum_{i = 1}^n \left[ f(c_i)\Delta x_i \right]
+\end{equation}
+
+\begin{equation}
+    F(b) - F(a) = \int_a^b f(x) dx
+\end{equation}
+
+\qed
 
 \subsubsection{Independence of Path \& Conservative Fields}
 

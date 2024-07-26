@@ -84,7 +84,8 @@ subspace $X = (0, 1]$ of the real line where $x_n \in X$. The sequence defined b
 be a Cauchy sequence in this space, but it is not convergent, because the point $0 \not\in X$ is not a point of the
 space
 
-\begin{center}
+\begin{figure}[H]
+    \centering
     \begin{tikzpicture}
         \colorlet{mygreen}{green!70!black}
 
@@ -100,7 +101,10 @@ space
 
         \draw [dashed] (A) -- (1, 1);
     \end{tikzpicture}
-\end{center}
+    \caption{Here, the real numbers in the range of $X = (0, 1]$ takes on the values ``y-axis". We use a solid line to
+    denote the range of $n$ values under the subspace of $X$. It really should be a dotted line because $n$ can only be
+    integers. We do that in order to distinguish it from the range we are not concerned with, i.e. $X = (1, \infty)$}
+\end{figure}
 
 \highlight[green]{The notion of a convergent sequence is not intrinsic to the sequence itself, but also depends on
 the structure of the space in which it lies}. A convergent sequence is not convergent "on its own"; it must converge to
@@ -162,6 +166,36 @@ necessary between \textit{real linear spaces} and \textit{complex linear spaces}
 
 Intuitively, a normed linear space is simply a linear space in which a notion of the distance from an arbitrary element
 to origin is defined.
+
+\begin{Definition}{Banach space}{banach-space}
+    A \textbf{Banach space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
+    is a normed linear space which is complete as a metric space.
+\end{Definition}
+
+
+
+One of the principal applications of the tory of Banach algebras develped from Def.~\ref{def:metric-space} to
+Def~\ref{def:banach-space} is to the study of operators in Hilbert
+spaces.\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.243}
+
+\begin{Definition}{Hilbert Space}{hilbert-space}
+    A \textbf{Hilbert space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.245}
+    is a complex Banach space whose norm arises from an inner product in which there is defined a complex function
+    $(\boldsymbol{v}, \boldsymbol{w})$ of vectors $\boldsymbol{v}$ with the following properties:
+
+    \begin{itemize}
+        \item $(\alpha \boldsymbol{v} + \beta \boldsymbol{w}, \boldsymbol{u}) = \alpha(\boldsymbol{v}, \boldsymbol{u}) + \beta(\boldsymbol{w}, \boldsymbol{u})$
+        \item $\overline{(\boldsymbol{v}, \boldsymbol{w})} = (\boldsymbol{w}, \boldsymbol{v})$
+        \item $(\boldsymbol{v}, \boldsymbol{v}) = \Vert x \Vert^2$
+    \end{itemize}
+
+    \tcblower
+
+    A complex function\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.17}
+    is one whose range consists of complex numbers
+
+    If $z = a + ib$ is a complex number, then its conjugate $\overline{z}$ is defined by $\overline{z} = a + i(-b)$\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.53}
+\end{Definition}
 
 \section{Vector Spaces and Subspaces}
 
