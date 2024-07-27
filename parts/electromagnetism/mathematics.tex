@@ -124,7 +124,11 @@ Since we have assumed $\Delta z = \Delta_1 z + \Delta_2 z$
     \Delta z = \Delta x f_x(x_0, y_0) + \Delta x\epsilon_1 + \Delta y f_y(x_0, y_0) + \Delta y\epsilon_2 = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y + \epsilon_1\Delta x + \epsilon_2\Delta y
 \end{equation}
 
-\qed
+\begin{figure}[H]
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
+\end{figure}
 
 \footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons, 2nd}, p. 681} Now Let
 $f(x, y, z)$ be a function of 3 variables defined throughout some region of three-dimensional space, and let $P$ be a
@@ -452,7 +456,11 @@ ending up with the original formula of
     \boldsymbol{A} \times (\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{A} \times \boldsymbol{B} + \boldsymbol{A} \times \boldsymbol{C}
 \]
 
-\qed
+\begin{figure}[H]
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
+\end{figure}
 
 Eq.~\ref{eq:cross-product-distributive-left} follows from Eq~\ref{eq:cross-product-distributive-right} combined with the
 corollary of
@@ -468,7 +476,11 @@ corollary of
     &= \boldsymbol{A} \times \boldsymbol{C} + \boldsymbol{B} \times \boldsymbol{C}
 \end{align*}
 
-\qed
+\begin{figure}[H]
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
+\end{figure}
 
 We continue with our task of multiplying out the \hyperref[eq:cross-product-of-two]{cross product of the vectors} using
 Eq.~\ref{eq:cross-product-homogeneity},~\ref{eq:cross-product-distributive-right}, and ~\ref{eq:cross-product-distributive-left}.
@@ -709,6 +721,7 @@ region of the plane, say
     frame hidden,colback=blue!10!white,
     borderline={1mm}{0mm}{blue,dotted}
 ]
+    \phantomsection\hypertarget{vector-field}
     The vector-value function~\ref{eq:vector-valued-function} is usually called \textit{force field}. More generally,
     a \textit{vector field} in the plane is any vector-valued function that associates a vector with each point $(x, y)$
     in a certain plane region $R$. In this context a function whose values are numbers (scalars) is called a
@@ -734,7 +747,7 @@ The work done by this force is denoted by
     \int_{C} \boldsymbol{F} \cdot d\boldsymbol{R} \text{\ \ \ \ \ \ or \ \ \ \ \ \ } \int_{C}M(x, y)dx + N(x, y)dy
 \end{equation}
 
-This is called the \textbf{line integral}
+\includegraphics[width=0.05\textwidth]{可莉-86.png} This is called the \textbf{line integral}
 
 We approximate the curve by a polygonal path as shown in Fig.~\ref{fig:line-integral}. That is, choose points
 $P_0 = A, P_1, P_2, \ldots, P_{n - 1}, P_n = B$ along C in this order; let $\boldsymbol{R_k}$ be the position vector of
@@ -956,8 +969,9 @@ To be able to go any further, we shall introduce the \textit{Mean value theorem 
 
     Finally, if $g$ is negative on $[a, b]$, we can still get the same result.
 
-    \qed
-
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
 \end{Theorem}
 
 By having $g(x) = 1$ in \hyperref[theo:mean-value-theorem-def-integrals]{mean value theorem for integration}, we have
@@ -1053,9 +1067,13 @@ Therefore
     \int_a^b f(t) dt = G(b) = F(b) - F(a)
 \end{equation}
 
-\qed
+\begin{figure}[H]
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
+\end{figure}
 
-\begin{Theorem}{\href{https://en.wikipedia.org/wiki/Fundamental\_theorem\_of\_calculus\#Second\_part}{The Second Fundamental Theorem of Calculus}: Newton-Leibniz Theorem}{fundamental-theorem-of-calculus-part-2}
+\begin{Theorem}{\href{https://en.wikipedia.org/wiki/Fundamental\_theorem\_of\_calculus\#Second\_part}{The Second Fundamental Theorem of Calculus}: Newton-Leibniz Theorem\phantomsection\hypertarget{fundamental-theorem-of-calculus-part-2}}{fundamental-theorem-of-calculus-part-2}
     Let $f$ be a real-valued function on a closed interval $[a, b]$ and $F$ a continuous function on $[a, b]$ which is
     an antiderivative of $f$ in $(a, b)$:
 
@@ -1133,9 +1151,86 @@ Since $f$ is Riemann integrable:
     F(b) - F(a) = \int_a^b f(x) dx
 \end{equation}
 
-\qed
+\begin{figure}[H]
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
+\end{figure}
 
 \subsubsection{Independence of Path \& Conservative Fields}
 
-\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons, 2nd}, p. 758} The
-vector field is the gradient of a scalar field. The Fundamental Theorem of Calculus
+\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons, 2nd}, p. 758} \hyperlink{vector-field}{We have already known that the vector field is the gradient of a scalar field}. The
+\hyperlink{fundamental-theorem-of-calculus-part-2}{Fundamental Theorem of Calculus of single-variable} in the case of
+2 variables can be derived as follows:
+
+\begin{align}
+    \int_C\boldsymbol{F}\cdot d\boldsymbol{R} &= \int_C \nabla f \cdot d\boldsymbol{R} \\
+    &= \int_a^b\left( \nabla f \cdot \frac{d\boldsymbol{R}}{dt} \right)dt \\
+    &= \int_a^b\left[ \left( \frac{\partial f}{\partial x}\boldsymbol{\hat{x}} + \frac{\partial f}{\partial y}\boldsymbol{\hat{y}} \right)  \cdot \frac{d(x\boldsymbol{\hat{x}} + y\boldsymbol{\hat{y}})}{dt} \right]dt \\
+    &= \int_a^b\left( \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t} \right)dt \\
+    &= \int_a^b \frac{d}{dt}f(x, y)dt \\
+    &= f(b) - f(a)
+\end{align}
+
+\begin{Theorem}{Fundamental Theorem of Calculus for Line Integrals}{fundamental-theorem-of-calculus-for-line-integrals}
+    If a vector field $\boldsymbol{F}$ is the gradient of some scalar field $f$ in a region $R$, so that
+    $\boldsymbol{F} = \nabla f$ in $R$, and if $C$ is any piecewise smooth curve in $R$ with initial and final points
+    $A$ and $B$, then
+
+    \begin{equation}\label{eq:fundamental-theorem-of-calculus-for-line-integrals}
+        \int_C\boldsymbol{F} \cdot d\boldsymbol{R} = f(B) - f(A)
+    \end{equation}
+\end{Theorem}
+
+The right side of the Eq.~\ref{eq:fundamental-theorem-of-calculus-for-line-integrals} depends only on the points $A$ and
+$B$ and not at all on the path $C$ that joins them. The line integral on the left side of
+Eq.~\ref{eq:fundamental-theorem-of-calculus-for-line-integrals} therefore has the same value for all paths $C$ from $A$
+to $B$. This can be expressed by saying that the \highlight[green]{line integral of a gradient field is independent
+of the path} \includegraphics[width=0.05\textwidth]{心海-17.png}. Next, it is clear from
+Eq.~\ref{eq:fundamental-theorem-of-calculus-for-line-integrals} that \highlight[green]{if $C$ is a closed path, then} \includegraphics[width=0.05\textwidth]{心海-18.png}
+
+\begin{equation}\label{eq:closed-path-line-int}
+    \oint_C\boldsymbol{F} \cdot d\boldsymbol{R} = 0
+\end{equation}
+
+These argument show that
+
+\begin{figure}[H]
+    \newtcbox{\inlineframe}[1][green]{
+        on line,
+        arc=5pt,
+        colback=white,
+        colframe=#1!50!white,
+        before upper={\rule[-3pt]{0pt}{10pt}},
+        boxrule=1pt,
+        boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt
+    }
+
+    \centering
+    \begin{tikzpicture}
+        \matrix (m) [matrix of math nodes,row sep=0.8em,column sep=3em,minimum width=2em] {
+            \quad & \text{\inlineframe{\hyperref[theo:fundamental-theorem-of-calculus-for-line-integrals]{Integral is independent of path}}} \\
+            \text{\inlineframe{\hyperlink{vector-field}{Gradient field}}} & \quad \\
+            \quad & \text{\inlineframe{\hyperref[eq:closed-path-line-int]{Integral around closed path is zero}}} \\};
+        \path[stealth-stealth]
+        (m-2-1) edge [double] node [above] {} (m-1-2)
+        (m-2-1) edge [double] node [below] {} (m-3-2);
+    \end{tikzpicture}\qquad
+
+    \caption{The symbol $\Rightarrow$ means ``implies"}
+\end{figure}
+
+We are going to show that these 3 properties are equivalent, in the sense that each implies the other two.
+
+\begin{tikzpicture}
+    \coordinate  (O) at (0,0);
+    \draw[red,use Hobby shortcut,closed=true]
+        (-1.8,-.2) .. (-1.6,.5) .. (-1,.9) ..
+        (-.3,1) .. (1,.7) .. (2,.2) .. (2.22,0) ..
+        (2.42,-.45) .. (2.25,-1) ..
+        (1.8,-1.18) .. (1.2,-1) ..
+        (0,-.8) ..
+        (-.9,-.9) .. (-1.5,-.7)
+        ;
+\end{tikzpicture}
+

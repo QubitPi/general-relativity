@@ -1,203 +1,4 @@
-\section{Metric Spaces}
-
-\begin{Definition}{Metric Space}{metric-space}
-    Let $X$ be a non-empty set. A \textbf{metric}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.51}
-    on $X$ is a real function $d$ of ordered pairs of elements of $X$ which satisfies the following conditions
-
-    \begin{itemize}
-        \item $d(x, y) \ge 0$, and $d(x, y) = 0 \iff x = y$
-        \item $d(x, y) = d(y, x)$ (symmetry)
-        \item $d(x, y) \le d(x, z) + d(z, y)$ (the triangle inequality)
-    \end{itemize}
-\end{Definition}
-
-$d(x, y)$ is called the \textit{distance} between $x$ and $y$. Thus a metric space consists of 2 objects:
-
-\begin{enumerate}
-    \item a non-empty set $X$, and
-    \item a metric $d$ on $X$
-\end{enumerate}
-
-\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.70}
-Now let $X$ be a metric space with metric $d$, and let
-
-\begin{equation}
-    \{ x_n \} = \{ x_1, x_2, \cdots, x_n, \cdot \}
-\end{equation}
-
-be a sequence of points in $X$. We say that $\{ x_n \}$ is \textbf{convergent} if there exists a point $x$ in $X$ such
-that either
-
-\begin{enumerate}
-    \item for each $\epsilon > 0$, there exists a positive integer $n_0$ such that $n \ge n_0 \Rightarrow d(x_n, x) < \epsilon$,
-          or, equivalently,
-    \item for each open sphere $S_{\epsilon}(x)$ centered on $x$, there exists a positive integer $n_0$ such that $x_n$
-          is in $S_{\epsilon}(x)$ for all $n \ge n_0$
-\end{enumerate}
-
-We say in this case that $x_n$ converges to $x$ and $x$ is called the \textit{limit} of the sequence $\{ x_n \}$ and we
-sometimes write $x_n \rightarrow x$ in the form of
-
-\[ \lim x_n = x \]
-
-Now let's consider two cases of convergence:
-
-\begin{itemize}
-    \item for each $\epsilon > 0$, there exists a positive integer $n_0$ such that $n \ge n_0 \Rightarrow d(x_n, x) < \epsilon$ (the same definition above)
-    \item for each $\epsilon > 0$, there exists a positive integer $n_0$ such that $m \ge n_0 \Rightarrow d(x_m, x) < \epsilon$
-\end{itemize}
-
-By the \textit{symmetry} and \textit{triangle inequality} of the Def.~\ref{def:metric-space}:
-
-\begin{equation}
-    d(x_m, x_n) \le d(x_m, x) + d(x, x_n) = d(x_m, x) + d(x_n, x) \le \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
-\end{equation}
-
-for all $m, n \lg n_0$. Therefore, every convergent sequence $\{ x_n \}$ has the following property:
-
-\begin{tcolorbox}[
-    colback=green!5!white,
-    colframe=green!75!black,
-    colbacktitle=red!85!black
-]
-    \begin{center}
-        For each $\epsilon > 0$, there exists a positive integer $n_0$ such that $m, n \ge n_0 \Rightarrow d(x_m, x_n) < \epsilon$
-    \end{center}
-\end{tcolorbox}
-
-A sequence with this property is called a \roundinlinebox[green]{Cauchy sequence}. Intuitively, a Cauchy sequence is a
-sequence whose elements become arbitrarily close to each other as the sequence progress:
-
-\begin{center}
-    \begin{tikzpicture}
-        \draw[->] (-0.2,0) -- (4.5,0) node[right] {$n$};
-        \draw[->] (0,-1.2) -- (0,2.5) node[above] {$x_n$};
-        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=blue,domain=0:4,samples=100]  plot (\x,{1+ sin(10*\x r)*e^(-\x)});
-        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=red,dashed,thin,domain=0:4,samples=100]  plot (\x,{1+e^(-\x)});
-        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=red,dashed,thin,domain=0:4,samples=100]  plot (\x,{1-e^(-\x)});
-    \end{tikzpicture}
-\end{center}
-
-In addition, we have also shown that every convergent sequence is a Cauchy sequence. \textit{The converse of this,
-however, is not necessarily true}. That is, a Cauchy sequence is not necessarily convergent. As an example, consider the
-subspace $X = (0, 1]$ of the real line where $x_n \in X$. The sequence defined by $x_n = \frac{1}{n}$ is easily seen to
-be a Cauchy sequence in this space, but it is not convergent, because the point $0 \not\in X$ is not a point of the
-space
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \colorlet{mygreen}{green!70!black}
-
-        \draw[->] (-0.2,0) -- (10,0) node[right] {$n$};
-        \draw[->] (0,-1.2) -- (0,3) node[above] {$x_n$};
-        \draw[dash pattern=on 0pt off 2\pgflinewidth,line cap=round,line width=0.5mm,color=blue,domain=0.3:1,samples=20]  plot (\x,{\x^(-1)});
-        \draw[line width=0.5mm,color=blue,domain=1:10]  plot (\x,{\x^(-1)});
-
-        \coordinate (A) at (0, 1);
-        \coordinate (B) at (0, 0);
-        \fill[mygreen] (A) circle (1.5pt) node[left=1] {$x_n = 1 \in X$};
-        \fill[red] (B) circle (1.5pt) node[left=1] {$x_n = 0 \not\in X$};
-
-        \draw [dashed] (A) -- (1, 1);
-    \end{tikzpicture}
-    \caption{Here, the real numbers in the range of $X = (0, 1]$ takes on the values ``y-axis". We use a solid line to
-    denote the range of $n$ values under the subspace of $X$. It really should be a dotted line because $n$ can only be
-    integers. We do that in order to distinguish it from the range we are not concerned with, i.e. $X = (1, \infty)$}
-\end{figure}
-
-\highlight[green]{The notion of a convergent sequence is not intrinsic to the sequence itself, but also depends on
-the structure of the space in which it lies}. A convergent sequence is not convergent "on its own"; it must converge to
-some point in the space.
-
-Sounds wordy? When the space \href{https://www.reddit.com/r/learnmath/comments/exp735/comment/fgaqd8p/?utm\_source=share&utm\_medium=web3x&utm\_name=web3xcss&utm\_term=1&utm\_content=share\_button}{has a hole} in it. Like if you remove 0 from $\mathbb{R}$ like in the case above, then
-$\frac{1}{n}$ is a Cauchy sequence that doesn't converge.
-
-We are now ready to introduce the concept of \textit{complete metric space}, which we define as follows:
-
-\begin{Definition}{Complete Metric Space}{complete-metric-space}
-    A complete metric space is a metric space in which every Cauchy sequence is convergent
-\end{Definition}
-
-\begin{Definition}{Linear Space}{linear-space}
-    Let $L$ be a non-empty set, and assume that each pair of elements $x$ and $y$ in $L$ can be combined by a process
-    called \textbf{addition} to yield an element $z$ in $L$ denoted by $z = x + y$. Assume also that this operation of
-    addition satisfies the following conditions:
-
-    \begin{itemize}
-        \item $x + y = y + x$
-        \item $x + (y + z) = (x + y) + z$
-        \item There exists in $L$ a unique element, denoted by $0$ and called the \textbf{zero element}, or the origin,
-              such that $x + 0 = x$ for every $x$
-        \item To each element $x$ in $L$ there corresponds a unique element in $L$, denoted by $-x$ and called the
-              negative of $x$, such that $x + (-x) = 0$.
-    \end{itemize}
-
-    We adopt the device of referring to the system of real numbers or to the system of complex numbers as the
-    \textbf{scalers}. We now assume that each scalar $\alpha$ and each element $x$ in $L$ can be combined by a process
-    called \textbf{scalar multiplication} to yield an element $y$ in $L$ denoted by $y = \alpha x$ in such a way that
-
-    \begin{itemize}
-        \item $\alpha(x + y) = \alpha x + \alpha y$
-        \item $(\alpha + \beta)x = \alpha x + \beta x$
-        \item $(\alpha\beta)x = \alpha(\beta x)$
-        \item $1 \cdot x = x$
-    \end{itemize}
-
-    The albegraic system $L$ defined by these operations and axioms is called a
-    \textbf{linear space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
-\end{Definition}
-
-Depending on the numbers admitted as scalars (only the real numbers, or all the complex numbers), we distinguish when
-necessary between \textit{real linear spaces} and \textit{complex linear spaces}. A linear space is often called a
-\hyperlink{vector-space}{\textit{vector space}} and its elements are spoken of as \textit{vectors}.
-
-\begin{Definition}{Normed Linear Space}{normed-linear-space}
-    A \textbf{Normed Linear Space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
-    is a linear space on which there is a \textbf{norm} defined, i.e. a function which assigns to each element $x$ in
-    the space a real number $\Vert x \Vert$ in such a manner that
-
-    \begin{itemize}
-        \item $\Vert x \Vert \ge 0$, and $\Vert x \Vert = 0 \iff x = 0$
-        \item $\Vert x + y \Vert \le \Vert x \Vert + \Vert y \Vert$
-        \item $\Vert \alpha x \Vert = \vert \alpha \vert \Vert x \Vert$
-    \end{itemize}
-\end{Definition}
-
-Intuitively, a normed linear space is simply a linear space in which a notion of the distance from an arbitrary element
-to origin is defined.
-
-\begin{Definition}{Banach space}{banach-space}
-    A \textbf{Banach space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.81}
-    is a normed linear space which is complete as a metric space.
-\end{Definition}
-
-
-
-One of the principal applications of the tory of Banach algebras develped from Def.~\ref{def:metric-space} to
-Def~\ref{def:banach-space} is to the study of operators in Hilbert
-spaces.\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.243}
-
-\begin{Definition}{Hilbert Space}{hilbert-space}
-    A \textbf{Hilbert space}\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.245}
-    is a complex Banach space whose norm arises from an inner product in which there is defined a complex function
-    $(\boldsymbol{v}, \boldsymbol{w})$ of vectors $\boldsymbol{v}$ with the following properties:
-
-    \begin{itemize}
-        \item $(\alpha \boldsymbol{v} + \beta \boldsymbol{w}, \boldsymbol{u}) = \alpha(\boldsymbol{v}, \boldsymbol{u}) + \beta(\boldsymbol{w}, \boldsymbol{u})$
-        \item $\overline{(\boldsymbol{v}, \boldsymbol{w})} = (\boldsymbol{w}, \boldsymbol{v})$
-        \item $(\boldsymbol{v}, \boldsymbol{v}) = \Vert x \Vert^2$
-    \end{itemize}
-
-    \tcblower
-
-    A complex function\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.17}
-    is one whose range consists of complex numbers
-
-    If $z = a + ib$ is a complex number, then its conjugate $\overline{z}$ is defined by $\overline{z} = a + i(-b)$\footnote{\href{https://trello.com/c/3EPccNTa}{Introduction to Topology and Functional Analysis by Goerge F. Simmons}, p.53}
-\end{Definition}
-
-\section{Vector Spaces and Subspaces}
+\section{Linear Algebra}
 
 \begin{Definition}{Vector Space \phantomsection\hypertarget{vector-space}}{vector-space}
     The space $\mathbb{R}^n$ consists of all column vectors $\boldsymbol{v}$ with $n$ components\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 120}
@@ -233,16 +34,123 @@ the plane; if we multiply an in-plane vector by $2$ or $-5$, it is still in the 
     The subspece $C(A)$ is the ``\textbf{span}" of matrix $A$
 \end{Definition}
 
+\begin{Definition}{Span \phantomsection\hypertarget{span}}{span}
+    A set of vectors spans a space if their linear combinations fill the space
+\end{Definition}
+
 \begin{Definition}{Basis for a Vector Space}{basis}
     A \textbf{basis}\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 172} for a vector space is a sequence of vectors with 2 properties
 
     \begin{itemize}
         \item The basis vectors are linearly independent, and
-        \item they \hyperlink{column-space}{span} the space
+        \item they \hyperlink{span}{span} the space
     \end{itemize}
 \end{Definition}
 
-For a basis $\{\boldsymbol{v_1}, \ldots, \boldsymbol{v_d}\}$ of $V$
+\subsection{Eigenvalues and Eigenvectors}
+
+\begin{tcolorbox}[
+    enhanced,arc=3mm,boxrule=1.5mm,
+    frame hidden,colback=blue!10!white,
+    borderline={1mm}{0mm}{blue,dotted}
+]
+    \centering
+    All matrices in this section are square
+\end{tcolorbox}
+
+Almost all vectors change direction, when they are multiplied by a matrix $A$. Certain exceptional vectors
+$\boldsymbol{x}$ don't and are in the same direction as $A\boldsymbol{x}$. Those are the \textbf{eigenvectors}\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 283}. By definition, the result of this multiplication shall be a number times
+the original $\boldsymbol{x}$, i.e.
+
+\begin{equation}
+    A\boldsymbol{x} = \lambda\boldsymbol{x}
+\end{equation}
+
+We call $\lambda$ an \textbf{eigenvalue} of $A$.
+
+The eigenvalue $\lambda$ tells whether the special vector $\boldsymbol{x}$ is stretched (e.g. 2) or shrunk (e.g.
+$\frac{1}{2}$) or reversed (-1) or left unchanged (1) when multiplied by $A$. When $\lambda = 0$, Then
+$A\boldsymbol{x} = 0\boldsymbol{x}$ means this eigenvector $\boldsymbol{x}$ is in nullspace\footnote{
+\begin{Definition}{Nullspace}{nullspace}
+    The nullspace of $A$ consists of all solutions to $A\boldsymbol{x} = \boldsymbol{0}$. These vectors $\boldsymbol{x}$
+    are in $\mathbb{R}^n$. The nullspace containing all solutions of $A\boldsymbol{x} = \boldsymbol{0}$ is denoted by
+    $N(A)$ (\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 132)
+\end{Definition}
+}
+
+\subsubsection{Matrix Diagonalization}
+
+\begin{tcolorbox}[
+    colbacktitle=red!10!white,
+    colback=blue!10!white,coltitle=red!70!black,
+    title=Why do we study disgonalizing a matrix?
+]
+    When $\boldsymbol{x}$ is an eigenvector, multiplication by $A$ is just multipliation by a number
+    $\lambda$: $A\boldsymbol{x} = \lambda\boldsymbol{x}$. All the difficulties of matrices are swept away, because the
+    matrix $A$ turns into a diagonal matrix $\Lambda$ when we use the eigenvectors properly.
+\end{tcolorbox}
+
+Suppose a $n$ by $n$ matrix A has $n$ linearly independent eigenvectors $\boldsymbol{x_1}, \ldots, \boldsymbol{x_n}$.
+Put them into the columns of an \textbf{eigenvector matrix $S$}. Multiplying $A$ with $S$\footnote{\href{https://trello.com/c/qHJeDNkU}{Introduction to Linear Algebra, Strang, 4th Edition, 2009}, p. 298}:
+
+\begin{align}
+    AS &= A\begin{bmatrix}
+              &                &        &                  \\
+              \boldsymbol{x_1} & \ldots & \boldsymbol{x_n} \\
+              &                &        &                  \\
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+           &                          &        &                            \\
+           \boldsymbol{\lambda_1 x_1} & \ldots & \boldsymbol{\lambda_n x_n} \\
+           &                          &        &                            \\
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+           &                &        &                  \\
+           \boldsymbol{x_1} & \ldots & \boldsymbol{x_n} \\
+           &                &        &                  \\
+    \end{bmatrix}\begin{bmatrix}
+                     \lambda_1 &      &         \\
+                     &         \ddots &         \\
+                     &         &      \lambda_n \\
+    \end{bmatrix} \\
+    &= S\begin{bmatrix}
+            \lambda_1 &      &         \\
+            &         \ddots &         \\
+            &         &      \lambda_n \\
+    \end{bmatrix}
+\end{align}
+
+Let
+
+\begin{equation}
+    \Lambda = \begin{bmatrix}
+                  \lambda_1 &      & \\
+                  &         \ddots & \\
+                  &         &      \lambda_n
+    \end{bmatrix}
+\end{equation}
+
+Then
+
+\begin{equation}
+    AS = S\Lambda \text{\ \ \ \ \ \ or \ \ \ \ \ \ } S^{-1}AS = \Lambda \text{\ \ \ \ \ \ or \ \ \ \ \ \ } A = S\Lambda S^{-1}
+\end{equation}
+
+\includegraphics[width=0.05\textwidth]{可莉-86.png} We call $\Lambda$ the \textbf{Eigenvalue Matrix}
+
+\begin{Definition}{Diagonalization}{diagonalization}
+    Suppose a $n$ by $n$ matrix A has $n$ linearly independent eigenvectors
+    $\boldsymbol{x_1}, \ldots, \boldsymbol{x_n}$. . Then
+    $S^{-1}AS$ is the \textbf{eigenvalue matrix $\Lambda$}
+
+    \begin{equation}
+        S^{-1}AS = \Lambda = \begin{bmatrix}
+                                \lambda_1 &      & \\
+                                &         \ddots & \\
+                                &         &      \lambda_n
+        \end{bmatrix}
+    \end{equation}
+\end{Definition}
 
 \begin{Definition}{Bilinear Form \phantomsection\hypertarget{bilinear-form}}{bilinear-form}
     Let $F$ be a field and $V$ a vector space over $F$. A \textit{bilinear form} on $V$ is a function
