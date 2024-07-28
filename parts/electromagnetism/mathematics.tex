@@ -1212,19 +1212,32 @@ These argument show that
             \quad & \text{\inlineframe{\hyperref[theo:fundamental-theorem-of-calculus-for-line-integrals]{Integral is independent of path}}} \\
             \text{\inlineframe{\hyperlink{vector-field}{Gradient field}}} & \quad \\
             \quad & \text{\inlineframe{\hyperref[eq:closed-path-line-int]{Integral around closed path is zero}}} \\};
-        \path[stealth-stealth]
+        \path[-stealth]
         (m-2-1) edge [double] node [above] {} (m-1-2)
         (m-2-1) edge [double] node [below] {} (m-3-2);
     \end{tikzpicture}\qquad
 
     \caption{The symbol $\Rightarrow$ means ``implies"}
+    \label{fig:gradient-field}
 \end{figure}
 
 We are going to show that these 3 properties are equivalent, in the sense that each implies the other two.
 
-\begin{tikzpicture}
-    \coordinate  (O) at (0,0);
-    \draw[red,use Hobby shortcut,closed=true]
+Suppose that the line integral of the vector field $\boldsymbol{F}$ is independent of the path. We shall approve that
+the line integral of the vector field $\boldsymbol{F}$ around a closed path is zero.
+
+We examine the figure below, in which two points $A$ and $B$ are chosen on the closed path $C$. These points divide $C$
+into paths $C_1$, from $A$ to $B$, and $C_2$, from $B$ to $A$.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \coordinate  (A) at (-1.8,-.2);
+        \coordinate  (B) at (2.42,-.45);
+        \coordinate  (C) at (-.3,1);
+        \coordinate  (D) at (1.8,-1.18);
+
+        \draw[red,use Hobby shortcut,closed=true]
         (-1.8,-.2) .. (-1.6,.5) .. (-1,.9) ..
         (-.3,1) .. (1,.7) .. (2,.2) .. (2.22,0) ..
         (2.42,-.45) .. (2.25,-1) ..
@@ -1232,5 +1245,128 @@ We are going to show that these 3 properties are equivalent, in the sense that e
         (0,-.8) ..
         (-.9,-.9) .. (-1.5,-.7)
         ;
-\end{tikzpicture}
 
+        \fill[black] (A) circle (2pt) node[left] {A};
+        \fill[black] (B) circle (2pt) node[right] {B};
+
+        \fill[black] (C) circle (0pt) node[above] {$C_1 \rightarrow$};
+        \fill[black] (D) circle (0pt) node[below] {$\leftarrow C_2$};
+    \end{tikzpicture}
+\end{figure}
+
+Since both $C_1$ and $-C_2$ are paths from $A$ to $B$,
+the assumption of independence of path implies that
+
+\begin{equation}
+    \int_{C_1}\boldsymbol{F}\cdot d\boldsymbol{R} = \underbrace{\int_{-C_2}\boldsymbol{F}\cdot d\boldsymbol{R} = -\int_{C_2}\boldsymbol{F}\cdot d\boldsymbol{R}}_{Eq.~\ref{eq:definite-integral-reverse}}
+\end{equation}
+
+It them follows that
+
+\begin{equation}
+    \int_{C_1}\boldsymbol{F}\cdot d\boldsymbol{R} + \int_{C_2}\boldsymbol{F}\cdot d\boldsymbol{R} = \oint_C\boldsymbol{F}\cdot d\boldsymbol{R} = 0
+\end{equation}
+
+\begin{figure}[H]
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
+\end{figure}
+
+Then we can easily reverse this argument to show that the integral from $A$ to $B$ is independent of the path
+
+\begin{figure}[H]
+    \newtcbox{\inlineframe}[1][green]{
+        on line,
+        arc=5pt,
+        colback=white,
+        colframe=#1!50!white,
+        before upper={\rule[-3pt]{0pt}{10pt}},
+        boxrule=1pt,
+        boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt
+    }
+
+    \centering
+    \begin{tikzpicture}
+        \matrix (m) [matrix of math nodes,row sep=0.8em,column sep=3em,minimum width=2em] {
+            \quad & \text{\inlineframe{\hyperref[theo:fundamental-theorem-of-calculus-for-line-integrals]{Integral is independent of path}}} \\
+            \text{\inlineframe{\hyperlink{vector-field}{Gradient field}}} & \quad \\
+            \quad & \text{\inlineframe{\hyperref[eq:closed-path-line-int]{Integral around closed path is zero}}} \\};
+        \path[-stealth]
+        (m-2-1) edge [double] node [above] {} (m-1-2)
+        (m-2-1) edge [double] node [below] {} (m-3-2);
+
+        \path[stealth-stealth]
+        (m-1-2) edge [double] node [below] {} (m-3-2);
+    \end{tikzpicture}\qquad
+
+    \caption{The updated Fig.~\ref{fig:gradient-field}}
+    \label{fig:closed-line-integral}
+\end{figure}
+
+To complete the proof of the equivalence of the 3 properties, it suffices to show that if $\boldsymbol{F}$ is a vector
+fioeld whose line integral is independent of path, then $\boldsymbol{F} = \nabla f$ for some scalar field $f$.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+    x=1bp,
+        y=-1bp,
+        use Hobby shortcut,
+        every circle/.style={radius=2},
+        thick,
+        my marks/.style={},
+        arrow mark/.style={
+          /my marks/.append style={
+            mark=at position #1 with {\arrow[ultra thick]{stealth}},
+          },
+        },
+        reversed arrow mark/.style={
+          /my marks/.append style={
+            mark=at position #1 with {\arrowreversed[ultra thick]{stealth}},
+          },
+        },
+        do marks/.style={
+          decorate,
+          postaction={
+            decoration={
+              markings,
+              /my marks,
+            },
+            decorate,
+          },
+        },
+    ]
+    \fill (60,57) circle;
+    \draw[
+      arrow mark=.14,
+      do marks,
+    ]
+      (34,56)..(53,44)..(64,45)..(73,57)..(60,68)..(49,61)..(54,53)
+    ;
+    \draw[
+      arrow mark=1,
+      do marks,
+      shorten >=1pt,
+    ]
+      (134,83)..(117,75)..(86,91)..(51,103)..(1,58)..(53,12)..(87,18)..
+      (113,25)..(148,0)
+    ;
+    \fill (118,50) coordinate (cross) circle;
+    \draw[
+      arrow mark=.06,
+      reversed arrow mark=.24,
+      reversed arrow mark=.78,
+      arrow mark=.92,
+      do marks,
+    ]
+      (152,86)..(cross)..(59,26)..(21,56)..(55,84)..(cross)..(152,11)
+    ;
+    \node[
+      below left,
+      inner sep=0pt,
+      outer sep=0pt,
+      font=\sffamily,
+    ] at (current bounding box.south east) {HL};
+  \end{tikzpicture}
+\end{figure}
