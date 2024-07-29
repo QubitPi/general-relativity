@@ -1305,7 +1305,14 @@ Then we can easily reverse this argument to show that the integral from $A$ to $
 \end{figure}
 
 To complete the proof of the equivalence of the 3 properties, it suffices to show that if $\boldsymbol{F}$ is a vector
-fioeld whose line integral is independent of path, then $\boldsymbol{F} = \nabla f$ for some scalar field $f$.
+fioeld whose line integral is independent of path, then $\boldsymbol{F} = \nabla f$ for some scalar field $f$. To do
+this, we choose a fixed point $(x_0, y_0)$ and an arbitrary point $(x, y)$. Given any path from $C$ from $(x_0, y_0)$ to
+$(x, y)$, because we assume the hypothesis of independence of path, we can unambiguously define the function $f(x, y)$
+by
+
+\begin{equation}
+    f(x, y) = \int_C\boldsymbol{F}\cdot d\boldsymbol{R} = \int_{(x_0, y_0)}^{(x, y)}\boldsymbol{F}\cdot d\boldsymbol{R}
+\end{equation}
 
 \begin{figure}[H]
     \centering
@@ -1337,36 +1344,118 @@ fioeld whose line integral is independent of path, then $\boldsymbol{F} = \nabla
           },
         },
     ]
-    \fill (60,57) circle;
-    \draw[
-      arrow mark=.14,
-      do marks,
-    ]
-      (34,56)..(53,44)..(64,45)..(73,57)..(60,68)..(49,61)..(54,53)
-    ;
-    \draw[
-      arrow mark=1,
-      do marks,
-      shorten >=1pt,
-    ]
-      (134,83)..(117,75)..(86,91)..(51,103)..(1,58)..(53,12)..(87,18)..
-      (113,25)..(148,0)
-    ;
-    \fill (118,50) coordinate (cross) circle;
-    \draw[
-      arrow mark=.06,
-      reversed arrow mark=.24,
-      reversed arrow mark=.78,
-      arrow mark=.92,
-      do marks,
-    ]
-      (152,86)..(cross)..(59,26)..(21,56)..(55,84)..(cross)..(152,11)
-    ;
-    \node[
-      below left,
-      inner sep=0pt,
-      outer sep=0pt,
-      font=\sffamily,
-    ] at (current bounding box.south east) {HL};
+%    \fill (60,57) circle;
+%    \draw[
+%      arrow mark=.14,
+%      do marks,
+%    ]
+%      (34,56)..(53,44)..(64,45)..(73,57)..(60,68)..(49,61)..(54,53)
+%    ;
+        \coordinate  (A) at (134,83);
+        \coordinate  (B) at (148,0);
+        \draw[
+          arrow mark=1,
+          do marks,
+          shorten >=1pt,
+        ]
+          (134,83)..(117,75)..(86,91)..(51,103)..(1,58)..(53,12)..(87,18)..
+          (113,25)..(148,0)
+        ;
+        \fill[black] (A) circle (2pt) node[below] {$(x_0, y_0)$};
+        \fill[black] (B) circle (2pt) node[above] {$(x, y)$};
+%    \fill (118,50) coordinate (cross) circle;
+%    \draw[
+%      arrow mark=.06,
+%      reversed arrow mark=.24,
+%      reversed arrow mark=.78,
+%      arrow mark=.92,
+%      do marks,
+%    ]
+%      (152,86)..(cross)..(59,26)..(21,56)..(55,84)..(cross)..(152,11)
+%    ;
+%    \node[
+%      below left,
+%      inner sep=0pt,
+%      outer sep=0pt,
+%      font=\sffamily,
+%    ] at (current bounding box.south east) {HL};
   \end{tikzpicture}
 \end{figure}
+
+$\boldsymbol{F}$ has the usual form of $\boldsymbol{F} = M(x, y)\boldsymbol{i} + N(x, y)\boldsymbol{j}$ so that
+
+\begin{equation}\label{eq:f-F-M-N}
+    f(x, y) = \int_{(x_0, y_0)}^{(x, y)} M(x, y)dx + N(x, y)dy
+\end{equation}
+
+Let's first hold $y$ fixed and move along the $x$-direction by $\Delta x$. By
+\hyperref[theo:fundamental-theorem-of-calculus-part-1]{The Fundamental Theorem of Calculus}, Eq~\ref{eq:f-F-M-N} implies
+
+\begin{equation}
+    f(x + \Delta x, y) - f(x, y) = \int_{(x, y)}^{(x + \Delta x, y)} M dx
+\end{equation}
+
+so
+
+\begin{equation}
+    \frac{\partial f}{\partial x} = \lim\limits_{\Delta x \rightarrow 0}\frac{f(x + \Delta x, y) - f(x, y)}{\Delta x} = \lim\limits_{\Delta x \rightarrow 0} \frac{1}{\Delta x}\int_{(x, y)}^{(x + \Delta x, y)} M dx = M
+\end{equation}
+
+Similarly
+
+\begin{equation}
+    \frac{\partial f}{\partial y} = N
+\end{equation}
+
+so
+
+\begin{equation}
+    \frac{\partial f}{\partial x}\boldsymbol{i} + \frac{\partial f}{\partial y}\boldsymbol{j} = \left( \frac{\partial}{\partial x}\boldsymbol{i} + \frac{\partial}{\partial y}\boldsymbol{j} \right) f  = \nabla f = M\boldsymbol{i} + N\boldsymbol{j} = \boldsymbol{F}
+\end{equation}
+
+\begin{figure}[H]
+    \begin{flushright}
+        \includegraphics[width=0.05\textwidth]{胡桃-28.png}
+    \end{flushright}
+\end{figure}
+
+\begin{figure}[H]
+    \newtcbox{\inlineframe}[1][green]{
+        on line,
+        arc=5pt,
+        colback=white,
+        colframe=#1!50!white,
+        before upper={\rule[-3pt]{0pt}{10pt}},
+        boxrule=1pt,
+        boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt
+    }
+
+    \centering
+    \begin{tikzpicture}
+        \matrix (m) [matrix of math nodes,row sep=0.8em,column sep=3em,minimum width=2em] {
+            \quad & \text{\inlineframe{\hyperref[theo:fundamental-theorem-of-calculus-for-line-integrals]{Integral is independent of path}}} \\
+            \text{\inlineframe{\hyperlink{vector-field}{Gradient field}}} & \quad \\
+            \quad & \text{\inlineframe{\hyperref[eq:closed-path-line-int]{Integral around closed path is zero}}} \\};
+        \path[stealth-stealth]
+        (m-2-1) edge [double] node [above] {} (m-1-2)
+        (m-2-1) edge [double] node [below] {} (m-3-2);
+
+        \path[stealth-stealth]
+        (m-1-2) edge [double] node [below] {} (m-3-2);
+    \end{tikzpicture}\qquad
+
+    \caption{The updated Fig.~\ref{fig:closed-line-integral}}
+    \label{fig:eqauivalence-of-conservation}
+\end{figure}
+
+\begin{tcolorbox}[
+    enhanced,frame hidden,boxrule=0pt,interior style={top color=green!10!white,
+    bottom color=green!10!white,middle color=green!50!yellow},
+    fuzzy halo=1pt with green
+]
+    \begin{center}
+        \textbf{A force that has one of 3 properties above is called \textbf{conservative}.}
+    \end{center}
+\end{tcolorbox}
+
+\subsection{Green's Theorem}
