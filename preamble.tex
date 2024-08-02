@@ -2,6 +2,7 @@
 
 \usepackage{fontspec}
 \setmainfont{Ubuntu}
+\newfontfamily{\USDeclaration}[Path=./fonts/]{USDeclaration.ttf}
 
 \usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
 
@@ -9,11 +10,16 @@
 \pagestyle{fancy}
 \lhead{
     \includegraphics[scale=0.05]{github.png}
-    \href{https://github.com/QubitPi/general-relativity}{Study Notes}
+    \href{https://github.com/QubitPi/general-relativity}{\USDeclaration Study Notes}
 }
-\chead{General Relativity}
+\chead{
+    \definecolor{mygreen}{HTML}{00AA00}
+    \raisebox{.5\fontcharht\font`0}{\pgfornament[width=1.5cm, color=mygreen]{11}}
+    {\USDeclaration General Relativity}
+    \raisebox{.5\fontcharht\font`0}{\pgfornament[width=1.5cm, color=mygreen]{14}}
+}
 \rhead{
-    \href{https://github.com/QubitPi}{QubitPi}
+    \href{https://qubitpi.org/}{\USDeclaration QubitPi\ }
     \includegraphics[scale=0.05]{logo-8th-version.png}
 }
 \lfoot{}
@@ -200,3 +206,5 @@ drop fuzzy shadow,#1}
 \usepackage{amsthm}
 \usepackage{cancel}
 \usepackage{subcaption}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{pgfornament}

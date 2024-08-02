@@ -14,7 +14,7 @@ all:
 	$(PUBLISH_NOTES)
 
 clean:
-	rm -rf *.aux *.log *.out *.bbl *.blg *.toc
+	rm -rf *.aux *.log *.out *.bbl *.blg *.toc *.tdo
 
 git-push:
 	git add study-notes.pdf

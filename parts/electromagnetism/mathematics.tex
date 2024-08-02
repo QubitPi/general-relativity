@@ -1459,3 +1459,52 @@ so
 \end{tcolorbox}
 
 \subsection{Green's Theorem}
+\begin{tcolorbox}[
+    parbox=false,
+    enhanced,
+    skin=enhancedlast jigsaw,
+    attach boxed title to top left={xshift=-4mm,yshift=-0.5mm},
+    varwidth boxed title=0.7\linewidth,
+    colbacktitle=blue!45!white,colframe=red!50!black,
+    interior style={top color=blue!10!white,bottom color=red!10!white},
+    boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+    underlay boxed title={
+        \fill[blue!45!white] (title.north west) -- (title.north east)
+        -- +(\tcboxedtitleheight-1mm,-\tcboxedtitleheight+1mm)
+        -- ([xshift=4mm,yshift=0.5mm]frame.north east) -- +(0mm,-1mm)
+        -- (title.south west) -- cycle;
+        \fill[blue!45!white!50!black] ([yshift=-0.5mm]frame.north west)
+        -- +(-0.4,0) -- +(0,-0.3) -- cycle;
+        \fill[blue!45!white!50!black] ([yshift=-0.5mm]frame.north east)
+        -- +(0,-0.3) -- +(0.4,0) -- cycle; },
+    title={Proof of Green's Theorem}
+]
+    \phantomsection\hypertarget{green-theorem-proof}
+    Green did not actually derive the form of ``Green's theorem" which appears in the
+    \hyperref[eq:green-theorem]{form we see today}; rather, he derived a form of the ``divergence theorem", which
+    appears on \href{https://books.google.com/books?id=GwYXAAAAYAAJ&pg=PA10}{pages 10 - 12} of his
+    \textit{An Essay on the Application of Mathematical Analysis to the Theories of Electricity and Magnetism}. A proof
+    of the theorem was finally provided in 1851 by
+    \href{https://en.wikipedia.org/wiki/Bernhard_Riemann}{Bernhard Riemann} in his inaugural dissertation: Bernhard
+    Riemann (1851) \href{https://books.google.com/books?id=PpALAAAAYAAJ&pg=PP5}{\textit{Grundlagen für eine allgemeine Theorie der Functionen einer veränderlichen complexen Grösse}}
+    (Basis for a general theory of functions of a variable complex quantity), (Göttingen, (Germany): Adalbert Rente,
+    1867); see pages
+    8 - 9.\footnote{\href{https://en.wikipedia.org/wiki/Green\%27s\_theorem\#cite\_note-5}{Green's theorem}, Wikipedia}
+
+    Having formulating the Riemannian Geometry, Riemann laid the foundations of the mathematics of \textbf{General
+    Relativity}\footnote{\href{https://en.wikipedia.org/wiki/Bernhard\_Riemann}{Bernhard Riemann}, Wikipedia}
+
+    A \hyperref[ch:riemannian-geometry]{separate part} has been dedicated to Riemannian Geometry which shall include the
+    rigorous proof of Green's theorem
+
+    Given that, the purpose of this section is solely for revealing the nature of the link between line integrals and
+    double integrals\footnote{\href{https://trello.com/c/byu9Pyy8}{Calculus with Analytic Geometry by George F. Simmons, 2nd}, p. 764}
+\end{tcolorbox}
+
+Let's look at a rectangular path like the one shown below
+
+\missingfigure{Draw rectangular box}
+
+\begin{equation}\label{eq:green-theorem}
+    \oint_C M dx + N dy = \iint\limits_{R}\left[ \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} \right] dA
+\end{equation}
