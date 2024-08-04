@@ -59,6 +59,8 @@ structure that is irrelevant to our purpose. Instead, we would like to view a ma
 own right, not as a subset of some larger space. They key concept that makes this possible is that of a
 \textit{topological space}.
 
+
+
 \begin{Definition}{Continuous Mapping}{continuous-mapping}
     If $(M_1, d_1)$ and $(M_2, d_2)$ are metric spaces and $x$ is a point in $M_1$, a map $f: M_1 \rightarrow M_2$ is
     said to be \textbf{continous at $x$} if for any $\epsilon > 0$ there exists $\delta > 0$ such that
@@ -71,11 +73,11 @@ own right, not as a subset of some larger space. They key concept that makes thi
     the subset of $Y$ defined by\footnote{\href{https://trello.com/c/SI33o8fG}{Introduction to Topological Manifolds}, John M. Lee, 2nd, P.387}
 
     \begin{equation}
-        f(S) = \{ y \in Y: y = f(x) \text{ for some } x \in S \}
+        f(S) = \{ y \subseteq Y: y = f(x) \text{ for some } x \in S \}
     \end{equation}
 \end{Definition}
 
 \begin{Definition}{Preimage}{preimage}
     If $T$ is a subset of $Y$, the \textbf{preimage of $T$ under $f$} (also called the \textbf{inverse image}) is the
-    subset $f^{-1}()$
+    subset $f^{-1}(T) \subseteq$
 \end{Definition}
