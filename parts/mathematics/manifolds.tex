@@ -110,14 +110,15 @@ own right, not as a subset of some larger space. They key concept that makes thi
 \end{Definition}
 
 \begin{Theorem}{Open Subset Criterion for Continuity}{open-subset-criterion-for-continuity}
-    A map $f: M_1 \rightarrow M_2$ between metric spaces is continuous if and only if the preimage of every open subset
-    of $M_2$ is open; that is, whenever $U$ is an open subset of $M_2$, its preimage $f^{-1}(U)$ is open in $M_1$
+    A map $f: M_1 \rightarrow M_2$ between metric spaces is \hyperref[def:continuous-mapping]{continuous} if and only if
+    the \hyperref[def:preimage]{preimage} of every open subset of $M_2$ is open; that is, whenever $U$ is an open subset
+    of $M_2$, its preimage $f^{-1}(U)$ is open in $M_1$
 \end{Theorem}
 
 \paragraph{Proof} First assume $f$ is continuous, and let $U \subseteq M_2$ be an open set.
 
-Let $x \in M_1$ be an element of the \hyperref[def:preimage]{preimage} of $U$; that is, $x$ is any point in $f^{-1}(U)$.
+Let $x \in M_1$ be an element of the \hyperref[def:preimage]{preimage} of $U$; that is, $x$ is any point in $f^{-1}(U) = \{ x \in M_1 : f(x) \in U \}$.
 Since $U$ is open, there exists some $r = \epsilon > 0$ such that
 $B_{\epsilon}(\text{element in } U) = B_{\epsilon}(f^{-1}(U)) \subseteq U$
 
-\hyperref[def:continuous-mapping]{Continuity of $f$} implies that there exists $\delta > 0$ such atht
+\hyperref[def:continuous-mapping]{Continuity of $f$} implies that there exists $\delta > 0$ such that if
