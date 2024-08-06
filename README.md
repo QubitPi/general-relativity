@@ -51,7 +51,8 @@ How to Compile Study Notes
 ### Setup
 
 1. Install [Tex Live][LaTeX URL] (version ≥ 2021)
-2. Download and install [Ubuntu Font][Ubuntu Font URL]. For how to install a new System font:
+2. Download and install [Ubuntu Font][Ubuntu Font URL]. For instructions on how to install a new System font please
+   refer to the following links:
 
    - Linux users shall consult [this thread](https://askubuntu.com/a/191782)
    - Mac users can follow [this Apple support](https://support.apple.com/guide/font-book/install-and-validate-fonts-fntbk1000/mac)
@@ -76,7 +77,7 @@ How to Compile Study Notes
    
    `make` should be installed in almost every Linux distribution and Mac user can install via `brew install make`
 
-### Getting Source Code
+### Getting Study Notes Source Code
 
 ```console
 git clone https://github.com/QubitPi/general-relativity.git
