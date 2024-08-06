@@ -14,7 +14,7 @@ Study Notes on General Relativity
 </div>
 
 Physics is, as I view it, a quantified version of Philosophy on how world actually works. It's pushing the limit of our
-human knowledge to futuristic questions such as
+human knowledge to futuristic inquiries such as
 
 - Is there another universe/world that we can travel into? 
 - Does gigantic celestial object, such as Black Hole, permit spacetime travelling into the future for humanities?
