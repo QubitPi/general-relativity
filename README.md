@@ -38,7 +38,7 @@ I, hereby, present my ongoing effort of
 * [Study Notes on General Relativity](#study-notes-on-general-relativity)
   * [How to Compile Study Notes](#how-to-compile-study-notes)
     * [Setup](#setup)
-    * [Getting Source Code](#getting-source-code)
+    * [Getting Study Notes Source Code](#getting-study-notes-source-code)
     * [Compiling Notes](#compiling-notes)
   * [Resources on General Relativity](#resources-on-general-relativity)
     * [Gravitational Wave](#gravitational-wave)
@@ -87,7 +87,7 @@ cd general-relativity
 ### Compiling Notes
 
 > [!NOTE]
-> Please be patient as the compilation takes some time ![](https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7/%E5%BF%83%E6%B5%B7-19.png?raw=true)
+> Please be patient as the compilation takes some time <img src="https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7/%E5%BF%83%E6%B5%B7-19.png?raw=true" width="5%" />
 
 ```console
 make
