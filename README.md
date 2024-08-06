@@ -13,13 +13,17 @@ Study Notes on General Relativity
     <img src="img/Lyney.png" width="15%" />
 </div>
 
-Physics is, as I view it, a quantified version of Philosophy on how world actually works. Astrophysics is my favorite
-branch of Physics because
+Physics is, as I view it, a quantified version of Philosophy on how world actually works. It's pushing the limit of our
+human knowledge to futuristic questions such as
 
-1. it stands as an opposing side of my familiar Quantum Mechanics and trains me the skill of thinking about lots of
-   problems from different perspectives, and
-2. __those who masters General Relativity or Physics in general has their best advantage to learn and analyze Business
-   or Technical problems in a systematic, logical, and correct way__
+- Is there another universe/world that we can travel into? 
+- Does gigantic celestial object, such as Black Hole, permit spacetime travelling into the future for humanities?
+- Will [Dark Matter/Dark Energy](https://youtu.be/6EavTTbuIq4?si=fAc1V1OW9LKJBCvk) bring the possibility of next-human
+  generation technologies?
+
+Astrophysics, thus, is my favorite branch of Physics and __those who masters General Relativity or Physics in general
+has their best advantage to learn and analyze Business or Technical problems in a systematic, logical, and correct way__
+as well
 
 I, hereby, present my ongoing effort of
 [__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the "Math" behind our universe
