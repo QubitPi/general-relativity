@@ -28,6 +28,8 @@ I, hereby, present my ongoing effort of
     <a href="https://youtu.be/Z6Jt4lCe8_I?si=n6opy2Ljv6Uqf80A"><img src="./img/black-hole.png" width="50%"></a>
 </div>
 
+---
+
 <!-- TOC -->
 * [Study Notes on General Relativity](#study-notes-on-general-relativity)
   * [How to Compile Study Notes](#how-to-compile-study-notes)
