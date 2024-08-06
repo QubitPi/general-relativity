@@ -13,14 +13,13 @@ Study Notes on General Relativity
     <img src="img/Lyney.png" width="15%" />
 </div>
 
-Physics is, as I view it, a quantified version of Philosophy on how world actually works. It's pushing the limit of our
+Physics is, as I view it, a quantified version of Philosophy on how world actually works. It's pushing the limits of
 human knowledge to futuristic inquiries such as
 
 - Will [Dark Matter/Dark Energy](https://youtu.be/6EavTTbuIq4?si=fAc1V1OW9LKJBCvk) bring the possibility of next-human
   generation technologies?
 - Does gigantic celestial object, such as Black Hole, permit spacetime travelling into the future for humanities?
 - Is there [another universe/world](https://youtu.be/GQTq1kufCLk?si=oOykmrp9u6xt-iJ0) that obeys a different philosophical system?
-
 
 Astrophysics, thus, is my favorite branch of Physics and __those who masters General Relativity or Physics in general
 has their best advantage to learn and analyze Business or Technical problems in a systematic, logical, and correct way__
