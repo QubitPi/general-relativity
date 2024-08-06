@@ -86,6 +86,9 @@ cd general-relativity
 
 ### Compiling Notes
 
+> [!NOTE]
+> Please be patient as the compilation takes some time ![](https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7/%E5%BF%83%E6%B5%B7-19.png?raw=true)
+
 ```console
 make
 ```
