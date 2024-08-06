@@ -28,8 +28,8 @@ I, hereby, present my ongoing effort of
     <a href="https://youtu.be/Z6Jt4lCe8_I?si=n6opy2Ljv6Uqf80A"><img src="./img/black-hole.png" width="50%"></a>
 </div>
 
-Documentation on How to Compile The Notes
------------------------------------------
+How to Compile Study Notes
+--------------------------
 
 ### Setup
 
@@ -73,6 +73,19 @@ make
 ```
 
 You now have my love of Physics located at [`./study-notes.pdf`][Study Notes on General Relativity]
+
+Resources on General Relativity
+-------------------------------
+
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/playlist?list=PL-CLnI8tPXu8bfJ5oVbVZdu16_xyg0Bkf&si=txt5-pf9fqk06ppp)
+
+### Gravitational Wave
+
+1. [How are gravitational waves created and measured?](https://youtu.be/ytV1KhjEQbs?si=goI3LG8Ohn0HPn1q)
+2. [How can a gravitational-wave signal be used to measure the mass and distance of its source?](https://youtu.be/CySut_9aKc0?si=sDRkP365nliufWtO)
+3. [Gravitational Wave Fitter mentioned in the 2 videos above](https://qubitpi.github.io/gravitational-wave-fitter/) ([Source Code](https://github.com/QubitPi/gravitational-wave-fitter))
+4. [Gravitational Wave Quickview App](https://gravitational-wave-quickview.streamlit.app/)
+5. [Discover, read, and plot gravitational wave data](https://nbviewer.org/github/QubitPi/jupyter-notebooks/blob/master/notebooks/gravitational-wave/Quickview.ipynb)
 
 License
 -------
