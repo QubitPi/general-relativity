@@ -10,6 +10,7 @@ all:
 	$(BUILDTEX)
 	$(BUILDTEX)
 	$(REMOVE_AUXILIARY)
+	cp $(PROJECT).pdf intermediate.pdf
 
 clean:
 	rm -rf *.aux *.log *.out *.bbl *.blg *.toc *.tdo
