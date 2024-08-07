@@ -103,6 +103,7 @@ Resources on General Relativity
 ### Black Holes
 
 - [black-holes.org](https://www.black-holes.org/)
+- [LIGO](https://www.ligo.caltech.edu/)
 
 ### Gravitational Wave
 
@@ -111,6 +112,12 @@ Resources on General Relativity
 3. [Gravitational Wave Fitter mentioned in the 2 videos above](https://qubitpi.github.io/gravitational-wave-fitter/) ([Source Code](https://github.com/QubitPi/gravitational-wave-fitter))
 4. [Gravitational Wave Quickview App](https://gravitational-wave-quickview.streamlit.app/)
 5. [Discover, read, and plot gravitational wave data](https://nbviewer.org/github/QubitPi/jupyter-notebooks/blob/master/notebooks/gravitational-wave/Quickview.ipynb)
+
+### Python Libraries
+
+- [Astropy](https://www.astropy.org/)
+- [GwPy](https://gwpy.github.io/docs/stable/)
+- [PyCBC](https://pycbc.org/)
 
 License
 -------
