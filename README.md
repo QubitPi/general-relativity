@@ -41,7 +41,9 @@ I, hereby, present my ongoing effort of
     * [Getting Study Notes Source Code](#getting-study-notes-source-code)
     * [Compiling Notes](#compiling-notes)
   * [Resources on General Relativity](#resources-on-general-relativity)
+    * [Black Holes](#black-holes)
     * [Gravitational Wave](#gravitational-wave)
+    * [Python Libraries](#python-libraries)
   * [License](#license)
 <!-- TOC -->
 
