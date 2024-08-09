@@ -1,0 +1,521 @@
+\part{Special Relativity}
+
+\chapter{Einstein's Original Paper on ``Special Relativity"}
+
+\begin{tcolorbox}[
+    colback=green!5!white,
+    colframe=green!75!black,
+    colbacktitle=red!85!black
+]
+    \phantomsection\hypertarget{sr-original-paper}
+    The original paper is in \href{https://trello.com/c/ll9Yzd8h}{The Collected Papers of Albert Einstein, Vol.2}, page 140, \textit{On the Electrodynamics of Moving Bodies}
+\end{tcolorbox}
+
+Reading the original paper requires the prerequisites of
+
+\begin{itemize}
+    \item \href{https://en.wikipedia.org/wiki/Michelson\%E2\%80\%93Morley\_experiment}{Michelson-Morley Experiment}
+
+    \begin{itemize}
+        \item \href{https://youtu.be/3G_Q6AggQF8?si=ihpGM23NGq2PfsE2}{An excellent experiment intro}
+        \item \highlight[green]{What I care most about this experiment is the \textbf{way we handle "unsolvable"
+        problems}. Michelson-Morley experiment had led to extensive followups trying to explain what was seen in the experiment. All the \textit{mediocre} conclusion simply said: "Dude, we don't know." Albert Einstein innovated a new era of Physics out of this conflict. \textbf{When a problem seems to lead to a dead end, it's time to innovate; it's time to take on the risk and bring the human into a new world of new opportunities!}}
+    \end{itemize}
+
+    \item \href{https://trello.com/c/SlPIXwCY}{Maxwell's Electrodynamics}
+
+    \begin{tcolorbox}[
+        colbacktitle=red!10!white,
+        colback=blue!10!white,coltitle=red!70!black,
+        title=Does the Electromagnetic Field \textit{physically} exist?
+    ]
+        ``There exists a model of the universe which includes a field known as the Electromagnetic Field. This
+        model does a remarkably good job of predicting the observations we make in the world. It does so good at
+        making such predictions that it is often phrased as 'existing in the
+        world"\footnote{\href{https://philosophy.stackexchange.com/a/28010}{https://philosophy.stackexchange.com/a/28010}}
+    \end{tcolorbox}
+\end{itemize}
+
+\subsection{Reading Notes...}
+
+...of \hyperlink{sr-original-paper}{the Paper}
+
+\subsubsection{\hfil \S1. Definition of Simultaneity \hfil}
+
+\begin{Definition}{Simultaneity}{def:simultaneity}
+    If an event occurs at $(t, x, y, z)$, then all observers would see this event at $(t, x', y', z')$, where
+    $x \ne x'$, $y \ne y'$, and $y \ne y'$
+\end{Definition}
+
+For example, If I say that ``a train arrives here at 7 o'clock," that means when a clock on that train ticks to 7, my
+hand watch also points at 7 sharp. There is no ``delay" caused by information propagation between the train clock and my
+hand watch; they just happen to ``synchronize" that way. We say the 7 on the hand watch and the 7 on the train are
+\roundinlinebox[green]{\textbf{simulaneous events}}
+
+This definition is ideal when the clock and the attached event are located at the same place because we can read the
+clock precisely at that location. But what if there are series of events at other locations and we need to link them
+temporally? Can we simply tell which of the two events happened first simply by comparing the time we see the incident
+light of the two events? No, because, as Einstein said, ``such an assignment has the drawback that it is not independent
+of the position of the observer". For example, suppose you are reading this PDF document at 9 am in the morning; 20
+minutes later your special apparatus on your desk detected the light of a collision of two stars in universe that
+happend 2 billion light years away. In this case, \textit{can we say you saw this PDF file earlier than then star
+collsion}?
+
+What is missing here is the ordering of multiple events. In other words, if we could somehow ``synchronize" the clock
+located at us, the PDF file, and the star collision, we will be able to say, by looking at all 3 clocks synchronized,
+the star collision happened first.
+
+Einstein offered an approch to synchronize the clocks in the following way. He got inspired by Differential Geometry
+by realizing that the clock $C_1$ of the event located at the \textit{vicinity} of another clock $C_2$ is
+infinitesimally synchronized with clock $C_2$. If there is a clock at point $A$ of space, then an observer located at
+$A$ can evaluate the time of the events in the immediate vicinity of $A$ by simply look at their hand watch. If there is
+also a clock at point $B$, then the time of the events in the immediate vicinity of $B$ can likewise be evaluated by an
+observer located at $B$. But it is not possible to compare the time of an event at $A$ with one at $B$ without a further
+stipulation; thus far we have only defined an "$A$-time" and a "$B$-time" but not a "time" common to $A$ and $B$. The
+latter can now be determined by establishing by definition that the "time" needed for the light to travel from $A$ to
+$B$ is equal to the "time" it needs to travel from $B$ to $A$. Thus we have the following definition
+
+\begin{Definition}{Synchronism (Location-Independent)}{synchronism}
+    Suppose a ray of light leaves from $A$ toward $B$ at ``A-time" at $t_A$, is reflected from $B$ toward $A$ at
+    ``B-time" $t_B$, and arrives back at $A$ at ``A-time" $t'_A$. The two clocks are \textit{synchronous} by defintion
+    if
+
+    \begin{equation}\label{eq:synchronism}
+    t_B - t_A = t'_A - t_B
+    \end{equation}
+\end{Definition}
+
+It follows naturally that
+
+\begin{enumerate}
+    \item if the clock in $B$ is synchronous with the clock in $A$, then the clock in $A$ is synchronous with the clock
+          in $B$, and
+    \item if the clock in $A$ is synchronous with the clock in $B$ as well as with the clock in $C$, then the clocks in
+          $B$ and $C$ are also synchronous relative to each other
+\end{enumerate}
+
+This is a very powerful assertion, because it states that for 2 clocks to be ``synchronous", not only do they need to
+be ticking at the same rate, but also they must always be pointing at the exact same absolute instance of time, i.e.
+both must be both ticking at 9:00:00 am sharp, not one at 9:00:00 and the other at 9:00:03. Another example is that
+two clocks at Chicago and New York City are never synchronous.
+
+Applying this Def.~\ref{def:synchronism}, we are able to solve the PDF-collision problem. Since the PDF and us are in
+pretty much vicinity of each other, we can approximate the two to be synchronous with each other. To synchronize with
+the star collison, our watch will need to ``move backwards" in time by little more than 2 billion years. According to
+the transitivity law of Synchronism, the clocks of PDF and the collision are new synchronized. The ordering of the
+events should be pretty clear now.
+
+The \textbf{speed of light as a universal constant in empty space is thus}:
+
+\begin{tcolorbox}[enhanced,colframe=green!75!black,colback=green!5!white]
+    \begin{equation}
+        V = \frac{2\overline{AB}}{t'_A - t_A}
+    \end{equation}
+\end{tcolorbox}
+
+\begin{marker}
+    and there is a BIG assumption: all clocks are at \textit{rest} in a system at \textit{rest}
+\end{marker}
+
+With that, we have a pretty good mechanism to talk about series of events in a system happening at different time,
+because we know how to synchronize them \includegraphics[height=0.05\textwidth]{可莉-35.png}
+
+\subsubsection{\hfil \S2. Something Stops Working\ldots \hfil}
+
+\begin{tcolorbox}[
+    enhanced,
+    title=Principle of Relativity,
+    colframe=green!50!black,
+    colback=green!10!white,
+    arc=0mm,
+    colbacktitle=red!10!white,
+    coltitle=green!50!black,
+    attach boxed title to top text right={yshift=-0.50mm},
+    boxed title style={
+        skin=enhancedfirst jigsaw,
+        size=small,arc=1mm,bottom=-1mm,
+        interior style={fill=none, top color=green!30!white, bottom color=green!20!white}
+    }
+]
+    The laws governing the changes of the state of any physical system do not depend on which one of two coordinate
+    systems in uniform translational motion relative to each other these changes of the state are referred to
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    enhanced,
+    title=Principle of the Constancy of the Velocity of Light,
+    colframe=green!50!black,
+    colback=green!10!white,
+    arc=0mm,
+    colbacktitle=red!10!white,
+    coltitle=green!50!black,
+    attach boxed title to top text left={yshift=-0.50mm},
+    boxed title style={
+        skin=enhancedfirst jigsaw,
+        size=small,arc=1mm,bottom=-1mm,
+        interior style={fill=none, top color=green!30!white, bottom color=green!20!white}
+    }
+]
+    \phantomsection\hypertarget{constant-c-principle}
+    Each ray of light moves in the coordinate system ``at rest" with the definite velocity $V$ independent of
+    whether this ray of light is emitted by a body at rest or a body in motion
+\end{tcolorbox}
+
+2 principles above along with the Def.\ref{def:synchronism} shall present us an surprising result that a moving rod
+with a stationary length $r_{AB}$ will be measured to have a different length measured by an moving observer
+
+\begin{tcolorbox}[
+    breakable,
+    parbox=false,
+    skin=bicolor,
+    sidebyside,
+    boxrule=0pt,
+    frame style={
+        top color=blue!50!white
+    },
+    colback=red!5!white,
+    colbacklower=green!5!white,
+    title={Suppose the rod is moving in the x-direction at a constant speed $v$. Let the length of the moving rod, measured in the system at rest, be denoted as $r_{AB}$, where $A$ and $B$ are the two ends of the rod. In addition, we imagine that the two ends ($A$ and $B$) of the rod are equipped with clocks ($C_1$ and $C_2$) that are \textit{synchronous} with the clocks of the system at rest. Hence, \textbf{$C_1$ and $C_2$ are \textit{synchronous} for the observer in the system at rest}
+whose readings always correspond to the "time of the system at rest"
+at the}
+]
+    \begin{center}
+        \textbf{Classically}
+    \end{center}
+
+    An observer co-moving with the rod measures this stationary rod to have a length of $t_B - t_A = t'_A - t_B = \frac{r_{AB}}{V}$, where $V$ is
+    the speed of light and $t_B, t_A, t'_A, t_B$ are all drawn from Def.\ref{def:synchronism}.
+
+    \textit{Another} stationary observer, who sees the rod moving, measures the length of the (moving) rod seeen from a
+    system at rest. The light travels, due to
+    \href{https://en.wikipedia.org/wiki/Inertia}{Classical Intertia}, at a speed of $ \color{red} v + V$, relative to
+    the observer. The observer see the light reaches the other end of the rod at $\Delta t = t_B - t_A$. The light ends up
+    travelling a distance of $(v + V)\Delta t$; this distance must also equal to the sum of the \textit{stationary rod
+    length} plus the \textit{extra distance that the rod travels}:
+
+    \begin{equation}
+    (v + V)\Delta t = r_{AB} + v\Delta t
+    \end{equation}
+
+    Thus
+
+    \begin{equation}
+        t_B - t_A = \frac{r_{AB}}{V}
+    \end{equation}
+
+    When the light reflects back:
+
+    \begin{equation}
+    (V - v)\Delta t = v\Delta t - r_{AB}
+    \end{equation}
+
+    \begin{equation}
+        t'_A - t_B = \frac{r_{AB}}{V}
+    \end{equation}
+
+    Therefore
+
+    \begin{equation}
+        t_B - t_A = t'_A - t_B
+    \end{equation}
+
+    \tcblower
+
+    \begin{center}
+        \textbf{Relativistically}
+    \end{center}
+
+    An observer co-moving with the rod measures this stationary rod to have a length of $t_B - t_A = t'_A - t_B = \frac{r_{AB}}{V}$, where $V$ is
+    the speed of light and $t_B, t_A, t'_A, t_B$ are all drawn from Def.\ref{def:synchronism}.
+
+    \textit{Another} stationary observer, who sees the rod moving, measures the length of the (moving) rod seeen from a
+    system at rest. The light travels, by
+    \hyperlink{constant-c-principle}{the Principle of the Constant Speed of Light}, at a speed of $ \color{green} V$,
+    relative to the observer. The observer see the light reaches the other end of the rod at $\Delta t = t_B - t_A$. The
+    light ends up travelling a distance of $V\Delta t$; this distance must also equal to the sum of the
+    \textit{stationary rod length} plus the \textit{extra distance that the rod travels}:
+
+    \begin{equation}
+        V\Delta t = r_{AB} + v\Delta t
+    \end{equation}
+
+    Thus
+
+    \begin{equation}\label{eq:forward-relativistic-propagation}
+    t_B - t_A = \frac{r_{AB}}{V - v}
+    \end{equation}
+
+    When the light reflects back:
+
+    \begin{equation}
+        V\Delta t = v\Delta t - r_{AB}
+    \end{equation}
+
+    \begin{equation}\label{eq:backward-relativistic-propagation}
+        t'_A - t_B = \frac{r_{AB}}{V + v}
+    \end{equation}
+
+    Therefore
+
+    \begin{equation}
+        t_B - t_A \ne t'_A - t_B
+    \end{equation}
+\end{tcolorbox}
+
+Note that neither Eq.\ref{eq:forward-relativistic-propagation} nor Eq.\ref{eq:backward-relativistic-propagation} is
+related to the $\text{time} = \frac{\text{distance}}{\text{speed}}$. \href{https://qr.ae/psQeNd}{The numerators of
+both equations are NOT the distance traveled and the denominator is NOT the speed of the travel}
+
+\begin{tcolorbox}[
+enhanced,
+skin=enhancedlast jigsaw,interior hidden,
+boxsep=0pt,top=0pt,colframe=red,coltitle=red!50!black,
+attach boxed title to bottom center,
+boxed title style={empty,boxrule=0.5mm},
+varwidth boxed title=0.5\linewidth,
+underlay boxed title={
+    \draw[white,line width=0.5mm]
+    ([xshift=0.3mm-\tcboxedtitleheight*2,yshift=0.3mm]title.north west)
+    --([xshift=-0.3mm+\tcboxedtitleheight*2,yshift=0.3mm]title.north east);
+    \path[draw=red,top color=white,bottom color=red!50!white,line width=0.5mm]
+    ([xshift=0.25mm-\tcboxedtitleheight*2,yshift=0.25mm]title.north west)
+    cos +(\tcboxedtitleheight,-\tcboxedtitleheight/2)
+    sin +(\tcboxedtitleheight,-\tcboxedtitleheight/2)
+    -- ([xshift=0.25mm,yshift=0.25mm]title.south west)
+    -- ([yshift=0.25mm]title.south east)
+    cos +(\tcboxedtitleheight,\tcboxedtitleheight/2)
+    sin +(\tcboxedtitleheight,\tcboxedtitleheight/2); },
+title=we have a contradiction,
+watermark graphics=烟绯-11.png,
+watermark opacity=0.3
+]
+Now, let's further imagine that each clock of $C_1$ and $C_2$ has an observer co-moving with it, and that these
+observers apply to the two clocks the criterion for synchronism formulated in Def~\ref{def:synchronism}. Classically,
+both observer co-moving with the moving rod and the observer in the system at rest declare $C_1$ and $C_2$ to be
+synchronous
+
+\begin{equation}\label{eq:synchronized-clocks}
+    t_B - t_A = t'_A - t_B
+\end{equation}
+
+Relativisically, however, observer co-moving with the moving rod, By Def.~\ref{def:synchronism}, finds $C_1$ and $C_2$ do not run synchronously
+
+\begin{equation}\label{eq:unsynchronized-clocks}
+    t_B - t_A \ne t'_A - t_B
+\end{equation}
+
+while the observer in the system at rest declare them synchronous, in this case
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    colback=green!5!white,
+    colframe=green!55!black,
+    title=How do we resolve the contradiction?
+]
+    \begin{center}
+        \textbf{There is No \textit{Absolute} Simultaneity}
+    \end{center}
+
+    Instead, two events that are simultaneous when observed from some particular coordinate system can no longer be
+    considered simultaneous when observed from a system that is moving relative to that system
+\end{tcolorbox}
+
+\subsubsection{\hfil \S3. Lorentz Transformation - Quantifying Non-Simultaneity \hfil}
+
+Let's formulate the problem we see at the end of the previous section:
+
+For every event at $(x, y, z, t)$ in a system $K$ at rest, there corresponds to an event $(\xi, \eta, \zeta, \tau)$ in
+a system $k$ moving in the x-direction relative to $K$
+
+This section derives the relation of $(\xi, \eta, \zeta, \tau)$ = $f(x, y, z, t)$
+
+In this setup, after some time $t$, a point $x$ in $K$ shall become the point $x'$ in $k$ where
+
+\[
+    x' = x + vt
+\]
+
+Let's suppose that at time $\tau_0$ a light ray is sent from the origin of the system $k$ along the x-axis to $x'$ and
+is reflected from there at time $\tau_1$ toward the origin, where it arrives at time $\tau_2$; we then must have
+
+\[
+    \tau_2 - \tau_1 = \tau_1 - \tau_0
+\]
+
+\begin{equation} \label{eq:tau_012}
+\frac{1}{2}(\tau_0 + \tau_2) = \tau_1
+\end{equation}
+
+Since it is also true that
+$\tau_2 = \tau_0 + \underbrace{\frac{x'}{V - v}}_{Eq.~\ref{eq:forward-relativistic-propagation}} + \underbrace{\frac{x'}{V + v}}_{Eq.~\ref{eq:backward-relativistic-propagation}}$,
+by writing out the parameters of $\tau$ in Eq.\ref{eq:tau_012}, we have the following general equation of
+
+\begin{equation}
+    \frac{1}{2}\left[ \tau(0, 0, 0, t) + \tau\left( 0, 0, 0, \tau_0 + \frac{x'}{V - v} + \frac{x'}{V + v} \right) \right] = \tau\left( x', 0, 0, t + \frac{x'}{V -v} \right)
+\end{equation}
+
+Taking the derivative of $\tau$ with respect to $x'$ and applying the Chain Rule of
+
+\[
+    \frac{\partial\tau}{\partial x'} = \frac{\partial\tau}{\partial t}\frac{\partial t}{\partial x'}
+\]
+
+give us
+
+\begin{equation}
+    \frac{1}{2}\frac{\partial\tau}{\partial t}\left[ \frac{1}{V - v} + \frac{1}{V + v} \right] = \frac{\partial\tau}{\partial x'} + \left( \frac{1}{V - v} \right)\frac{\partial\tau}{\partial t}
+\end{equation}
+
+which simplifies down to
+
+\begin{equation}\label{eq:tau_t_general}
+\tcbhighmath[
+    enhanced,colframe=red,colback=white,arc=0pt,boxrule=1pt,
+    fuzzy halo=1mm with blue!50!white,
+    arc=2pt,
+    boxrule=0pt,
+    frame hidden
+]{
+    \frac{\partial\tau}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial\tau}{\partial t} = 0
+}
+\end{equation}
+
+It should be noted that $\mathscr{L} = \frac{\partial}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial}{\partial t}$
+is a Linear operator
+\footnote{See \href{https://trello.com/c/5L46ePJQ}{Partial Differential Equations}, Strauss, page 2 for definition of \textit{Linearity}}
+because
+
+\begin{align}
+    \mathscr{L}(\tau_1 + \tau_2) &= \frac{\partial(\tau_1 + \tau_2)}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial(\tau_1 + \tau_2)}{\partial t} \\
+    &= \frac{\partial\tau_1}{\partial x'} + \frac{\partial\tau_2}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial\tau_1}{\partial t} + \frac{v}{V^2 - v^2}\frac{\partial\tau_2}{\partial t} \\
+    &= \mathscr{L}(\tau_1) + \mathscr{L}(\tau_2)
+\end{align}
+
+and
+
+\begin{equation}
+    \mathscr{L}(c\tau) = \frac{\partial c\tau}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial c\tau}{\partial t} = c\left( \frac{\partial\tau}{\partial x'} + \frac{v}{V^2 - v^2}\frac{\partial\tau}{\partial t} \right) = c\mathscr{L}(\tau)
+\end{equation}
+
+Therefore Eq.\ref{eq:tau_t_general} has a solution of the form\footnote{See \href{https://trello.com/c/5L46ePJQ}{Partial Differential Equations}, Strauss, page 6}
+
+\begin{equation}
+    \tau = f\left( \frac{v}{V^2 - v^2} x - t \right)
+\end{equation}
+
+We shall declare that
+
+\begin{equation}\label{eq:transformation}
+\tau = \underbrace{f\left( \frac{v}{V^2 - v^2} x - t \right)}_{Mathematics} = \underbrace{\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right)}_{Physics}
+\end{equation}
+
+which assumes that transformation between $\tau$ and $t$ must be \textit{linear} which can be inferred by the
+following fundamental postulate\footnote{In a\href{https://download.wpsoftware.net/causality-lorentz-group-zeeman.pdf}{1964 paper}, Erik Christopher Zeeman showed that the Lorentz transformation can be proven by applying the homogeneity principle to equations that represent the corresponding quantities at rest. This shows that the Lorentz transformation must be linear in both space and time coordinates}:
+
+\begin{tcolorbox}[
+    enhanced,frame hidden,boxrule=0pt,interior style={top color=green!10!white,
+    bottom color=green!10!white,middle color=green!50!yellow},
+    fuzzy halo=1pt with green
+]
+    \begin{center}
+        \textbf{Space and time are homogeneous}\footnote{\textit{What proof do we have that the universe is
+        homogenous?} In physics we can't prove something like this. It must be a postulate - something we take as a
+        fundamental assumption on which to base our theories. If the assumption is wrong then eventually we will find
+        experimental evidence of this. What we can say is that currently there is no evidence for any lack of
+        homegeneity or isotropy in the universe.}
+    \end{center}
+\end{tcolorbox}
+
+With Eq.\ref{eq:transformation}, we shall deduct the first 3 positional transformations in $(\xi, \eta, \zeta, \tau)$.
+For a light ray emitted at time $\tau = 0$ in the direction of increasing $\xi$, we have
+
+\begin{equation}
+    \xi = V\tau = V\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right)
+\end{equation}
+
+which, combined with Eq.\ref{eq:forward-relativistic-propagation}, gives
+
+\begin{equation}\label{eq:x-transformation}
+\xi = \varphi(v)\left( \frac{V^2}{V^2 - v^2} \right) x
+\end{equation}
+
+Analogously, by considering light rays \textbf{moving along the two other moving axes while $k$ is still moving in the
+x-direction}:
+
+\begin{equation}\label{eq:y-transformation}
+\left\{
+\begin{array}{l}
+    \eta = V\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right) \\
+    y^2 + (vt)^2 = (Vt)^2 \\
+    x = 0
+\end{array}
+\right.
+\Rightarrow
+\eta = \varphi(v)\frac{V}{\sqrt{V^2 - v^2}}y
+\end{equation}
+
+\begin{equation}\label{eq:z-transformation}
+\left\{
+\begin{array}{l}
+    \zeta = V\varphi(v)\left( t - \frac{v}{V^2 - v^2} x \right) \\
+    z^2 + (vt)^2 = (Vt)^2 \\
+    x = 0
+\end{array}
+\right.
+\Rightarrow
+\zeta = \varphi(v)\frac{V}{\sqrt{V^2 - v^2}}z
+\end{equation}
+
+Note that Eq.\ref{eq:x-transformation}, \ref{eq:y-transformation}, and \ref{eq:z-transformation} are based on the
+assumption that $k$ starts out at the same point of $K$'s origin
+
+It does not lose generality to say if $k$ is moving relative to $K$ at speed $v$ then $K$ is moving relative to $k$ at
+speed $-v$. Directly measuring coordinates in $K$ is effectively the same thing as transforming $(x, y, z, t)$ in $K$
+to $(\xi, \eta, \zeta, \tau)$ and then back to $(x, y, z, t)$ so we have along the x-axis:
+
+\begin{equation}
+    x = \varphi(-v)\left( \frac{V^2}{V^2 - v^2} \right) \varphi(v)\left( \frac{V^2}{V^2 - v^2} \right) x = \varphi(v)\varphi(-v)\left( \frac{V^2}{V^2 - v^2} \right)^2 x
+\end{equation}
+
+where $v$ is the speed of $K$ relative to $K$, which is clearly 0. Therefore
+
+\begin{equation}
+    x = \varphi(v)\varphi(-v)\left( \frac{V^2}{V^2 - 0^2} \right)^2 x = \varphi(v)\varphi(-v) x
+\end{equation}
+
+which leads to the identity transformation of
+
+\begin{equation}\label{eq:trans-coef-prod-1}
+\varphi(v)\varphi(-v) = 1
+\end{equation}
+
+Let's place a rod of length $l$ at the origin of $k$ perpendicular to $\xi$-axis. If $k$ is moving to the x-direction
+relative to $K$ at speed $v$, the measurement of the rod length, which we denote $y_1$, in $K$ satisfy
+
+\begin{equation}
+    l = \varphi(v)\frac{V}{\sqrt{V^2 - v^2}}y_1
+\end{equation}
+
+By symmetry
+
+\begin{equation}
+    l = \varphi(-v)\frac{V}{\sqrt{V^2 - v^2}}y_1
+\end{equation}
+
+\begin{equation}\label{eq:trans-coef-equal}
+\varphi(v) = \varphi(-v)
+\end{equation}
+
+Combining \ref{eq:trans-coef-equal} and \ref{eq:trans-coef-prod-1} leads to
+
+\begin{equation}
+    \varphi(v) = \pm 1
+\end{equation}
+
+By definition we know $l > 0$, $y_1 > 0$, and $V > 0$, therefore,
+
+\begin{equation}
+    \varphi(v) = 1
+\end{equation}
+
+
