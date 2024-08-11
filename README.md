@@ -51,7 +51,12 @@ I, hereby, present my ongoing effort of
 What I Learn About Learning General Relativity
 ----------------------------------------------
 
-- Nothing comes up in its final form on its first rendering. 
+- Nothing comes up in its final form on its first rendering. There must be iterations of corrections and 
+  improvements before we are able to show the world something really fascinating. For example, I made several 
+  conceptual mistakes on Einstein's Special Relativity paper on its first read and was forced to come back to it 
+  several  times before I came very close to what Einstein was really talking about. I believe Tesla, Apple, Google, or
+  many great organizations never shows up from nothing. Their founders must have gone through phases of growth and
+  practice before reaching that peak!
 
 How to Compile Study Notes
 --------------------------
