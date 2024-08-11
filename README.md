@@ -36,6 +36,7 @@ I, hereby, present my ongoing effort of
 
 <!-- TOC -->
 * [Study Notes on General Relativity](#study-notes-on-general-relativity)
+  * [What I Learn About Learning General Relativity](#what-i-learn-about-learning-general-relativity)
   * [How to Compile Study Notes](#how-to-compile-study-notes)
     * [Setup](#setup)
     * [Getting Study Notes Source Code](#getting-study-notes-source-code)
@@ -46,6 +47,11 @@ I, hereby, present my ongoing effort of
     * [Python Libraries](#python-libraries)
   * [License](#license)
 <!-- TOC -->
+
+What I Learn About Learning General Relativity
+----------------------------------------------
+
+- Nothing comes up in its final form on its first rendering. 
 
 How to Compile Study Notes
 --------------------------
