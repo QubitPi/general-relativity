@@ -359,15 +359,26 @@ explore this transformation which is famously called the ``Lorentz transformatio
 \end{tcolorbox}
 
 In this setup, let's talk about how observer $k$ measures things in $K$. Suppose there is a point at rest in
-$K: (x, y, z)$. Let's denote this point measured from within system $k$ as $k: (x', y', z')$. At time $t_0 = 0$ letAfter some time $t$, since
-$K$ is effectively moving to in the negative $x-direciton$ relative to $k$, observer in $k$ will now see this event
-further to the left, i.e. the coordinate of this event now becomes
+$K: (x, y, z)$. Let's denote this point measured from within system $k$ as $k: (x', y', z')$.
 
-\[
-    x' = x - vt
-\]
+\begin{marker}
+    \phantomsection\hypertarget{same-origin-assumption}
+    We will assume that the origins of $k$ and $K$ coincide
+    initially\footnote{\href{https://trello.com/c/ll9Yzd8h}{The Collected Papers of Albert Einstein, Vol.2}, page 149}.
+    That is at $t_0 = 0$, $x = x'$
+\end{marker}
 
-Let's suppose that at time $\tau_0$ a light ray is sent from the origin of the system $k$ along the x-axis to $x'$ and
+After some time $t$, since $K$ is effectively moving to in the negative $x-direciton$ relative to $k$, observer in $k$
+will now see this event further to the left, i.e. the coordinate of this event now becomes
+
+\begin{equation}\label{eq:linking-k-and-K}
+    x' = x + c - vt = x - vt
+\end{equation}
+
+$c = 0$ because of the \hyperlink{same-origin-assumption}{assumption} we have made. Eq.~\ref{eq:linking-k-and-K} allow
+us to link systems $k$ and $K$ by a common attribute - $x'$. So let's start from here.
+
+Suppose that at time $\tau_0$ a light ray is sent from the origin of the system $k$ along the x-axis to $x'$ and
 is reflected from there at time $\tau_1$ toward the origin, where it arrives at time $\tau_2$; we then must have
 
 \[
