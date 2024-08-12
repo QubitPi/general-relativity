@@ -16,7 +16,7 @@ Study Notes on General Relativity
 Physics is, as I view it, a quantified version of Philosophy on how world actually works. It's pushing the limits of
 human knowledge to futuristic inquiries such as
 
-- Will [Dark Matter/Dark Energy](https://youtu.be/6EavTTbuIq4?si=fAc1V1OW9LKJBCvk) bring the possibility of next-human
+- Will [Dark Matter/Dark Energy](https://youtu.be/5vjl6tdwmFA?si=J5HajQKMmD4oexzA&t=2649) bring the possibility of next-human
   generation technologies?
 - Does gigantic celestial object, such as Black Hole, permit spacetime travelling into the future for humanities?
 - Is there [another universe/world](https://youtu.be/GQTq1kufCLk?si=oOykmrp9u6xt-iJ0) that obeys a different philosophical system?
