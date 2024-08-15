@@ -48,8 +48,8 @@ I, hereby, present my ongoing effort of
   * [License](#license)
 <!-- TOC -->
 
-What I Learn About Learning General Relativity
-----------------------------------------------
+What I Stumbled Upon During Studying General Relativity
+-------------------------------------------------------
 
 - Nothing comes up in its final form on its first rendering. There must be iterations of corrections and 
   improvements before we are able to show the world something really fascinating. For example, I made several 
