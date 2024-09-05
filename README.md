@@ -122,7 +122,7 @@ Resources on General Relativity
 
 1. [How are gravitational waves created and measured?](https://youtu.be/ytV1KhjEQbs?si=goI3LG8Ohn0HPn1q)
 2. [How can a gravitational-wave signal be used to measure the mass and distance of its source?](https://youtu.be/CySut_9aKc0?si=sDRkP365nliufWtO)
-3. [Gravitational Wave Fitter mentioned in the 2 videos above](https://qubitpi.github.io/gravitational-wave-fitter/) ([Source Code](https://github.com/QubitPi/gravitational-wave-fitter))
+3. [Gravitational Wave Fitter mentioned in the 2 videos above](https://gravitational-wave-fitter.qubitpi.org/) ([Source Code](https://github.com/QubitPi/gravitational-wave-fitter))
 4. [Gravitational Wave Quickview App](https://gravitational-wave-quickview.streamlit.app/)
 5. [Discover, read, and plot gravitational wave data](https://nbviewer.org/github/QubitPi/jupyter-notebooks/blob/master/notebooks/gravitational-wave/Quickview.ipynb)
 
