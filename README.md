@@ -113,7 +113,8 @@ You now have my love of Physics located at [`./study-notes.pdf`][Study Notes on 
 Resources on General Relativity
 -------------------------------
 
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/playlist?list=PL-CLnI8tPXu8bfJ5oVbVZdu16_xyg0Bkf&si=txt5-pf9fqk06ppp)
+- [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/playlist?list=PL-CLnI8tPXu8bfJ5oVbVZdu16_xyg0Bkf&si=txt5-pf9fqk06ppp)
+- [General relativity for babies](https://trello.com/c/LjQpMlyl)
 
 ### Black Holes
 
