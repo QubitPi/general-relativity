@@ -57,6 +57,8 @@ What I Stumbled Upon During Studying General Relativity
   several  times before I came very close to what Einstein was really talking about. I believe Tesla, Apple, Google, or
   many great organizations never shows up from nothing. Their founders must have gone through phases of growth and
   practice before reaching that peak!
+- The most perfect theory (Electromagnetism) didn't start with the most logical philosophical inquiry but through
+  earth-touching experiments (Faraday on _Experimental researches in electricity_)
 
 How to Compile Study Notes
 --------------------------
