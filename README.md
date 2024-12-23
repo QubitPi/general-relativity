@@ -28,9 +28,9 @@ Study Notes on General Relativity
 </div>
 
 The mysterious connection between Quantum and Astrophysics through black hole's Singularity keeps my curiosity high
-every day, which is why I spend time on studying General Relativity. Not only that, those who master General Relativity
-or Physics in general has their best advantage to learn and analyze Business or Technical problems in a systematic,
-logical, and correct way as well. I, hereby, present my ongoing effort of
+every day, which is why I spend time on studying __General Relativity__. Not only that, those who master General
+Relativity or Physics in general has their best advantage to learn and analyze Business or Technical problems in a
+systematic, logical, and correct way as well. I, hereby, present my ongoing effort of
 [Study Notes on General Theory of Relativity][Study Notes on General Relativity], the Math behind our universe
 
 <div align="center">
