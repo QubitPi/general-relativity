@@ -27,10 +27,10 @@ Study Notes on General Relativity
     <img src="img/Lyney.png" width="15%" />
 </div>
 
-Quantum and Astrophysics are my favorite branches of Physics. Their mysterious connection through black hole's
-Singularity keeps my curiosity high every day, which is why I spend time on General Relativity. Not only that, those
-who master General Relativity or Physics in general has their best advantage to learn and analyze Business or Technical
-problems in a systematic, logical, and correct way as well. I, hereby, present my ongoing effort of
+The mysterious connection between Quantum and Astrophysics through black hole's Singularity keeps my curiosity high
+every day, which is why I spend time on studying General Relativity. Not only that, those who master General Relativity
+or Physics in general has their best advantage to learn and analyze Business or Technical problems in a systematic,
+logical, and correct way as well. I, hereby, present my ongoing effort of
 [__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the Math behind our universe
 
 <div align="center">
