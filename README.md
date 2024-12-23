@@ -91,7 +91,7 @@ cd general-relativity
 ### Compiling Notes
 
 > [!NOTE]
-> Please be patient as the compilation takes some time <img src="https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7/%E5%BF%83%E6%B5%B7.png?raw=true" width="5%" />
+> Please be patient as the compilation takes some time <img src="https://github.com/QubitPi/QubitPi/blob/master/img/%E5%BF%83%E6%B5%B7.png?raw=true" width="5%" />
 
 ```console
 make
