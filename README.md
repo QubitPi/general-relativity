@@ -27,14 +27,6 @@ Study Notes on General Relativity
     <img src="img/Lyney.png" width="15%" />
 </div>
 
-Physics is, as I view it, a mathematical version of Philosophy on how world actually works. It's pushing the limits of
-human knowledge to futuristic inquiries such as
-
-- Will [Dark Matter/Dark Energy](https://youtu.be/5vjl6tdwmFA?si=J5HajQKMmD4oexzA&t=2649) bring the possibility of next-human
-  generation technologies?
-- Does gigantic celestial object, such as Black Hole, permit spacetime travelling into the future for humanities?
-- Is there [another universe/world](https://youtu.be/GQTq1kufCLk?si=oOykmrp9u6xt-iJ0) that obeys a different philosophical system?
-
 Quantum and Astrophysics are my favorite branches of Physics. Their mysterious connection through black hole's
 Singularity keeps my curiosity high every day, which is why I spend time on General Relativity. Not only that, __those
 who master General Relativity or Physics in general has their best advantage to learn and analyze Business or Technical
