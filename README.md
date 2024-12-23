@@ -36,9 +36,9 @@ human knowledge to futuristic inquiries such as
 - Is there [another universe/world](https://youtu.be/GQTq1kufCLk?si=oOykmrp9u6xt-iJ0) that obeys a different philosophical system?
 
 Quantum and Astrophysics are my favorite branches of Physics. Their mysterious connection through black hole's
-Singularity keeps my curiosity high every day. Not only that, __those who master General Relativity or Physics in
-general has their best advantage to learn and analyze Business or Technical problems in a systematic, logical, and
-correct way__ as well
+Singularity keeps my curiosity high every day, which is why I spend time on General Relativity. Not only that, __those
+who master General Relativity or Physics in general has their best advantage to learn and analyze Business or Technical
+problems in a systematic, logical, and correct way__ as well
 
 I, hereby, present my ongoing effort of
 [__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the Math behind our universe
