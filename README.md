@@ -37,7 +37,7 @@ problems in a systematic, logical, and correct way as well. I, hereby, present m
     <a href="https://youtu.be/Z6Jt4lCe8_I?si=n6opy2Ljv6Uqf80A"><img src="./img/black-hole.png" width="50%"></a>
 </div>
 
-What I Stumbled Upon During Studying General Relativity
+What I Stumbled Upon on the Study of General Relativity
 -------------------------------------------------------
 
 - Nothing comes up in its final form on its first rendering. There must be iterations of corrections and 
