@@ -31,7 +31,7 @@ The mysterious connection between Quantum and Astrophysics through black hole's 
 every day, which is why I spend time on studying General Relativity. Not only that, those who master General Relativity
 or Physics in general has their best advantage to learn and analyze Business or Technical problems in a systematic,
 logical, and correct way as well. I, hereby, present my ongoing effort of
-[__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the Math behind our universe
+[Study Notes on General Theory of Relativity][Study Notes on General Relativity], the Math behind our universe
 
 <div align="center">
     <a href="https://youtu.be/Z6Jt4lCe8_I?si=n6opy2Ljv6Uqf80A"><img src="./img/black-hole.png" width="50%"></a>
