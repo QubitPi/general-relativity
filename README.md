@@ -27,7 +27,7 @@ Study Notes on General Relativity
     <img src="img/Lyney.png" width="15%" />
 </div>
 
-Physics is, as I view it, a quantified version of Philosophy on how world actually works. It's pushing the limits of
+Physics is, as I view it, a mathematical version of Philosophy on how world actually works. It's pushing the limits of
 human knowledge to futuristic inquiries such as
 
 - Will [Dark Matter/Dark Energy](https://youtu.be/5vjl6tdwmFA?si=J5HajQKMmD4oexzA&t=2649) bring the possibility of next-human
@@ -35,12 +35,13 @@ human knowledge to futuristic inquiries such as
 - Does gigantic celestial object, such as Black Hole, permit spacetime travelling into the future for humanities?
 - Is there [another universe/world](https://youtu.be/GQTq1kufCLk?si=oOykmrp9u6xt-iJ0) that obeys a different philosophical system?
 
-Astrophysics, thus, is my favorite branch of Physics and __those who masters General Relativity or Physics in general
-has their best advantage to learn and analyze Business or Technical problems in a systematic, logical, and correct way__
-as well
+Quantum and Astrophysics are my favorite branches of Physics. Their mysterious connection through black hole's
+Singularity keeps my curiosity high every day. Not only that, __those who master General Relativity or Physics in
+general has their best advantage to learn and analyze Business or Technical problems in a systematic, logical, and
+correct way__ as well
 
 I, hereby, present my ongoing effort of
-[__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the "Math" behind our universe
+[__Study Notes on General Theory of Relativity__][Study Notes on General Relativity], the Math behind our universe
 
 <div align="center">
     <a href="https://youtu.be/Z6Jt4lCe8_I?si=n6opy2Ljv6Uqf80A"><img src="./img/black-hole.png" width="50%"></a>
