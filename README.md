@@ -7,7 +7,7 @@ Study Notes on General Relativity
 
 <!-- TOC -->
 * [Study Notes on General Relativity](#study-notes-on-general-relativity)
-  * [What I Stumbled Upon During Studying General Relativity](#what-i-stumbled-upon-during-studying-general-relativity)
+  * [What I Stumbled Upon on the Study of General Relativity](#what-i-stumbled-upon-on-the-study-of-general-relativity)
   * [How to Compile Study Notes](#how-to-compile-study-notes)
     * [Setup](#setup)
     * [Getting Study Notes Source Code](#getting-study-notes-source-code)
