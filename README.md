@@ -16,6 +16,7 @@ Study Notes on General Relativity
     * [Black Holes](#black-holes)
     * [Gravitational Wave](#gravitational-wave)
     * [Python Libraries](#python-libraries)
+  * [LaTeX Resources](#latex-resources)
   * [License](#license)
 <!-- TOC -->
 
@@ -123,6 +124,19 @@ Resources on General Relativity
 - [Astropy](https://www.astropy.org/)
 - [GwPy](https://gwpy.github.io/docs/stable/)
 - [PyCBC](https://pycbc.org/)
+
+LaTeX Resources
+---------------
+
+- [LaTeX math equation online editor](https://latexeditor.lagrida.com/)
+- [QuickLaTeX.com](https://quicklatex.com/) - Instant math equation syntax checker and sharing via image online
+- [MacTeX](https://www.tug.org/mactex/) - LaTeX comes with various installation packges, some are minimized versions.
+  The comprehensive package is MacTeX
+- [CTAN](https://www.ctan.org/) - The "Maven Central" for LaTeX
+- [texlive package manager](https://tug.org/texlive/doc/tlmgr.html) - Installing a LaTeX package. e.g.
+  `sudo tlmgr update --self && sudo tlmgr install pgfornament`
+- [LaTeX showcase](https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends)
+- [Cool Text Highlighting in LaTeX](https://tex.stackexchange.com/a/6029)
 
 License
 -------
