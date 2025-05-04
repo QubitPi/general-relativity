@@ -7,4 +7,6 @@
 *.blg
 *.toc
 *.tdo
+*.bcf
+*.run.xml
 intermediate.pdf
