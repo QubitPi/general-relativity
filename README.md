@@ -5,21 +5,6 @@ Study Notes on General Relativity
 [![Ubuntu Font Badge][Ubuntu Font Badge]][Ubuntu Font URL]
 [![Apache License Badge]][Apache License, Version 2.0]
 
-<!-- TOC -->
-* [Study Notes on General Relativity](#study-notes-on-general-relativity)
-  * [What I Stumbled Upon on the Study of General Relativity](#what-i-stumbled-upon-on-the-study-of-general-relativity)
-  * [How to Compile Study Notes](#how-to-compile-study-notes)
-    * [Setup](#setup)
-    * [Getting Study Notes Source Code](#getting-study-notes-source-code)
-    * [Compiling Notes](#compiling-notes)
-  * [Resources on General Relativity](#resources-on-general-relativity)
-    * [Black Holes](#black-holes)
-    * [Gravitational Wave](#gravitational-wave)
-    * [Python Libraries](#python-libraries)
-  * [LaTeX Resources](#latex-resources)
-  * [License](#license)
-<!-- TOC -->
-
 <div align="center">
     <img src="img/Lynette.png" width="15%" />
     <a href="http://relativity.qubitpi.org/study-notes.pdf">
