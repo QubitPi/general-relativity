@@ -70,7 +70,7 @@ How to Compile Study Notes
 ### Getting Study Notes Source Code
 
 ```console
-git clone https://github.com/QubitPi/general-relativity.git
+git clone git@github.com:QubitPi/general-relativity.git
 cd general-relativity
 ```
 
@@ -131,7 +131,7 @@ The use and distribution terms for this book are covered by the [Apache License,
 [Apache License Badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License, Version 2.0]: https://www.apache.org/licenses/LICENSE-2.0
 
-[GNU Make]: https://trello.com/c/xv3Hso1O
+[GNU Make]: http://uploads.mitechie.com/books/Managing_Projects_with_GNU_Make_Third_Edition.pdf
 
 [LaTeX Badge]: https://img.shields.io/badge/LaTeX-TeX%20Live%E2%89%A52021-008080.svg?style=for-the-badge&logo=latex&logoColor=white
 [LaTeX URL]: https://tug.org/texlive/
