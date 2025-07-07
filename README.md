@@ -88,6 +88,7 @@ You now have my love of Physics located at [`./study-notes.pdf`][Study Notes on 
 Resources on General Relativity
 -------------------------------
 
+- [Gravitational Wave Open Science Center](https://gwosc.org/) ([GitHub](https://github.com/gwosc-tutorial))
 - [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/playlist?list=PL-CLnI8tPXu8bfJ5oVbVZdu16_xyg0Bkf&si=txt5-pf9fqk06ppp)
 - [General relativity for babies](https://trello.com/c/LjQpMlyl)
 
@@ -132,6 +133,8 @@ who publishes Ancient Greek and Latin original texts I've been enjoying reading 
 The Zeph fonts are based on 'Porson' Greek [according to the information provided by Harvard University Press](https://www.loebclassics.com/page/logo)
 (HUP). But the Zeph\* fonts themselves seem to be custom commissions for HUP for use in Loeb books, which means the
 fonts are close-sourced[^1].
+
+[^1]: https://tex.stackexchange.com/a/163342/277953
 
 The closest font I found, thus, is the [GFS Porson for Ancient Greek](https://www.google.com/search?q=GFS+Porson+for+Ancient+Greek) which ended up being the Greek font I use for
 the flash cards in this project
