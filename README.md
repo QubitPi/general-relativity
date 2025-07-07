@@ -123,6 +123,19 @@ LaTeX Resources
 - [LaTeX showcase](https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends)
 - [Cool Text Highlighting in LaTeX](https://tex.stackexchange.com/a/6029)
 
+Ancient Greek Texts
+-------------------
+
+The Greek font above was inspired by the Zeph fonts invented by [the Loeb Classical Library in Harvard University](https://www.hup.harvard.edu/series/loeb-classical-library),
+who publishes Ancient Greek and Latin original texts I've been enjoying reading since I was a college student.
+
+The Zeph fonts are based on 'Porson' Greek [according to the information provided by Harvard University Press](https://www.loebclassics.com/page/logo)
+(HUP). But the Zeph\* fonts themselves seem to be custom commissions for HUP for use in Loeb books, which means the
+fonts are close-sourced[^1].
+
+The closest font I found, thus, is the [GFS Porson for Ancient Greek](https://www.google.com/search?q=GFS+Porson+for+Ancient+Greek) which ended up being the Greek font I use for
+the flash cards in this project
+
 License
 -------
 
