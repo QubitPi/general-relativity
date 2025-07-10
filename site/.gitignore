@@ -1,29 +1,4 @@
-.idea
-.DS_Store
-*.aux
-*.log
-*.out
-*.bbl
-*.blg
-*.toc
-*.tdo
-*.bcf
-*.run.xml
-intermediate.pdf
-
-# site
-.pnp.*
-.yarn
-dist
-/build
-/coverage
-node_modules
-.env.
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# site
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 node_modules
@@ -39,6 +14,8 @@ out/
 build
 .swc/
 
+# misc
+.DS_Store
 *.pem
 
 # debug

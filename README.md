@@ -5,16 +5,19 @@ Study Notes on General Relativity
 [![Ubuntu Font Badge][Ubuntu Font Badge]][Ubuntu Font URL]
 [![Apache License Badge]][Apache License, Version 2.0]
 
+Introduction
+------------
+
 <div align="center">
     <a href="http://relativity.qubitpi.org/study-notes.pdf">
         <img src="img/general-relativity-quantum-graph.png" width="50%"/>
     </a>
 </div>
 
-The mysterious connection between Quantum and General Relativity through black hole's Singularity in Astrophysics keeps
-my curiosity high every day, which is why I spend time on studying __General Relativity__. Reconciling General
-Relativity (which describes gravity on large scales) with Quantum Mechanics (which describes the behavior of matter at
-the atomic level) is also a major challenge in Physics world community. 
+The mysterious connection between Quantum and Astrophysics through Singularity inside black hole keeps my curiosity high
+every day, which is why I spend time on studying __General Relativity__. Reconciling General Relativity (which describes
+gravity on large scales) with Quantum Mechanics (which describes the behavior of matter at the atomic level) is also a
+major challenge in Physics community around the world.
 
 Bridging General Relativity and Quantum Mechanics, Graph Theory can be a useful tool particularly in theoretical
 frameworks that attempt to unify General Relativity with Quantum Mechanics. For example, some researchers are exploring
@@ -51,7 +54,7 @@ How to Compile Study Notes
    ```console
    make --version
    ```
-   
+
    which, when installed, outputs something like this
 
    ```console
@@ -63,7 +66,7 @@ How to Compile Study Notes
 
    This program built for i386-apple-darwin11.3.0
    ```
-   
+
    `make` should be installed in almost every Linux distribution and Mac user can install via `brew install make`
 
 ### Getting Study Notes Source Code
