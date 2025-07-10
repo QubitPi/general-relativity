@@ -7,7 +7,7 @@ Study Notes on General Relativity
 
 <div align="center">
     <a href="http://relativity.qubitpi.org/study-notes.pdf">
-        <img src="./img/gr-quantum-graph.png" width="50%"/>
+        <img src="img/general-relativity-quantum-graph.png" width="50%"/>
     </a>
 </div>
 
