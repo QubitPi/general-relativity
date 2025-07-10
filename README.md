@@ -6,34 +6,33 @@ Study Notes on General Relativity
 [![Apache License Badge]][Apache License, Version 2.0]
 
 <div align="center">
+    <a href="http://relativity.qubitpi.org/study-notes.pdf">
+        <img src="./img/gr-quantum-graph.png" width="50%"/>
+    </a>
+</div>
+
+The mysterious connection between Quantum and General Relativity through black hole's Singularity in Astrophysics keeps
+my curiosity high every day, which is why I spend time on studying __General Relativity__. Reconciling General
+Relativity (which describes gravity on large scales) with Quantum Mechanics (which describes the behavior of matter at
+the atomic level) is also a major challenge in Physics world community. 
+
+Bridging General Relativity and Quantum Mechanics, Graph Theory can be a useful tool particularly in theoretical
+frameworks that attempt to unify General Relativity with Quantum Mechanics. For example, some researchers are exploring
+discrete structures like graphs to model spacetime and potentially reconcile general relativity with quantum mechanics.
+Discrete approaches using graphs could offer a path towards this unification by providing a framework where both
+theories can be derived from a more fundamental structure
+
+Not only that, those who master General Relativity or Physics in general has their best advantage to learn and analyze
+Business or Technical problems in a systematic, logical, and correct way as well. I, hereby, present my ongoing effort
+of [Study Notes on General Theory of Relativity][Study Notes on General Relativity], with the emphasis on Graph Theory:
+
+<div align="center">
     <img src="img/Lynette.png" width="15%" />
     <a href="http://relativity.qubitpi.org/study-notes.pdf">
         <img src="./img/sample.png" width="50%"/>
     </a>
     <img src="img/Lyney.png" width="15%" />
 </div>
-
-The mysterious connection between Quantum and Astrophysics through black hole's Singularity keeps my curiosity high
-every day, which is why I spend time on studying __General Relativity__. Not only that, those who master General
-Relativity or Physics in general has their best advantage to learn and analyze Business or Technical problems in a
-systematic, logical, and correct way as well. I, hereby, present my ongoing effort of
-[Study Notes on General Theory of Relativity][Study Notes on General Relativity], the Math behind our universe
-
-<div align="center">
-    <a href="https://youtu.be/Z6Jt4lCe8_I?si=n6opy2Ljv6Uqf80A"><img src="./img/black-hole.png" width="50%"></a>
-</div>
-
-What I Stumbled Upon on the Study of General Relativity
--------------------------------------------------------
-
-- Nothing comes up in its final form on its first rendering. There must be iterations of corrections and 
-  improvements before we are able to show the world something really fascinating. For example, I made several 
-  conceptual mistakes on Einstein's Special Relativity paper on its first read and was forced to come back to it 
-  several  times before I came very close to what Einstein was really talking about. I believe Tesla, Apple, Google, or
-  many great organizations never shows up from nothing. Their founders must have gone through phases of growth and
-  practice before reaching that peak!
-- The most perfect theory (Electromagnetism) didn't start with the most logical philosophical inquiry but through
-  earth-touching experiments (Faraday on _Experimental researches in electricity_)
 
 How to Compile Study Notes
 --------------------------
@@ -127,8 +126,9 @@ LaTeX Resources
 Ancient Greek Texts
 -------------------
 
-The Greek font above was inspired by the Zeph fonts invented by [the Loeb Classical Library in Harvard University](https://www.hup.harvard.edu/series/loeb-classical-library),
-who publishes Ancient Greek and Latin original texts I've been enjoying reading since I was a college student.
+The Greek font used in Euclid's Element section was inspired by the Zeph fonts invented by
+[the Loeb Classical Library in Harvard University](https://www.hup.harvard.edu/series/loeb-classical-library), who publishes Ancient Greek and Latin original texts I've been
+enjoying reading since I was a college student.
 
 The Zeph fonts are based on 'Porson' Greek [according to the information provided by Harvard University Press](https://www.loebclassics.com/page/logo)
 (HUP). But the Zeph\* fonts themselves seem to be custom commissions for HUP for use in Loeb books, which means the
