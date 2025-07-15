@@ -118,7 +118,7 @@ export default function Page(): JSX.Element {
                 className="group relative overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
               >
                 <span className="relative z-10">
-                  QubitPi
+                  Jiaqi Liu
                 </span>
                 <div className="absolute inset-0 -translate-x-full transform bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
               </a>
